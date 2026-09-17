@@ -513,7 +513,7 @@ All confirmed on 2026-09-17. Each row is a constraint for Phase 0 onward.
 | 11 | Process | Spec Kit, initialised in place in Phase 0; constitution from this plan; one spec per pattern from a project template (§7) |
 | 12 | Coverage gate | Line and branch coverage above 90 % in every language, CLI entry point excludable; replaces the original 95 % / 90 % |
 | 13 | First specs | 001 is the CLI runner alone, accepted against test fixtures; 002 is Strategy, the first pattern spec |
-| 14 | Catalogue | The 28 patterns of §11: the 11 from the original project plus 17 new ones; icons carried into the README table |
+| 14 | Catalogue | The 28 patterns of §11: the supplied 26-entry table appended with every original pattern missing from it (Simple Factory, Producer/Consumer); Protection Proxy and Virtual Proxy as two entries; Monostate referenced to Ball & Crawford and Martin; icons carried into the README table |
 
 Dependency versions are not pinned in this document; each will be verified as at
 least seven days old when the scaffold is created.
@@ -576,10 +576,11 @@ generated README table.
 
 Notes:
 
-* **Simple Factory** and **Producer/Consumer** are not in the supplied table; they
-  are kept because the original project has them. Drop either by removing its row.
-* **Protection Proxy** and **Virtual Proxy** are two entries, as supplied. Both docs
-  cross-reference each other under *Related patterns* and share the Proxy
+* **Simple Factory** and **Producer/Consumer** are not in the supplied table. Every
+  pattern of the original project is kept, so the supplied table is appended with
+  them (decision 14).
+* **Protection Proxy** and **Virtual Proxy** are two separate entries (decision 14).
+  Both docs cross-reference each other under *Related patterns* and share the Proxy
   participants (Subject, RealSubject, Proxy).
 * **Monostate** needs a reference outside GoF: S. Ball and J. Crawford, "Monostate
   Classes: The Power of One", *C++ Report*, 1997, and R. C. Martin, *Agile Software
