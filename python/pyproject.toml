@@ -1,0 +1,52 @@
+[project]
+name = "patterns"
+version = "0.1.0"
+description = "Design patterns in Python, discovered by package and run from a small CLI"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+patterns = "patterns.runtime.cli:main"
+
+[dependency-groups]
+dev = [
+  "pytest==9.1.1",
+  "pytest-cov==7.1.0",
+  "coverage==7.16.0",
+  "ruff==0.16.6",
+  "mypy==2.3.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.11,<0.12"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "patterns"
+module-root = "src"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=patterns --cov-branch --cov-report=term-missing --cov-fail-under=90"
+
+[tool.coverage.run]
+branch = true
+source = ["patterns"]
+# Only the CLI entry point may be excluded (constitution VI).
+omit = ["*/runtime/cli.py"]
+
+[tool.coverage.report]
+fail_under = 90
+show_missing = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "SIM", "ANN"]
+
+[tool.mypy]
+strict = true
+files = ["src", "tests"]

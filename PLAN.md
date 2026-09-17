@@ -462,7 +462,8 @@ Mechanical steps:
 
 **Phase 0 – Skeleton (½ day).** Directory layout, `catalog.yaml` with the 28
 patterns of §11 (implementations empty), Makefile, `pnpm-workspace.yaml` and root `package.json`, per-language
-project files with zero patterns but a working `list`/`run` CLI, `.sdkmanrc`,
+project files with zero patterns (build, test, lint and coverage gates wired; the
+`list`/`run` CLI itself is spec 001), `.sdkmanrc`,
 `.gitignore`, `.editorconfig`, root and per-language READMEs, CI workflows green on
 empty projects. Spec Kit initialised in place, constitution written from this plan,
 pattern spec and task templates derived (§7). Local git only; the remote is added

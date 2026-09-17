@@ -1,0 +1,17 @@
+{
+  "name": "javascript",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Design patterns in plain JavaScript (ESM, Node)",
+  "scripts": {
+    "cli": "node src/cli.js",
+    "test": "node scripts/run-tests.js",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "c8": "12.0.0",
+    "eslint": "10.10.0"
+  }
+}

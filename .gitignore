@@ -1,0 +1,27 @@
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+*.iml
+
+# Java
+java/target/
+java/.mvn/wrapper/maven-wrapper.jar
+
+# Python
+python/.venv/
+python/**/__pycache__/
+python/.pytest_cache/
+python/.mypy_cache/
+python/.ruff_cache/
+python/.coverage
+python/coverage.xml
+python/htmlcov/
+
+# Node
+node_modules/
+typescript/dist/
+typescript/coverage/
+javascript/coverage/
+tools/runner/dist/
+tools/runner/coverage/

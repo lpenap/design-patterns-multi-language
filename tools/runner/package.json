@@ -1,0 +1,24 @@
+{
+  "name": "@patterns/runner",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Orchestrator: reads catalog.yaml and drives the per-language CLIs (validate, run, snapshot, check)",
+  "bin": {
+    "patterns": "./bin/patterns.js"
+  },
+  "scripts": {
+    "test": "vitest run --coverage",
+    "lint": "tsc --noEmit && eslint ."
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "22.20.2",
+    "@vitest/coverage-v8": "5.0.0",
+    "eslint": "10.10.0",
+    "tsx": "4.23.13",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.70.0",
+    "vitest": "5.0.0"
+  }
+}

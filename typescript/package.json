@@ -1,0 +1,22 @@
+{
+  "name": "typescript",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Design patterns in TypeScript",
+  "scripts": {
+    "cli": "tsx src/cli.ts",
+    "test": "vitest run --coverage",
+    "lint": "tsc --noEmit && eslint ."
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "22.20.2",
+    "@vitest/coverage-v8": "5.0.0",
+    "eslint": "10.10.0",
+    "tsx": "4.23.13",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.70.0",
+    "vitest": "5.0.0"
+  }
+}

@@ -1,0 +1,6 @@
+packages:
+  - typescript
+  - javascript
+  - tools/runner
+allowBuilds:
+  esbuild: true

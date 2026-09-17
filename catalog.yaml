@@ -1,0 +1,261 @@
+# Single source of truth for patterns, languages and implementation locations.
+# Everything cross-cutting (README table, CI matrix, conformance checks) is
+# generated from or validated against this file. See PLAN.md §2 and §11.
+version: 1
+
+languages:
+  java:
+    name: Java
+    dir: java
+    run: "java -jar java/target/patterns.jar"
+  python:
+    name: Python
+    dir: python
+    run: "uv run --project python patterns"
+  typescript:
+    name: TypeScript
+    dir: typescript
+    run: "pnpm --dir typescript exec tsx src/cli.ts"
+  javascript:
+    name: JavaScript
+    dir: javascript
+    run: "node javascript/src/cli.js"
+
+categories:
+  - id: creational
+    name: Creational
+  - id: structural
+    name: Structural
+  - id: behavioural
+    name: Behavioural
+  - id: concurrency
+    name: Concurrency constructs
+
+# `implementations` is filled in by each pattern's spec; empty means pending.
+# `parity: strict` requires byte-identical output across languages.
+patterns:
+  # ---- Creational ----
+  - id: abstract-factory
+    icon: "🌰"
+    name: Abstract Factory
+    category: creational
+    intent: Provide an interface for creating families of related objects without naming their concrete classes.
+    doc: docs/patterns/abstract-factory.md
+    parity: strict
+    implementations: {}
+  - id: builder
+    icon: "👷"
+    name: Builder
+    category: creational
+    intent: Separate the construction of a complex object from its representation so the same process can create different representations.
+    doc: docs/patterns/builder.md
+    parity: strict
+    implementations: {}
+  - id: factory-method
+    icon: "🏭"
+    name: Factory Method
+    category: creational
+    intent: Define an interface for creating an object, but let subclasses decide which class to instantiate.
+    doc: docs/patterns/factory-method.md
+    parity: strict
+    implementations: {}
+  - id: simple-factory
+    icon: "🏗️"
+    name: Simple Factory
+    category: creational
+    intent: Centralise the creation of related products behind a single method that selects the concrete class.
+    doc: docs/patterns/simple-factory.md
+    parity: strict
+    implementations: {}
+  - id: monostate
+    icon: "🔂"
+    name: Monostate
+    category: creational
+    intent: Share all state among every instance of a class while leaving instantiation unconstrained.
+    doc: docs/patterns/monostate.md
+    parity: strict
+    implementations: {}
+  - id: prototype
+    icon: "🃏"
+    name: Prototype
+    category: creational
+    intent: Specify the kinds of objects to create using a prototypical instance, and create new objects by copying it.
+    doc: docs/patterns/prototype.md
+    parity: strict
+    implementations: {}
+  - id: singleton
+    icon: "💍"
+    name: Singleton
+    category: creational
+    intent: Ensure a class has exactly one instance and provide a global point of access to it.
+    doc: docs/patterns/singleton.md
+    parity: strict
+    implementations: {}
+
+  # ---- Structural ----
+  - id: adapter
+    icon: "🔌"
+    name: Adapter
+    category: structural
+    intent: Convert the interface of a class into another interface clients expect.
+    doc: docs/patterns/adapter.md
+    parity: strict
+    implementations: {}
+  - id: bridge
+    icon: "🌉"
+    name: Bridge
+    category: structural
+    intent: Decouple an abstraction from its implementation so the two can vary independently.
+    doc: docs/patterns/bridge.md
+    parity: strict
+    implementations: {}
+  - id: composite
+    icon: "🌿"
+    name: Composite
+    category: structural
+    intent: Compose objects into tree structures and let clients treat individual objects and compositions uniformly.
+    doc: docs/patterns/composite.md
+    parity: strict
+    implementations: {}
+  - id: decorator
+    icon: "🍧"
+    name: Decorator
+    category: structural
+    intent: Attach additional responsibilities to an object dynamically.
+    doc: docs/patterns/decorator.md
+    parity: strict
+    implementations: {}
+  - id: facade
+    icon: "🎁"
+    name: Façade
+    category: structural
+    intent: Provide a unified, higher-level interface to a set of interfaces in a subsystem.
+    doc: docs/patterns/facade.md
+    parity: strict
+    implementations: {}
+  - id: flyweight
+    icon: "🍃"
+    name: Flyweight
+    category: structural
+    intent: Use sharing to support large numbers of fine-grained objects efficiently.
+    doc: docs/patterns/flyweight.md
+    parity: strict
+    implementations: {}
+  - id: protection-proxy
+    icon: "☔"
+    name: Protection Proxy
+    category: structural
+    intent: Control access to an object by checking the caller's rights before forwarding a request.
+    doc: docs/patterns/protection-proxy.md
+    parity: strict
+    implementations: {}
+  - id: virtual-proxy
+    icon: "🍬"
+    name: Virtual Proxy
+    category: structural
+    intent: Defer the creation of an expensive object until it is actually needed.
+    doc: docs/patterns/virtual-proxy.md
+    parity: strict
+    implementations: {}
+
+  # ---- Behavioural ----
+  - id: chain-of-responsibility
+    icon: "🐝"
+    name: Chain of Responsibility
+    category: behavioural
+    intent: Pass a request along a chain of handlers until one of them handles it.
+    doc: docs/patterns/chain-of-responsibility.md
+    parity: strict
+    implementations: {}
+  - id: command
+    icon: "👫"
+    name: Command
+    category: behavioural
+    intent: Encapsulate a request as an object, allowing requests to be queued, logged and undone.
+    doc: docs/patterns/command.md
+    parity: strict
+    implementations: {}
+  - id: interpreter
+    icon: "🎶"
+    name: Interpreter
+    category: behavioural
+    intent: Given a language, define a representation for its grammar along with an interpreter that uses it.
+    doc: docs/patterns/interpreter.md
+    parity: strict
+    implementations: {}
+  - id: iterator
+    icon: "🍫"
+    name: Iterator
+    category: behavioural
+    intent: Provide sequential access to the elements of an aggregate without exposing its underlying representation.
+    doc: docs/patterns/iterator.md
+    parity: strict
+    implementations: {}
+  - id: mediator
+    icon: "💐"
+    name: Mediator
+    category: behavioural
+    intent: Define an object that encapsulates how a set of objects interact, keeping them from referring to each other explicitly.
+    doc: docs/patterns/mediator.md
+    parity: strict
+    implementations: {}
+  - id: memento
+    icon: "💾"
+    name: Memento
+    category: behavioural
+    intent: Capture and externalise an object's internal state so it can be restored later, without violating encapsulation.
+    doc: docs/patterns/memento.md
+    parity: strict
+    implementations: {}
+  - id: observer
+    icon: "👓"
+    name: Observer
+    category: behavioural
+    intent: Define a one-to-many dependency so that dependents are notified when a subject changes state.
+    doc: docs/patterns/observer.md
+    parity: strict
+    implementations: {}
+  - id: state
+    icon: "🐉"
+    name: State
+    category: behavioural
+    intent: Allow an object to alter its behaviour when its internal state changes; the object appears to change class.
+    doc: docs/patterns/state.md
+    parity: strict
+    implementations: {}
+  - id: strategy
+    icon: "💡"
+    name: Strategy
+    category: behavioural
+    intent: Define a family of interchangeable algorithms and let the client choose one at run time.
+    doc: docs/patterns/strategy.md
+    parity: strict
+    implementations: {}
+  - id: template-method
+    icon: "📝"
+    name: Template Method
+    category: behavioural
+    intent: Define the skeleton of an algorithm and defer some steps to subclasses.
+    doc: docs/patterns/template-method.md
+    parity: strict
+    implementations: {}
+  - id: visitor
+    icon: "🏃"
+    name: Visitor
+    category: behavioural
+    intent: Represent an operation to be performed on the elements of an object structure without changing their classes.
+    doc: docs/patterns/visitor.md
+    parity: strict
+    implementations: {}
+
+  # ---- Concurrency constructs ----
+  - id: producer-consumer
+    icon: "🔄"
+    name: Producer/Consumer
+    category: concurrency
+    # Threads make interleaving nondeterministic; the spec decides whether the
+    # example can be made strict (fixed counts, ordered join) or stays loose.
+    parity: loose
+    intent: Coordinate threads that generate data with threads that process it through a bounded, thread-safe buffer.
+    doc: docs/patterns/producer-consumer.md
+    implementations: {}
