@@ -65,7 +65,8 @@ languages:
 categories: [creational, structural, behavioural, concurrency]
 
 patterns:
-  - id: strategy
+  - id: strategy               # kebab-case; folder names follow each language's convention
+    icon: "💡"                  # used by the generated README table
     name: Strategy
     category: behavioural
     aka: [Policy]
@@ -81,6 +82,10 @@ patterns:
 
 A pattern may list fewer than four implementations while being ported; the
 validator reports the gaps and the generated README table marks them as pending.
+The full list of catalogued patterns is in §11. Ids are kebab-case
+(`chain-of-responsibility`); the per-language implementation paths carry the
+folder name each language needs (`chainofresponsibility` for a Java package or a
+Python module, `chain-of-responsibility` for TypeScript and JavaScript).
 
 ### Repository layout
 
@@ -382,8 +387,8 @@ A pattern is done when all of the following hold. The orchestrator's `validate` 
       the addition; lint and type checks clean.
 
 **Integration**
-- [ ] Catalog entry with `id`, `name`, `category`, `intent`, `doc`, `parity` and the
-      four implementation paths.
+- [ ] Catalog entry with `id`, `icon`, `name`, `category`, `intent`, `doc`, `parity`
+      and the four implementation paths.
 - [ ] `<runner> list` in each language includes the id; `<runner> run <id>` works.
 - [ ] `snapshots/<id>/<language>.txt` committed for each language.
 - [ ] `patterns validate` and `patterns check` pass; README catalogue table regenerated.
@@ -426,9 +431,10 @@ Acceptance criteria:
 template and the definition of done of §7.4 with no host work mixed in. It becomes
 the reference for the specs that follow.
 
-**Specs 003–012 – one per remaining pattern**, generated from the pattern template.
-Later additions (new patterns, new languages) follow the same route: a new language
-is a spec whose acceptance is "all catalogued patterns run and pass `check`".
+**Specs 003–012 – the ten remaining patterns of the original project**, generated
+from the pattern template. **Specs 013–029 – the seventeen new patterns** of §11,
+in the order listed there. Later additions follow the same route: a new language is
+a spec whose acceptance is "all catalogued patterns run and pass `check`".
 
 ## 8. Migration from the Java project
 
@@ -454,8 +460,8 @@ Mechanical steps:
 
 ## 9. Phases
 
-**Phase 0 – Skeleton (½ day).** Directory layout, `catalog.yaml` with the 11
-patterns, Makefile, `pnpm-workspace.yaml` and root `package.json`, per-language
+**Phase 0 – Skeleton (½ day).** Directory layout, `catalog.yaml` with the 28
+patterns of §11 (implementations empty), Makefile, `pnpm-workspace.yaml` and root `package.json`, per-language
 project files with zero patterns but a working `list`/`run` CLI, `.sdkmanrc`,
 `.gitignore`, `.editorconfig`, root and per-language READMEs, CI workflows green on
 empty projects. Spec Kit initialised in place, constitution written from this plan,
@@ -474,10 +480,16 @@ languages).** One spec and one branch per pattern from the pattern template. Jav
 a move; the other three are fresh idiomatic implementations. A spec closes when the
 definition of done (§7.4) holds and the branch is merged into `master`.
 
-**Phase 3 – Enhancements (open-ended).**
-* New patterns: Builder, Prototype, Composite, Proxy, Facade, Command, State,
-  Iterator, Mediator, Visitor; more concurrency constructs (Monitor, Read/Write lock,
-  a Futures/Promises comparison across languages is a natural fit for this repo).
+**Phase 3 – Specs 013–029: the seventeen new patterns of §11 (~½ day each).**
+Fresh implementations in all four languages, same template, same definition of
+done. Suggested order: structural first (Bridge, Composite, Façade, Flyweight,
+Protection Proxy, Virtual Proxy), then creational (Builder, Prototype, Monostate),
+then behavioural (Command, State, Iterator, Mediator, Memento, Visitor,
+Interpreter). Interpreter last: it is the largest.
+
+**Phase 4 – Enhancements (open-ended).**
+* More concurrency constructs (Monitor, Read/Write lock, a Futures/Promises
+  comparison across languages is a natural fit for this repo).
 * New languages: Kotlin, Go, Rust. Cost is one dir + one CLI + one catalog entry.
 * Presentation beyond GitHub: revisit options C and D of §5 if wanted.
 Each enhancement is its own spec.
@@ -501,6 +513,76 @@ All confirmed on 2026-09-17. Each row is a constraint for Phase 0 onward.
 | 11 | Process | Spec Kit, initialised in place in Phase 0; constitution from this plan; one spec per pattern from a project template (§7) |
 | 12 | Coverage gate | Line and branch coverage above 90 % in every language, CLI entry point excludable; replaces the original 95 % / 90 % |
 | 13 | First specs | 001 is the CLI runner alone, accepted against test fixtures; 002 is Strategy, the first pattern spec |
+| 14 | Catalogue | The 28 patterns of §11: the 11 from the original project plus 17 new ones; icons carried into the README table |
 
 Dependency versions are not pinned in this document; each will be verified as at
 least seven days old when the scaffold is created.
+
+---
+
+## 11. Pattern catalogue
+
+Twenty-eight entries: the eleven of the original project (marked *original*) and
+seventeen new ones. Categories follow Gamma et al. with one extra category for
+concurrency constructs. Icons are stored in the catalog and rendered in the
+generated README table.
+
+### Creational
+
+| | Pattern | Id | Intent | Origin |
+|---|---|---|---|---|
+| 🌰 | Abstract Factory | `abstract-factory` | Provide an interface for creating families of related objects without naming their concrete classes. | original |
+| 👷 | Builder | `builder` | Separate the construction of a complex object from its representation so the same process can create different representations. | new |
+| 🏭 | Factory Method | `factory-method` | Define an interface for creating an object, but let subclasses decide which class to instantiate. | original |
+| 🏗️ | Simple Factory | `simple-factory` | Centralise the creation of related products behind a single method that selects the concrete class. Not in the GoF catalogue; kept from the original. | original |
+| 🔂 | Monostate | `monostate` | Share all state among every instance of a class while leaving instantiation unconstrained; a Singleton alternative (Ball and Crawford). | new |
+| 🃏 | Prototype | `prototype` | Specify the kinds of objects to create using a prototypical instance, and create new objects by copying it. | new |
+| 💍 | Singleton | `singleton` | Ensure a class has exactly one instance and provide a global point of access to it. | original |
+
+### Structural
+
+| | Pattern | Id | Intent | Origin |
+|---|---|---|---|---|
+| 🔌 | Adapter | `adapter` | Convert the interface of a class into another interface clients expect. | original |
+| 🌉 | Bridge | `bridge` | Decouple an abstraction from its implementation so the two can vary independently. | new |
+| 🌿 | Composite | `composite` | Compose objects into tree structures and let clients treat individual objects and compositions uniformly. | new |
+| 🍧 | Decorator | `decorator` | Attach additional responsibilities to an object dynamically. | original |
+| 🎁 | Façade | `facade` | Provide a unified, higher-level interface to a set of interfaces in a subsystem. | new |
+| 🍃 | Flyweight | `flyweight` | Use sharing to support large numbers of fine-grained objects efficiently. | new |
+| ☔ | Protection Proxy | `protection-proxy` | Control access to an object by checking the caller's rights before forwarding a request. Variant of Proxy. | new |
+| 🍬 | Virtual Proxy | `virtual-proxy` | Defer the creation of an expensive object until it is actually needed. Variant of Proxy. | new |
+
+### Behavioural
+
+| | Pattern | Id | Intent | Origin |
+|---|---|---|---|---|
+| 🐝 | Chain of Responsibility | `chain-of-responsibility` | Pass a request along a chain of handlers until one of them handles it. | original |
+| 👫 | Command | `command` | Encapsulate a request as an object, allowing requests to be queued, logged and undone. | new |
+| 🎶 | Interpreter | `interpreter` | Given a language, define a representation for its grammar along with an interpreter that uses it. | new |
+| 🍫 | Iterator | `iterator` | Provide sequential access to the elements of an aggregate without exposing its underlying representation. | new |
+| 💐 | Mediator | `mediator` | Define an object that encapsulates how a set of objects interact, keeping them from referring to each other explicitly. | new |
+| 💾 | Memento | `memento` | Capture and externalise an object's internal state so it can be restored later, without violating encapsulation. | new |
+| 👓 | Observer | `observer` | Define a one-to-many dependency so that dependents are notified when a subject changes state. | original |
+| 🐉 | State | `state` | Allow an object to alter its behaviour when its internal state changes; the object appears to change class. | new |
+| 💡 | Strategy | `strategy` | Define a family of interchangeable algorithms and let the client choose one at run time. | original |
+| 📝 | Template Method | `template-method` | Define the skeleton of an algorithm and defer some steps to subclasses. | original |
+| 🏃 | Visitor | `visitor` | Represent an operation to be performed on the elements of an object structure without changing their classes. | new |
+
+### Concurrency constructs
+
+| | Construct | Id | Problem | Origin |
+|---|---|---|---|---|
+| 🔄 | Producer/Consumer | `producer-consumer` | Coordinate threads that generate data with threads that process it through a bounded, thread-safe buffer. | original |
+
+Notes:
+
+* **Simple Factory** and **Producer/Consumer** are not in the supplied table; they
+  are kept because the original project has them. Drop either by removing its row.
+* **Protection Proxy** and **Virtual Proxy** are two entries, as supplied. Both docs
+  cross-reference each other under *Related patterns* and share the Proxy
+  participants (Subject, RealSubject, Proxy).
+* **Monostate** needs a reference outside GoF: S. Ball and J. Crawford, "Monostate
+  Classes: The Power of One", *C++ Report*, 1997, and R. C. Martin, *Agile Software
+  Development*, 2003, ch. on Singleton and Monostate. Added to `docs/references.md`.
+* Icons for Simple Factory and Producer/Consumer are placeholders chosen here; all
+  others are as supplied.
