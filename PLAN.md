@@ -515,6 +515,7 @@ All confirmed on 2026-09-17. Each row is a constraint for Phase 0 onward.
 | 12 | Coverage gate | Line and branch coverage above 90 % in every language, CLI entry point excludable; replaces the original 95 % / 90 % |
 | 13 | First specs | 001 is the CLI runner alone, accepted against test fixtures; 002 is Strategy, the first pattern spec |
 | 14 | Catalogue | The 28 patterns of §11: the supplied 26-entry table appended with every original pattern missing from it (Simple Factory, Producer/Consumer); Protection Proxy and Virtual Proxy as two entries; Monostate referenced to Ball & Crawford and Martin; icons carried into the README table |
+| 15 | TypeScript version | 6.0.3 until typescript-eslint supports TypeScript 7 (7.0 ships no compiler API; support tracked for 7.1+). Upgrade is a follow-up spec; the two-compiler alias recipe is not used |
 
 Dependency versions are not pinned in this document; each will be verified as at
 least seven days old when the scaffold is created.
