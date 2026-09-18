@@ -1,0 +1,3 @@
+Executing Simple Factory Pattern Implementation
+  ConcreteProductA
+  ConcreteProductB
