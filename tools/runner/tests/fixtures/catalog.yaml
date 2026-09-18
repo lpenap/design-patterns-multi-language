@@ -1,0 +1,41 @@
+version: 1
+languages:
+  java:       { name: Java,       dir: java,       run: "node fake-runner.js java" }
+  python:     { name: Python,     dir: python,     run: "node fake-runner.js python" }
+  typescript: { name: TypeScript, dir: typescript, run: "node fake-runner.js typescript" }
+  javascript: { name: JavaScript, dir: javascript, run: "node fake-runner.js javascript" }
+categories:
+  - { id: creational, name: Creational }
+  - { id: concurrency, name: Concurrency constructs }
+patterns:
+  - id: fixture-alpha
+    icon: "A"
+    name: Fixture Alpha
+    category: creational
+    intent: First fixture.
+    doc: docs/patterns/fixture-alpha.md
+    parity: strict
+    implementations:
+      java: java/alpha
+      python: python/alpha
+      typescript: typescript/alpha
+      javascript: javascript/alpha
+  - id: fixture-beta
+    icon: "B"
+    name: Fixture Beta
+    category: concurrency
+    intent: Second fixture, loose parity.
+    doc: docs/patterns/fixture-beta.md
+    parity: loose
+    implementations:
+      java: java/beta
+      python: python/beta
+      typescript: typescript/beta
+      javascript: javascript/beta
+  - id: fixture-gamma
+    icon: "G"
+    name: Fixture Gamma
+    category: creational
+    intent: Not implemented anywhere.
+    doc: docs/patterns/fixture-gamma.md
+    implementations: {}

@@ -1,0 +1,29 @@
+name: conformance
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  validate-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-java@v6.0.1
+        with:
+          java-version: "25"
+          distribution: "temurin"
+          cache: maven
+      - uses: astral-sh/setup-uv@v10.0.1
+        with:
+          enable-cache: true
+          cache-dependency-glob: python/uv.lock
+      - uses: pnpm/action-setup@v6.1.0
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: "22"
+          cache: pnpm
+      - run: make setup
+      - run: make validate
+      - run: make check
