@@ -1,0 +1,6 @@
+{
+  "java":       { "examples": { "fixture-alpha": ["Executing Fixture Alpha Pattern Implementation", "  first", "  second"], "fixture-beta": ["Executing Fixture Beta Pattern Implementation", "  java"] }, "fail": [] },
+  "python":     { "examples": { "fixture-alpha": ["Executing Fixture Alpha Pattern Implementation", "  first", "  second"], "fixture-beta": ["Executing Fixture Beta Pattern Implementation", "  python"] }, "fail": [] },
+  "typescript": { "examples": { "fixture-alpha": ["Executing Fixture Alpha Pattern Implementation", "  first", "  second"], "fixture-beta": ["Executing Fixture Beta Pattern Implementation", "  typescript"] }, "fail": [] },
+  "javascript": { "examples": { "fixture-alpha": ["Executing Fixture Alpha Pattern Implementation", "  first", "  second"], "fixture-beta": ["Executing Fixture Beta Pattern Implementation", "  javascript"] }, "fail": [] }
+}

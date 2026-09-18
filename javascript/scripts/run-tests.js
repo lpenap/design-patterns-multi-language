@@ -21,6 +21,7 @@ const c8 = [
   "--include", "src/**/*.js",
   "--exclude", "src/**/*.test.js",
   // Only the CLI entry point may be excluded (constitution VI).
+  "--exclude", "src/**/*.test-helper.js",
   "--exclude", "src/cli.js",
   "--lines", "90", "--branches", "90", "--check-coverage",
   "--reporter", "text",

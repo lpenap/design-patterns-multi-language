@@ -15,9 +15,9 @@ protocols, discovery and the CLI.
 uv sync                    # create .venv and install dev tools
 uv run pytest              # tests with branch coverage, gate > 90 %
 uv run ruff check . && uv run ruff format --check . && uv run mypy
-uv run patterns list       # JSON array of pattern ids
-uv run patterns run strategy
-uv run patterns run --all
+uv run patterns list             # JSON array of pattern ids, exit 0
+uv run patterns run strategy     # lines to stdout, exit 0; unknown id → stderr, exit 2
+uv run patterns run --all        # every example, separated by 40 dashes
 ```
 
 ## Conventions

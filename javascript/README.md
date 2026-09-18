@@ -17,9 +17,9 @@ the CLI.
 ```bash
 pnpm test                  # node:test under c8, gate > 90 % lines and branches
 pnpm lint                  # eslint
-pnpm cli list              # JSON array of pattern ids
-pnpm cli run strategy
-pnpm cli run -- --all
+node src/cli.js list             # JSON array of pattern ids, exit 0
+node src/cli.js run strategy     # lines to stdout, exit 0; unknown id → stderr, exit 2
+node src/cli.js run --all        # every example, separated by 40 dashes
 ```
 
 ## Conventions

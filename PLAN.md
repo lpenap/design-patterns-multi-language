@@ -432,7 +432,7 @@ template and the definition of done of §7.4 with no host work mixed in. It beco
 the reference for the specs that follow.
 
 **Specs 003–012 – the ten remaining patterns of the original project**, generated
-from the pattern template. **Specs 013–029 – the seventeen new patterns** of §11,
+from the pattern template. **Specs 013–028 – the sixteen new patterns** of §11,
 in the order listed there. Later additions follow the same route: a new language is
 a spec whose acceptance is "all catalogued patterns run and pass `check`".
 
@@ -460,7 +460,7 @@ Mechanical steps:
 
 ## 9. Phases
 
-**Phase 0 – Skeleton (½ day).** Directory layout, `catalog.yaml` with the 28
+**Phase 0 – Skeleton (½ day).** Directory layout, `catalog.yaml` with the 27
 patterns of §11 (implementations empty), Makefile, `pnpm-workspace.yaml` and root `package.json`, per-language
 project files with zero patterns (build, test, lint and coverage gates wired; the
 `list`/`run` CLI itself is spec 001), `.sdkmanrc`,
@@ -469,7 +469,7 @@ empty projects. Spec Kit initialised in place, constitution written from this pl
 pattern spec and task templates derived (§7). Local git only; the remote is added
 later and `master` stays the default branch.
 
-**Phase 1 – Specs 001 and 002: CLI runner, then Strategy (1–1½ days).** Spec 001
+**Phase 1 – Specs 001 and 002: CLI runner, then Strategy (1–1½ days).** *Spec 001 delivered 2026-09-18 on branch `001-cli-runner`.* Spec 001
 delivers the per-language CLIs and the orchestrator (`validate`, `run`, `snapshot`,
 `check`), accepted against test fixtures. Spec 002 delivers Strategy in all four
 languages meeting the definition of done, four snapshots and the generated README
@@ -481,7 +481,7 @@ languages).** One spec and one branch per pattern from the pattern template. Jav
 a move; the other three are fresh idiomatic implementations. A spec closes when the
 definition of done (§7.4) holds and the branch is merged into `master`.
 
-**Phase 3 – Specs 013–029: the seventeen new patterns of §11 (~½ day each).**
+**Phase 3 – Specs 013–028: the sixteen new patterns of §11 (~½ day each).**
 Fresh implementations in all four languages, same template, same definition of
 done. Suggested order: structural first (Bridge, Composite, Façade, Flyweight,
 Protection Proxy, Virtual Proxy), then creational (Builder, Prototype, Monostate),
@@ -514,7 +514,7 @@ All confirmed on 2026-09-17. Each row is a constraint for Phase 0 onward.
 | 11 | Process | Spec Kit, initialised in place in Phase 0; constitution from this plan; one spec per pattern from a project template (§7) |
 | 12 | Coverage gate | Line and branch coverage above 90 % in every language, CLI entry point excludable; replaces the original 95 % / 90 % |
 | 13 | First specs | 001 is the CLI runner alone, accepted against test fixtures; 002 is Strategy, the first pattern spec |
-| 14 | Catalogue | The 28 patterns of §11: the supplied 26-entry table appended with every original pattern missing from it (Simple Factory, Producer/Consumer); Protection Proxy and Virtual Proxy as two entries; Monostate referenced to Ball & Crawford and Martin; icons carried into the README table |
+| 14 | Catalogue | The 27 patterns of §11: the supplied 25-entry table appended with every original pattern missing from it (Simple Factory, Producer/Consumer); Protection Proxy and Virtual Proxy as two entries; Monostate referenced to Ball & Crawford and Martin; icons carried into the README table |
 | 15 | TypeScript version | 6.0.3 until typescript-eslint supports TypeScript 7 (7.0 ships no compiler API; support tracked for 7.1+). Upgrade is a follow-up spec; the two-compiler alias recipe is not used |
 
 Dependency versions are not pinned in this document; each will be verified as at
@@ -524,8 +524,8 @@ least seven days old when the scaffold is created.
 
 ## 11. Pattern catalogue
 
-Twenty-eight entries: the eleven of the original project (marked *original*) and
-seventeen new ones. Categories follow Gamma et al. with one extra category for
+Twenty-seven entries: the eleven of the original project (marked *original*) and
+sixteen new ones. Categories follow Gamma et al. with one extra category for
 concurrency constructs. Icons are stored in the catalog and rendered in the
 generated README table.
 
