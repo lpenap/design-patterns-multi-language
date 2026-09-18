@@ -1,0 +1,3 @@
+Executing Template Method Pattern Implementation
+  ConcreteClassA.primitiveOperation1 then ConcreteClassA.primitiveOperation2
+  ConcreteClassB.primitiveOperation1 then ConcreteClassB.primitiveOperation2 with hook
