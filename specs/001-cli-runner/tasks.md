@@ -29,8 +29,8 @@ Language-first monorepo (constitution I): `java/`, `python/`, `typescript/`, `ja
 
 **Purpose**: dependencies and wiring that Phase 0 did not include
 
-- [ ] T001 Add `yaml` 2.9.0 to `tools/runner/package.json` dependencies and run `pnpm install` from the repo root (lockfile updated)
-- [ ] T002 [P] Create `tools/runner/bin/patterns.js` (`#!/usr/bin/env node`, imports `tsx` register then `../src/cli.ts`), executable bit set, and confirm `pnpm --filter @patterns/runner exec patterns` resolves
+- [x] T001 Add `yaml` 2.9.0 to `tools/runner/package.json` dependencies and run `pnpm install` from the repo root (lockfile updated)
+- [x] T002 [P] Create `tools/runner/bin/patterns.js` (`#!/usr/bin/env node`, imports `tsx` register then `../src/cli.ts`), executable bit set, and confirm `pnpm --filter @patterns/runner exec patterns` resolves
 - [ ] T003 [P] Add `tools/runner/tests/fixtures/` skeleton: `catalog.yaml` (four languages all running `node tests/fixtures/fake-runner.js <lang>`; patterns `fixture-alpha` strict and `fixture-beta` loose with implementations for all four; `fixture-gamma` with no implementations), `docs/patterns/fixture-alpha.md` and `fixture-beta.md` with a `## The example` fenced block, `README.md` with `<!-- catalogue:start -->`/`<!-- catalogue:end -->` markers, empty `snapshots/`
 - [ ] T004 [P] Create `tools/runner/tests/fixtures/fake-runner.js`: reads `behaviour.json` next to it (per language: ids → lines, `fail` ids, `drift` overrides, `missing` flag → exit 127 before anything), implements `list`, `run <id>`, `run --all` exactly per `contracts/language-cli.md`
 
@@ -40,15 +40,15 @@ Language-first monorepo (constitution I): `java/`, `python/`, `typescript/`, `ja
 
 **Purpose**: the `Example`/`Output` contract and discovery each CLI is built on. Blocks all user stories.
 
-- [ ] T005 [P] Java: `java/src/main/java/com/penapereira/patterns/runtime/Example.java` (`String id(); void run(Output out);`) and `Output.java` (`void line(String text);`)
-- [ ] T006 [P] Java: `java/src/test/java/com/penapereira/patterns/runtime/BufferOutput.java` (collects lines), `FixtureAlphaExample.java` (id `fixture-alpha`, lines `Executing Fixture Alpha Pattern Implementation`, `  first`, `  second`), `FixtureBetaExample.java` (id `fixture-beta`, one line), `FixtureFailingExample.java` (id `fixture-failing`, throws `IllegalStateException("boom")` after writing one line); register the three in `java/src/test/resources/META-INF/services/com.penapereira.patterns.runtime.Example`
-- [ ] T007 Java: `ExamplesTest.java` (fails first) then `Examples.java`: `static SortedMap<String, Example> discover(ServiceLoader<Example>)` and `discover()` using the context class loader; duplicate id → `IllegalStateException("duplicate example id: <id>")`
-- [ ] T008 [P] Python: `python/src/patterns/runtime/__init__.py` and `contract.py` (`Example` and `Output` `Protocol`s, `BufferOutput` class, `ConsoleOutput(stream)`)
-- [ ] T009 [P] Python: `python/tests/fixtures/__init__.py`, `fixtures/fixture_alpha/__init__.py`, `fixtures/fixture_beta/__init__.py`, `fixtures/fixture_failing/__init__.py` (same ids and lines as the Java fixtures), `fixtures/not_an_example/__init__.py` (no `example` attribute)
-- [ ] T010 Python: `python/tests/test_discovery.py` (fails first) then `python/src/patterns/runtime/discovery.py`: `discover(package: ModuleType = patterns) -> dict[str, Example]` via `pkgutil.iter_modules(package.__path__)`, skipping `runtime`, importing each subpackage, reading `example` if present; duplicate → `DuplicateExampleError`
-- [ ] T011 [P] TypeScript: `typescript/src/runtime/contract.ts` (`Example`, `Output` interfaces, `BufferOutput`, `ConsoleOutput`), `typescript/src/runtime/registry.ts` (`export const examples: Example[] = []`), `typescript/src/runtime/fixtures.test-helper.ts` exporting `fixtureAlpha`, `fixtureBeta`, `fixtureFailing` (same ids and lines) — helper is test-only (excluded via `*.test-helper.ts` pattern added to `vitest.config.ts` coverage exclude and to the CLI production import graph)
-- [ ] T012 [P] JavaScript: `javascript/src/runtime/contract.js` (`BufferOutput`, `ConsoleOutput`, JSDoc for the Example shape), `javascript/src/runtime/registry.js` (`export const examples = []`), `javascript/src/runtime/fixtures.test-helper.js` (same fixtures); add the helper pattern to the c8 excludes in `javascript/scripts/run-tests.js`
-- [ ] T013 [P] TypeScript and JavaScript: `typescript/src/runtime/index-of.test.ts` and `javascript/src/runtime/index-of.test.js` (fail first) then `indexExamples(list)` in each `contract` module: sorted map by id, duplicate → `Error("duplicate example id: <id>")`
+- [x] T005 [P] Java: `java/src/main/java/com/penapereira/patterns/runtime/Example.java` (`String id(); void run(Output out);`) and `Output.java` (`void line(String text);`)
+- [x] T006 [P] Java: `java/src/test/java/com/penapereira/patterns/runtime/BufferOutput.java` (collects lines), `FixtureAlphaExample.java` (id `fixture-alpha`, lines `Executing Fixture Alpha Pattern Implementation`, `  first`, `  second`), `FixtureBetaExample.java` (id `fixture-beta`, one line), `FixtureFailingExample.java` (id `fixture-failing`, throws `IllegalStateException("boom")` after writing one line); register the three in `java/src/test/resources/META-INF/services/com.penapereira.patterns.runtime.Example`
+- [x] T007 Java: `ExamplesTest.java` (fails first) then `Examples.java`: `static SortedMap<String, Example> discover(ServiceLoader<Example>)` and `discover()` using the context class loader; duplicate id → `IllegalStateException("duplicate example id: <id>")`
+- [x] T008 [P] Python: `python/src/patterns/runtime/__init__.py` and `contract.py` (`Example` and `Output` `Protocol`s, `BufferOutput` class, `ConsoleOutput(stream)`)
+- [x] T009 [P] Python: `python/tests/fixtures/__init__.py`, `fixtures/fixture_alpha/__init__.py`, `fixtures/fixture_beta/__init__.py`, `fixtures/fixture_failing/__init__.py` (same ids and lines as the Java fixtures), `fixtures/not_an_example/__init__.py` (no `example` attribute)
+- [x] T010 Python: `python/tests/test_discovery.py` (fails first) then `python/src/patterns/runtime/discovery.py`: `discover(package: ModuleType = patterns) -> dict[str, Example]` via `pkgutil.iter_modules(package.__path__)`, skipping `runtime`, importing each subpackage, reading `example` if present; duplicate → `DuplicateExampleError`
+- [x] T011 [P] TypeScript: `typescript/src/runtime/contract.ts` (`Example`, `Output` interfaces, `BufferOutput`, `ConsoleOutput`), `typescript/src/runtime/registry.ts` (`export const examples: Example[] = []`), `typescript/src/runtime/fixtures.test-helper.ts` exporting `fixtureAlpha`, `fixtureBeta`, `fixtureFailing` (same ids and lines) — helper is test-only (excluded via `*.test-helper.ts` pattern added to `vitest.config.ts` coverage exclude and to the CLI production import graph)
+- [x] T012 [P] JavaScript: `javascript/src/runtime/contract.js` (`BufferOutput`, `ConsoleOutput`, JSDoc for the Example shape), `javascript/src/runtime/registry.js` (`export const examples = []`), `javascript/src/runtime/fixtures.test-helper.js` (same fixtures); add the helper pattern to the c8 excludes in `javascript/scripts/run-tests.js`
+- [x] T013 [P] TypeScript and JavaScript: `typescript/src/runtime/index-of.test.ts` and `javascript/src/runtime/index-of.test.js` (fail first) then `indexExamples(list)` in each `contract` module: sorted map by id, duplicate → `Error("duplicate example id: <id>")`
 
 **Checkpoint**: each language can build a sorted, duplicate-free index of examples from fixtures; all five projects still lint green.
 
@@ -62,40 +62,40 @@ Language-first monorepo (constitution I): `java/`, `python/`, `typescript/`, `ja
 
 ### Java — `java/src/main/java/com/penapereira/patterns/runtime/`
 
-- [ ] T014 [P] [US1] `java/src/test/java/com/penapereira/patterns/runtime/CliTest.java`: `list` with fixtures → `["fixture-alpha","fixture-beta","fixture-failing"]\n`, exit 0; `list` with empty map → `[]\n`
-- [ ] T015 [P] [US2] `CliTest.java`: `run fixture-alpha` → three lines with `\n`, empty stderr, exit 0; `run nope` → empty stdout, stderr `unknown example: nope\n`, exit 2; `run fixture-failing` → empty stdout, stderr `example failed: fixture-failing: boom\n`, exit 1
-- [ ] T016 [P] [US3] `CliTest.java`: `run --all` → alpha, 40 dashes, beta, 40 dashes, (failing: stderr line) exit 1; `run --all` with only alpha and beta → exit 0 with one separator; empty map → empty stdout exit 0; no args / `bogus` → usage line on stderr, exit 1
-- [ ] T017 [US1] `Cli.java`: `int run(String[] args, PrintStream out, PrintStream err, SortedMap<String, Example> examples)` implementing `list` (compact JSON, ids sorted; JSON-escape ids)
-- [ ] T018 [US2] `Cli.java`: `run <id>` — collect through `BufferOutput`-like private class, print all lines only on success; exit codes 0/2/1 and stderr messages per contract
-- [ ] T019 [US3] `Cli.java`: `run --all` with 40-dash separator between consecutive outputs, per-example failure to stderr, exit 1 if any failed; usage handling
-- [ ] T020 [US1] `Main.java`: `main` builds `Examples.discover()` (catching the duplicate exception → stderr line, exit 1), calls `Cli.run(args, System.out, System.err, ...)`, `System.exit`; add `**/runtime/Main.class` already excluded in `pom.xml`; `./mvnw -q verify` green, jar runs `list` → `[]`
+- [x] T014 [P] [US1] `java/src/test/java/com/penapereira/patterns/runtime/CliTest.java`: `list` with fixtures → `["fixture-alpha","fixture-beta","fixture-failing"]\n`, exit 0; `list` with empty map → `[]\n`
+- [x] T015 [P] [US2] `CliTest.java`: `run fixture-alpha` → three lines with `\n`, empty stderr, exit 0; `run nope` → empty stdout, stderr `unknown example: nope\n`, exit 2; `run fixture-failing` → empty stdout, stderr `example failed: fixture-failing: boom\n`, exit 1
+- [x] T016 [P] [US3] `CliTest.java`: `run --all` → alpha, 40 dashes, beta, 40 dashes, (failing: stderr line) exit 1; `run --all` with only alpha and beta → exit 0 with one separator; empty map → empty stdout exit 0; no args / `bogus` → usage line on stderr, exit 1
+- [x] T017 [US1] `Cli.java`: `int run(String[] args, PrintStream out, PrintStream err, SortedMap<String, Example> examples)` implementing `list` (compact JSON, ids sorted; JSON-escape ids)
+- [x] T018 [US2] `Cli.java`: `run <id>` — collect through `BufferOutput`-like private class, print all lines only on success; exit codes 0/2/1 and stderr messages per contract
+- [x] T019 [US3] `Cli.java`: `run --all` with 40-dash separator between consecutive outputs, per-example failure to stderr, exit 1 if any failed; usage handling
+- [x] T020 [US1] `Main.java`: `main` builds `Examples.discover()` (catching the duplicate exception → stderr line, exit 1), calls `Cli.run(args, System.out, System.err, ...)`, `System.exit`; add `**/runtime/Main.class` already excluded in `pom.xml`; `./mvnw -q verify` green, jar runs `list` → `[]`
 
 ### Python — `python/src/patterns/runtime/`
 
-- [ ] T021 [P] [US1] `python/tests/test_cli.py`: same `list` cases as T014 using `io.StringIO` streams and fixture dict
-- [ ] T022 [P] [US2] `python/tests/test_cli.py`: same `run` cases as T015
-- [ ] T023 [P] [US3] `python/tests/test_cli.py`: same `run --all` and usage cases as T016
-- [ ] T024 [US1] `python/src/patterns/runtime/cli.py`: `run(argv: Sequence[str], stdout: TextIO, stderr: TextIO, examples: Mapping[str, Example]) -> int` — `list` (json.dumps with `separators=(",", ":")`)
-- [ ] T025 [US2] `cli.py`: `run <id>` with buffered output, exit codes and messages per contract
-- [ ] T026 [US3] `cli.py`: `run --all`, separator, usage; `main() -> None` (excluded from coverage via `omit` already in `pyproject.toml`; move the entry into `cli.py:main` only, keep `run` covered) calling `discover()` and `sys.exit(run(sys.argv[1:], sys.stdout, sys.stderr, examples))`; `uv run --project python patterns list` → `[]`; pytest/ruff/mypy green
+- [x] T021 [P] [US1] `python/tests/test_cli.py`: same `list` cases as T014 using `io.StringIO` streams and fixture dict
+- [x] T022 [P] [US2] `python/tests/test_cli.py`: same `run` cases as T015
+- [x] T023 [P] [US3] `python/tests/test_cli.py`: same `run --all` and usage cases as T016
+- [x] T024 [US1] `python/src/patterns/runtime/cli.py`: `run(argv: Sequence[str], stdout: TextIO, stderr: TextIO, examples: Mapping[str, Example]) -> int` — `list` (json.dumps with `separators=(",", ":")`)
+- [x] T025 [US2] `cli.py`: `run <id>` with buffered output, exit codes and messages per contract
+- [x] T026 [US3] `cli.py`: `run --all`, separator, usage; `main() -> None` (excluded from coverage via `omit` already in `pyproject.toml`; move the entry into `cli.py:main` only, keep `run` covered) calling `discover()` and `sys.exit(run(sys.argv[1:], sys.stdout, sys.stderr, examples))`; `uv run --project python patterns list` → `[]`; pytest/ruff/mypy green
 
 ### TypeScript — `typescript/src/runtime/`
 
-- [ ] T027 [P] [US1] `typescript/src/runtime/cli.test.ts`: `list` cases as T014 with an `Io {stdout: string[]; stderr: string[]}` collector
-- [ ] T028 [P] [US2] `cli.test.ts`: `run` cases as T015
-- [ ] T029 [P] [US3] `cli.test.ts`: `run --all` and usage cases as T016
-- [ ] T030 [US1] `typescript/src/runtime/cli.ts`: `export function run(argv: readonly string[], io: Io, examples: readonly Example[]): number` — `list`
-- [ ] T031 [US2] `cli.ts`: `run <id>` buffered, codes and messages per contract
-- [ ] T032 [US3] `cli.ts`: `run --all`, separator, usage; `typescript/src/cli.ts` entry (`process.exit(run(process.argv.slice(2), consoleIo, examples))`, catching duplicate error → stderr, exit 1); `pnpm --dir typescript exec tsx src/cli.ts list` → `[]`; vitest coverage, tsc, eslint green
+- [x] T027 [P] [US1] `typescript/src/runtime/cli.test.ts`: `list` cases as T014 with an `Io {stdout: string[]; stderr: string[]}` collector
+- [x] T028 [P] [US2] `cli.test.ts`: `run` cases as T015
+- [x] T029 [P] [US3] `cli.test.ts`: `run --all` and usage cases as T016
+- [x] T030 [US1] `typescript/src/runtime/cli.ts`: `export function run(argv: readonly string[], io: Io, examples: readonly Example[]): number` — `list`
+- [x] T031 [US2] `cli.ts`: `run <id>` buffered, codes and messages per contract
+- [x] T032 [US3] `cli.ts`: `run --all`, separator, usage; `typescript/src/cli.ts` entry (`process.exit(run(process.argv.slice(2), consoleIo, examples))`, catching duplicate error → stderr, exit 1); `pnpm --dir typescript exec tsx src/cli.ts list` → `[]`; vitest coverage, tsc, eslint green
 
 ### JavaScript — `javascript/src/runtime/`
 
-- [ ] T033 [P] [US1] `javascript/src/runtime/cli.test.js` (node:test): `list` cases as T014
-- [ ] T034 [P] [US2] `cli.test.js`: `run` cases as T015
-- [ ] T035 [P] [US3] `cli.test.js`: `run --all` and usage cases as T016
-- [ ] T036 [US1] `javascript/src/runtime/cli.js`: `export function run(argv, io, examples)` — `list`
-- [ ] T037 [US2] `cli.js`: `run <id>` buffered, codes and messages per contract
-- [ ] T038 [US3] `cli.js`: `run --all`, separator, usage; `javascript/src/cli.js` entry; `node javascript/src/cli.js list` → `[]`; c8 gate and eslint green
+- [x] T033 [P] [US1] `javascript/src/runtime/cli.test.js` (node:test): `list` cases as T014
+- [x] T034 [P] [US2] `cli.test.js`: `run` cases as T015
+- [x] T035 [P] [US3] `cli.test.js`: `run --all` and usage cases as T016
+- [x] T036 [US1] `javascript/src/runtime/cli.js`: `export function run(argv, io, examples)` — `list`
+- [x] T037 [US2] `cli.js`: `run <id>` buffered, codes and messages per contract
+- [x] T038 [US3] `cli.js`: `run --all`, separator, usage; `javascript/src/cli.js` entry; `node javascript/src/cli.js list` → `[]`; c8 gate and eslint green
 
 **Checkpoint**: all four production CLIs answer `list` with `[]` and `run x` with exit 2; each language's tests cover the contract table completely.
 

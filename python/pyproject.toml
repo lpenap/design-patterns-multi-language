@@ -33,8 +33,8 @@ addopts = "--cov=patterns --cov-branch --cov-report=term-missing --cov-fail-unde
 [tool.coverage.run]
 branch = true
 source = ["patterns"]
-# Only the CLI entry point may be excluded (constitution VI).
-omit = ["*/runtime/cli.py"]
+# Only the CLI entry point may be excluded (constitution VI): cli.main() carries
+# "pragma: no cover"; nothing is omitted by file.
 
 [tool.coverage.report]
 fail_under = 90

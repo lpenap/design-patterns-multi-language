@@ -16,7 +16,7 @@ export default defineConfig({
       provider: "v8",
       include: ["src/**/*.ts"],
       // Only the CLI entry point may be excluded (constitution VI).
-      exclude: ["src/**/*.test.ts", "src/cli.ts"],
+      exclude: ["src/**/*.test.ts", "src/**/*.test-helper.ts", "src/cli.ts"],
       ...(hasTests ? { thresholds: { lines: 90, branches: 90 } } : {}),
     },
   },
