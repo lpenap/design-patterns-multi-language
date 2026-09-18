@@ -19,8 +19,9 @@ class BoundedBuffer[T]:
     def __init__(self, capacity: int) -> None:
         self._capacity = capacity
         self._items: deque[T] = deque()
-        self._not_full = threading.Condition()
-        self._not_empty = threading.Condition(self._not_full)  # same lock
+        self._lock = threading.Lock()
+        self._not_full = threading.Condition(self._lock)
+        self._not_empty = threading.Condition(self._lock)
 
     def put(self, item: T) -> None:
         """Wait while the buffer is full, then append the item."""
@@ -38,7 +39,7 @@ class BoundedBuffer[T]:
             return item
 
     def size(self) -> int:
-        with self._not_full:
+        with self._lock:
             return len(self._items)
 
 
