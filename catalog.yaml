@@ -274,7 +274,11 @@ patterns:
     intent: Define the skeleton of an algorithm and defer some steps to subclasses.
     doc: docs/patterns/template-method.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/templatemethod
+      python: python/src/patterns/templatemethod
+      typescript: typescript/src/template-method
+      javascript: javascript/src/template-method
   - id: visitor
     icon: "🏃"
     name: Visitor
