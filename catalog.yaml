@@ -62,7 +62,11 @@ patterns:
     intent: Define an interface for creating an object, but let subclasses decide which class to instantiate.
     doc: docs/patterns/factory-method.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/factorymethod
+      python: python/src/patterns/factorymethod
+      typescript: typescript/src/factory-method
+      javascript: javascript/src/factory-method
   - id: simple-factory
     icon: "🏗️"
     name: Simple Factory
