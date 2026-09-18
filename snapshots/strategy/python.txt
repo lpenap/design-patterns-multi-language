@@ -1,0 +1,3 @@
+Executing Strategy Pattern Implementation
+  Operation with --> algorithm from ConcreteStrategyA
+  Operation with ==> algorithm from ConcreteStrategyB

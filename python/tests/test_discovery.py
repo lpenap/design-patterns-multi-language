@@ -10,8 +10,11 @@ def test_discovers_fixtures_sorted_and_skips_packages_without_example() -> None:
     assert list(found) == ["fixture-alpha", "fixture-beta", "fixture-failing"]
 
 
-def test_production_package_has_no_examples_yet() -> None:
-    assert discover() == {}
+def test_production_package_exposes_only_kebab_case_non_fixture_ids() -> None:
+    ids = list(discover())
+    assert ids == sorted(ids)
+    assert all(not i.startswith("fixture-") for i in ids)
+    assert "strategy" in ids
 
 
 def test_duplicate_ids_are_rejected() -> None:

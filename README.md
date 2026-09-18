@@ -85,7 +85,7 @@ generated from [`catalog.yaml`](catalog.yaml); do not edit it by hand.
 | 💾 | [Memento](docs/patterns/memento.md) | Capture and externalise an object's internal state so it can be restored later, without violating encapsulation. | pending | pending | pending | pending |
 | 👓 | [Observer](docs/patterns/observer.md) | Define a one-to-many dependency so that dependents are notified when a subject changes state. | pending | pending | pending | pending |
 | 🐉 | [State](docs/patterns/state.md) | Allow an object to alter its behaviour when its internal state changes; the object appears to change class. | pending | pending | pending | pending |
-| 💡 | [Strategy](docs/patterns/strategy.md) | Define a family of interchangeable algorithms and let the client choose one at run time. | pending | pending | pending | pending |
+| 💡 | [Strategy](docs/patterns/strategy.md) | Define a family of interchangeable algorithms and let the client choose one at run time. | done | done | done | done |
 | 📝 | [Template Method](docs/patterns/template-method.md) | Define the skeleton of an algorithm and defer some steps to subclasses. | pending | pending | pending | pending |
 | 🏃 | [Visitor](docs/patterns/visitor.md) | Represent an operation to be performed on the elements of an object structure without changing their classes. | pending | pending | pending | pending |
 

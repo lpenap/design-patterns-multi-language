@@ -12,8 +12,9 @@ class ExamplesTest {
     @Test
     void discoversFixturesFromTestClassPathSortedById() {
         SortedMap<String, Example> found = Examples.discover();
-        assertEquals(List.of("fixture-alpha", "fixture-beta", "fixture-failing"),
-                List.copyOf(found.keySet()));
+        List<String> fixtures = found.keySet().stream().filter(id -> id.startsWith("fixture-")).toList();
+        assertEquals(List.of("fixture-alpha", "fixture-beta", "fixture-failing"), fixtures);
+        assertEquals(List.copyOf(found.keySet()).stream().sorted().toList(), List.copyOf(found.keySet()));
     }
 
     @Test
