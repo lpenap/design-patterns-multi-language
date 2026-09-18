@@ -52,7 +52,7 @@ generated from [`catalog.yaml`](catalog.yaml); do not edit it by hand.
 
 | | Pattern | Intent | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|---|
-| 🌰 | [Abstract Factory](docs/patterns/abstract-factory.md) | Provide an interface for creating families of related objects without naming their concrete classes. | pending | pending | pending | pending |
+| 🌰 | [Abstract Factory](docs/patterns/abstract-factory.md) | Provide an interface for creating families of related objects without naming their concrete classes. | done | done | done | done |
 | 👷 | [Builder](docs/patterns/builder.md) | Separate the construction of a complex object from its representation so the same process can create different representations. | pending | pending | pending | pending |
 | 🏭 | [Factory Method](docs/patterns/factory-method.md) | Define an interface for creating an object, but let subclasses decide which class to instantiate. | pending | pending | pending | pending |
 | 🏗️ | [Simple Factory](docs/patterns/simple-factory.md) | Centralise the creation of related products behind a single method that selects the concrete class. | pending | pending | pending | pending |

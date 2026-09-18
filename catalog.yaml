@@ -42,7 +42,11 @@ patterns:
     intent: Provide an interface for creating families of related objects without naming their concrete classes.
     doc: docs/patterns/abstract-factory.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/abstractfactory
+      python: python/src/patterns/abstractfactory
+      typescript: typescript/src/abstract-factory
+      javascript: javascript/src/abstract-factory
   - id: builder
     icon: "👷"
     name: Builder
