@@ -144,7 +144,11 @@ patterns:
     intent: Attach additional responsibilities to an object dynamically.
     doc: docs/patterns/decorator.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/decorator
+      python: python/src/patterns/decorator
+      typescript: typescript/src/decorator
+      javascript: javascript/src/decorator
   - id: facade
     icon: "🎁"
     name: Façade
