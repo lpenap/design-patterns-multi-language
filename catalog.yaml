@@ -242,7 +242,11 @@ patterns:
     intent: Define a one-to-many dependency so that dependents are notified when a subject changes state.
     doc: docs/patterns/observer.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/observer
+      python: python/src/patterns/observer
+      typescript: typescript/src/observer
+      javascript: javascript/src/observer
   - id: state
     icon: "🐉"
     name: State
