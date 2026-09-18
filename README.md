@@ -55,7 +55,7 @@ generated from [`catalog.yaml`](catalog.yaml); do not edit it by hand.
 | 🌰 | [Abstract Factory](docs/patterns/abstract-factory.md) | Provide an interface for creating families of related objects without naming their concrete classes. | done | done | done | done |
 | 👷 | [Builder](docs/patterns/builder.md) | Separate the construction of a complex object from its representation so the same process can create different representations. | pending | pending | pending | pending |
 | 🏭 | [Factory Method](docs/patterns/factory-method.md) | Define an interface for creating an object, but let subclasses decide which class to instantiate. | done | done | done | done |
-| 🏗️ | [Simple Factory](docs/patterns/simple-factory.md) | Centralise the creation of related products behind a single method that selects the concrete class. | pending | pending | pending | pending |
+| 🏗️ | [Simple Factory](docs/patterns/simple-factory.md) | Centralise the creation of related products behind a single method that selects the concrete class. | done | done | done | done |
 | 🔂 | [Monostate](docs/patterns/monostate.md) | Share all state among every instance of a class while leaving instantiation unconstrained. | pending | pending | pending | pending |
 | 🃏 | [Prototype](docs/patterns/prototype.md) | Specify the kinds of objects to create using a prototypical instance, and create new objects by copying it. | pending | pending | pending | pending |
 | 💍 | [Singleton](docs/patterns/singleton.md) | Ensure a class has exactly one instance and provide a global point of access to it. | pending | pending | pending | pending |

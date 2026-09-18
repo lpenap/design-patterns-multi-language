@@ -74,7 +74,11 @@ patterns:
     intent: Centralise the creation of related products behind a single method that selects the concrete class.
     doc: docs/patterns/simple-factory.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/simplefactory
+      python: python/src/patterns/simplefactory
+      typescript: typescript/src/simple-factory
+      javascript: javascript/src/simple-factory
   - id: monostate
     icon: "🔂"
     name: Monostate
