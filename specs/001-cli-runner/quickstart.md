@@ -47,3 +47,13 @@ cross-language difference is reported as info only; remove a language command
 ## CI
 
 Push the branch: `java`, `python`, `node` and `conformance` workflows green.
+
+## Validated
+
+2026-09-18, macOS, JDK 25.0.4-tem, Python 3.14.6, Node 20.20.2, pnpm 12.4.0:
+every command above behaved as described. `make validate` reports
+`validate: 27 patterns, 0 errors`; `make check` reports
+`check: 0 ok, 0 drift, 0 mismatch, 0 failed`; `make run P=does-not-exist`
+prints `not in catalog: does-not-exist` and exits 1. Coverage: Java 100/100,
+Python 100/100, TypeScript 100/100, JavaScript 100/100, orchestrator 99/94
+(lines/branches, %). CI workflows cannot run until a remote exists.

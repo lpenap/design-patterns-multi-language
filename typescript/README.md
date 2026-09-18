@@ -14,9 +14,9 @@ the CLI. Files run directly through `tsx`; there is no build output.
 ```bash
 pnpm test                  # vitest with v8 coverage, gate > 90 % lines and branches
 pnpm lint                  # tsc --noEmit and eslint
-pnpm cli list              # JSON array of pattern ids
-pnpm cli run strategy
-pnpm cli run -- --all
+pnpm exec tsx src/cli.ts list            # JSON array of pattern ids, exit 0
+pnpm exec tsx src/cli.ts run strategy    # lines to stdout, exit 0; unknown id → stderr, exit 2
+pnpm exec tsx src/cli.ts run --all       # every example, separated by 40 dashes
 ```
 
 ## Conventions

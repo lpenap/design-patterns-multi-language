@@ -18,18 +18,18 @@ export JAVA_HOME
 MVN := cd java && ./mvnw -q -ntp
 UV := cd python && uv run
 PNPM := pnpm
-RUNNER := $(PNPM) --filter @patterns/runner exec patterns
+RUNNER := node tools/runner/bin/patterns.js
 
 .PHONY: setup test lint list run run-all snapshot check validate clean \
-        test-java test-python test-typescript test-javascript \
-        lint-java lint-python lint-typescript lint-javascript
+        test-java test-python test-typescript test-javascript test-runner \
+        lint-java lint-python lint-typescript lint-javascript lint-runner
 
 setup:
 	$(PNPM) install --frozen-lockfile
 	cd python && uv sync
 	$(MVN) -DskipTests verify
 
-test: test-java test-python test-typescript test-javascript
+test: test-java test-python test-typescript test-javascript test-runner
 
 test-java:
 	$(MVN) verify
@@ -43,7 +43,10 @@ test-typescript:
 test-javascript:
 	$(PNPM) --filter javascript test
 
-lint: lint-java lint-python lint-typescript lint-javascript
+test-runner:
+	$(PNPM) --filter @patterns/runner test
+
+lint: lint-java lint-python lint-typescript lint-javascript lint-runner
 
 lint-java:
 	$(MVN) -DskipTests compile
@@ -58,6 +61,9 @@ lint-typescript:
 
 lint-javascript:
 	$(PNPM) --filter javascript lint
+
+lint-runner:
+	$(PNPM) --filter @patterns/runner lint
 
 list:
 	$(RUNNER) list $(if $(L),--lang $(L),)

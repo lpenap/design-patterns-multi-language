@@ -141,11 +141,11 @@ Language-first monorepo (constitution I): `java/`, `python/`, `typescript/`, `ja
 
 ## Phase 6: Integration & Polish
 
-- [ ] T055 [P] Verify `Makefile` `RUNNER` invocation works from a clean shell (`make list`, `make run P=strategy L=java`, `make run-all L=python`, `make snapshot`, `make check`, `make validate`); fix the pnpm filter/exec form if needed
-- [ ] T056 [P] Update `tools/runner/README.md` (commands now real, fixture testing approach), `java/README.md`, `python/README.md`, `typescript/README.md`, `javascript/README.md` (exact `list`/`run` commands and exit codes), root `README.md` "How it fits together" if anything changed
-- [ ] T057 [P] `PLAN.md`: mark Phase 1 spec 001 as delivered; confirm `catalog.yaml` `run:` commands match what the orchestrator executes
-- [ ] T058 Run the full `quickstart.md` script end to end on this machine; record the outcome in `specs/001-cli-runner/quickstart.md` under a "Validated" note with date
-- [ ] T059 `make lint && make test` green for all five projects; coverage > 90 % line and branch confirmed in each report; commit on `001-cli-runner`
+- [x] T055 [P] Verify `Makefile` `RUNNER` invocation works from a clean shell (`make list`, `make run P=strategy L=java`, `make run-all L=python`, `make snapshot`, `make check`, `make validate`); fix the pnpm filter/exec form if needed
+- [x] T056 [P] Update `tools/runner/README.md` (commands now real, fixture testing approach), `java/README.md`, `python/README.md`, `typescript/README.md`, `javascript/README.md` (exact `list`/`run` commands and exit codes), root `README.md` "How it fits together" if anything changed
+- [x] T057 [P] `PLAN.md`: mark Phase 1 spec 001 as delivered; confirm `catalog.yaml` `run:` commands match what the orchestrator executes
+- [x] T058 Run the full `quickstart.md` script end to end on this machine; record the outcome in `specs/001-cli-runner/quickstart.md` under a "Validated" note with date
+- [x] T059 `make lint && make test` green for all five projects; coverage > 90 % line and branch confirmed in each report; commit on `001-cli-runner`
 
 ---
 

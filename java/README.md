@@ -14,9 +14,9 @@ Design patterns in Java 25, one package per pattern under
 
 ```bash
 ./mvnw verify                          # compile, test, coverage gate (> 90 % line and branch)
-java -jar target/patterns.jar list     # JSON array of pattern ids
-java -jar target/patterns.jar run strategy
-java -jar target/patterns.jar run --all
+java -jar target/patterns.jar list            # JSON array of pattern ids, exit 0
+java -jar target/patterns.jar run strategy    # lines to stdout, exit 0; unknown id → stderr, exit 2
+java -jar target/patterns.jar run --all       # every example, separated by 40 dashes
 ```
 
 ## Conventions
