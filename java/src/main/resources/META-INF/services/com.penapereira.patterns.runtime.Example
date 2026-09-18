@@ -6,3 +6,4 @@ com.penapereira.patterns.singleton.SingletonExample
 com.penapereira.patterns.adapter.AdapterExample
 com.penapereira.patterns.decorator.DecoratorExample
 com.penapereira.patterns.chainofresponsibility.ChainOfResponsibilityExample
+com.penapereira.patterns.observer.ObserverExample

@@ -1,0 +1,4 @@
+Executing Observer Pattern Implementation
+  observer1 notified: state 0 -> 5
+  observer2 notified: state 0 -> 5
+  observer1 notified: state 5 -> 10

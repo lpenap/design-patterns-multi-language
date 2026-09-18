@@ -14,3 +14,5 @@ Shared bibliography. Pattern documents cite these by number, e.g. `[1, p. 315]`.
 10. J. Gosling, B. Joy, G. Steele, G. Bracha, A. Buckley, D. Smith and G. Bierman, *The Java Language Specification*, Java SE 25 edition, §12.4.
 11. J. Manson, W. Pugh and S. V. Adve, "The Java Memory Model," in *Proc. 32nd ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL '05)*, 2005, pp. 378–391.
 12. D. Bacon et al., "The 'Double-Checked Locking is Broken' Declaration," 2001. Available online.
+13. G. Hamilton (ed.), *JavaBeans API Specification*, version 1.01. Sun Microsystems, 1997, §7 (Properties, bound properties).
+14. Oracle, *Java Platform SE API Specification*, class `java.util.Observable`, deprecation note.
