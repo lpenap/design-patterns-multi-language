@@ -21,7 +21,9 @@ describe("indexExamples", () => {
     assert.throws(() => indexExamples([fixtureAlpha, fixtureAlpha]), /duplicate example id: fixture-alpha/);
   });
 
-  it("production registry is empty until patterns are added", () => {
-    assert.equal(indexExamples(examples).size, 0);
+  it("production registry holds only kebab-case, non-fixture ids", () => {
+    const ids = [...indexExamples(examples).keys()];
+    assert.ok(ids.includes("strategy"));
+    assert.ok(ids.every((id) => /^[a-z][a-z0-9]*(-[a-z0-9]+)*$/.test(id) && !id.startsWith("fixture-")));
   });
 });

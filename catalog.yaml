@@ -230,7 +230,11 @@ patterns:
     intent: Define a family of interchangeable algorithms and let the client choose one at run time.
     doc: docs/patterns/strategy.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/strategy
+      python: python/src/patterns/strategy
+      typescript: typescript/src/strategy
+      javascript: javascript/src/strategy
   - id: template-method
     icon: "📝"
     name: Template Method
