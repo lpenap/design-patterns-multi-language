@@ -64,7 +64,7 @@ generated from [`catalog.yaml`](catalog.yaml); do not edit it by hand.
 
 | | Pattern | Intent | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|---|
-| 🔌 | [Adapter](docs/patterns/adapter.md) | Convert the interface of a class into another interface clients expect. | pending | pending | pending | pending |
+| 🔌 | [Adapter](docs/patterns/adapter.md) | Convert the interface of a class into another interface clients expect. | done | done | done | done |
 | 🌉 | [Bridge](docs/patterns/bridge.md) | Decouple an abstraction from its implementation so the two can vary independently. | pending | pending | pending | pending |
 | 🌿 | [Composite](docs/patterns/composite.md) | Compose objects into tree structures and let clients treat individual objects and compositions uniformly. | pending | pending | pending | pending |
 | 🍧 | [Decorator](docs/patterns/decorator.md) | Attach additional responsibilities to an object dynamically. | pending | pending | pending | pending |

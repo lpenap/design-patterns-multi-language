@@ -116,7 +116,11 @@ patterns:
     intent: Convert the interface of a class into another interface clients expect.
     doc: docs/patterns/adapter.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/adapter
+      python: python/src/patterns/adapter
+      typescript: typescript/src/adapter
+      javascript: javascript/src/adapter
   - id: bridge
     icon: "🌉"
     name: Bridge
