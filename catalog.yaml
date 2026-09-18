@@ -102,7 +102,11 @@ patterns:
     intent: Ensure a class has exactly one instance and provide a global point of access to it.
     doc: docs/patterns/singleton.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/singleton
+      python: python/src/patterns/singleton
+      typescript: typescript/src/singleton
+      javascript: javascript/src/singleton
 
   # ---- Structural ----
   - id: adapter

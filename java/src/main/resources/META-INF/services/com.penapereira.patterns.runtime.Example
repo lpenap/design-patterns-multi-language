@@ -2,3 +2,4 @@ com.penapereira.patterns.strategy.StrategyExample
 com.penapereira.patterns.abstractfactory.AbstractFactoryExample
 com.penapereira.patterns.factorymethod.FactoryMethodExample
 com.penapereira.patterns.simplefactory.SimpleFactoryExample
+com.penapereira.patterns.singleton.SingletonExample
