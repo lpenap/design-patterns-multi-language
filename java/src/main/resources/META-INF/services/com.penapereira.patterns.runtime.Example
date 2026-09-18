@@ -8,3 +8,4 @@ com.penapereira.patterns.decorator.DecoratorExample
 com.penapereira.patterns.chainofresponsibility.ChainOfResponsibilityExample
 com.penapereira.patterns.observer.ObserverExample
 com.penapereira.patterns.templatemethod.TemplateMethodExample
+com.penapereira.patterns.producerconsumer.ProducerConsumerExample
