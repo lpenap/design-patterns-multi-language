@@ -93,7 +93,7 @@ generated from [`catalog.yaml`](catalog.yaml); do not edit it by hand.
 
 | | Construct | Problem | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|---|
-| 🔄 | [Producer/Consumer](docs/patterns/producer-consumer.md) | Coordinate threads that generate data with threads that process it through a bounded, thread-safe buffer. | pending | pending | pending | pending |
+| 🔄 | [Producer/Consumer](docs/patterns/producer-consumer.md) | Coordinate threads that generate data with threads that process it through a bounded, thread-safe buffer. | done | done | done | done |
 <!-- catalogue:end -->
 
 ## Repository layout

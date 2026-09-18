@@ -293,9 +293,13 @@ patterns:
     icon: "🔄"
     name: Producer/Consumer
     category: concurrency
-    # Threads make interleaving nondeterministic; the spec decides whether the
-    # example can be made strict (fixed counts, ordered join) or stays loose.
-    parity: loose
+    # The example prints a summary (produced, consumed sorted, exactly-once),
+    # never the interleaving, so the output is identical on every run.
+    parity: strict
     intent: Coordinate threads that generate data with threads that process it through a bounded, thread-safe buffer.
     doc: docs/patterns/producer-consumer.md
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/producerconsumer
+      python: python/src/patterns/producerconsumer
+      typescript: typescript/src/producer-consumer
+      javascript: javascript/src/producer-consumer

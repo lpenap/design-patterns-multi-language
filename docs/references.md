@@ -16,3 +16,5 @@ Shared bibliography. Pattern documents cite these by number, e.g. `[1, p. 315]`.
 12. D. Bacon et al., "The 'Double-Checked Locking is Broken' Declaration," 2001. Available online.
 13. G. Hamilton (ed.), *JavaBeans API Specification*, version 1.01. Sun Microsystems, 1997, §7 (Properties, bound properties).
 14. Oracle, *Java Platform SE API Specification*, class `java.util.Observable`, deprecation note.
+15. E. W. Dijkstra, "Cooperating Sequential Processes," EWD 123, Technological University Eindhoven, 1965. Reprinted in F. Genuys (ed.), *Programming Languages*, Academic Press, 1968, pp. 43–112.
+16. D. Lea, *Concurrent Programming in Java: Design Principles and Patterns*, 2nd ed. Addison-Wesley, 1999.
