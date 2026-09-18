@@ -477,7 +477,7 @@ table, with the conformance job green. Together they prove the contract and the
 Spec Kit workflow before scaling either.
 
 **Phase 2 – Specs 003–012: the remaining 10 patterns (~½ day each across the four
-languages).** One spec and one branch per pattern from the pattern template. Java is
+languages).** *Delivered 2026-09-18, PRs #2–#11. Factory Method, Observer and Producer/Consumer were restructured to the literature's participants and made deterministic; Producer/Consumer parity is strict.* One spec and one branch per pattern from the pattern template. Java is
 a move; the other three are fresh idiomatic implementations. A spec closes when the
 definition of done (§7.4) holds and the branch is merged into `master`.
 
