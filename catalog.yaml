@@ -190,7 +190,11 @@ patterns:
     intent: Pass a request along a chain of handlers until one of them handles it.
     doc: docs/patterns/chain-of-responsibility.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/chainofresponsibility
+      python: python/src/patterns/chainofresponsibility
+      typescript: typescript/src/chain-of-responsibility
+      javascript: javascript/src/chain-of-responsibility
   - id: command
     icon: "👫"
     name: Command

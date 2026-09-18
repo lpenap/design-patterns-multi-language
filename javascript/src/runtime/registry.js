@@ -1,5 +1,6 @@
 import { abstractFactoryExample } from "../abstract-factory/example.js";
 import { adapterExample } from "../adapter/example.js";
+import { chainOfResponsibilityExample } from "../chain-of-responsibility/example.js";
 import { decoratorExample } from "../decorator/example.js";
 import { factoryMethodExample } from "../factory-method/example.js";
 import { simpleFactoryExample } from "../simple-factory/example.js";
@@ -8,4 +9,4 @@ import { strategyExample } from "../strategy/example.js";
 
 // Every pattern folder adds one import line here. The CLI receives this array,
 // so tests can pass fixtures instead and the production list stays exact.
-export const examples = [abstractFactoryExample, adapterExample, decoratorExample, factoryMethodExample, simpleFactoryExample, singletonExample, strategyExample];
+export const examples = [abstractFactoryExample, adapterExample, chainOfResponsibilityExample, decoratorExample, factoryMethodExample, simpleFactoryExample, singletonExample, strategyExample];
