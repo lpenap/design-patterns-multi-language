@@ -58,7 +58,7 @@ generated from [`catalog.yaml`](catalog.yaml); do not edit it by hand.
 | 🏗️ | [Simple Factory](docs/patterns/simple-factory.md) | Centralise the creation of related products behind a single method that selects the concrete class. | done | done | done | done |
 | 🔂 | [Monostate](docs/patterns/monostate.md) | Share all state among every instance of a class while leaving instantiation unconstrained. | pending | pending | pending | pending |
 | 🃏 | [Prototype](docs/patterns/prototype.md) | Specify the kinds of objects to create using a prototypical instance, and create new objects by copying it. | pending | pending | pending | pending |
-| 💍 | [Singleton](docs/patterns/singleton.md) | Ensure a class has exactly one instance and provide a global point of access to it. | pending | pending | pending | pending |
+| 💍 | [Singleton](docs/patterns/singleton.md) | Ensure a class has exactly one instance and provide a global point of access to it. | done | done | done | done |
 
 ### Structural
 

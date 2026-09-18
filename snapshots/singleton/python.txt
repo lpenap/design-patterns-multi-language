@@ -1,0 +1,3 @@
+Executing Singleton Pattern Implementation
+  Same instance returned twice: true
+  Singleton is doing something

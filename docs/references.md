@@ -11,3 +11,6 @@ Shared bibliography. Pattern documents cite these by number, e.g. `[1, p. 315]`.
 7. S. Ball and J. Crawford, "Monostate Classes: The Power of One," *C++ Report*, vol. 9, no. 5, 1997.
 8. R. C. Martin, *Agile Software Development: Principles, Patterns, and Practices*. Prentice Hall, 2003.
 9. B. Meyer, *Object-Oriented Software Construction*. Prentice Hall, 1988, §2.3 (the open-closed principle).
+10. J. Gosling, B. Joy, G. Steele, G. Bracha, A. Buckley, D. Smith and G. Bierman, *The Java Language Specification*, Java SE 25 edition, §12.4.
+11. J. Manson, W. Pugh and S. V. Adve, "The Java Memory Model," in *Proc. 32nd ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL '05)*, 2005, pp. 378–391.
+12. D. Bacon et al., "The 'Double-Checked Locking is Broken' Declaration," 2001. Available online.
