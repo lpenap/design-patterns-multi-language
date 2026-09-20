@@ -1,5 +1,9 @@
 import type { Example } from "../runtime/contract.ts";
-import { Abstraction, ConcreteImplementorA, ConcreteImplementorB, type Implementor, RefinedAbstraction } from "./bridge.ts";
+import { Abstraction } from "./abstraction.ts";
+import { ConcreteImplementorA } from "./concrete-implementor-a.ts";
+import { ConcreteImplementorB } from "./concrete-implementor-b.ts";
+import type { Implementor } from "./implementor.ts";
+import { RefinedAbstraction } from "./refined-abstraction.ts";
 
 /** The client: combines each abstraction with each implementor. */
 export const bridgeExample: Example = {
