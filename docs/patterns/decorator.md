@@ -53,7 +53,7 @@ classDiagram
 
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
-| Component | The interface shared by objects that can have responsibilities added: `operation()`. | [`Component`](../../java/src/main/java/com/penapereira/patterns/decorator/Component.java) | [`Component`](../../python/src/patterns/decorator/component.py) (Protocol) | [`Component`](../../typescript/src/decorator/component.ts) | implicit: any object with `operation()` ([`decorator.js`](../../javascript/src/decorator/decorator.js)) |
+| Component | The interface shared by objects that can have responsibilities added: `operation()`. | [`Component`](../../java/src/main/java/com/penapereira/patterns/decorator/Component.java) | [`Component`](../../python/src/patterns/decorator/component.py) (Protocol) | [`Component`](../../typescript/src/decorator/component.ts) | implicit: any object with `operation()` ([`decorator/`](../../javascript/src/decorator/)) |
 | ConcreteComponent | The object being decorated. | [`ConcreteComponent`](../../java/src/main/java/com/penapereira/patterns/decorator/ConcreteComponent.java) | `ConcreteComponent` | `ConcreteComponent` | `ConcreteComponent` |
 | Decorator | Implements `Component`, holds the wrapped component and forwards to it by default. | [`Decorator`](../../java/src/main/java/com/penapereira/patterns/decorator/Decorator.java) | `Decorator` | `Decorator` | `Decorator` |
 | ConcreteDecorator | Adds its responsibility around the delegated call. | [`ConcreteDecoratorA`](../../java/src/main/java/com/penapereira/patterns/decorator/ConcreteDecoratorA.java), `ConcreteDecoratorB` | `ConcreteDecoratorA`, `ConcreteDecoratorB` | `ConcreteDecoratorA`, `ConcreteDecoratorB` | `ConcreteDecoratorA`, `ConcreteDecoratorB` |
