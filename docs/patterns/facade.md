@@ -44,7 +44,7 @@ classDiagram
 
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
-| Facade | Knows which subsystem classes handle a request and delegates to them in the right order. | [`Facade`](../../java/src/main/java/com/penapereira/patterns/facade/Facade.java) | [`Facade`](../../python/src/patterns/facade/__init__.py) | [`Facade`](../../typescript/src/facade/facade.ts) | [`Facade`](../../javascript/src/facade/facade.js) |
+| Facade | Knows which subsystem classes handle a request and delegates to them in the right order. | [`Facade`](../../java/src/main/java/com/penapereira/patterns/facade/Facade.java) | [`Facade`](../../python/src/patterns/facade/facade.py) | [`Facade`](../../typescript/src/facade/facade.ts) | [`Facade`](../../javascript/src/facade/facade.js) |
 | Subsystem classes | Implement the subsystem's functionality; know nothing of the façade. | [`SubsystemA`](../../java/src/main/java/com/penapereira/patterns/facade/SubsystemA.java), `SubsystemB`, `SubsystemC` | `SubsystemA`, `SubsystemB`, `SubsystemC` | `SubsystemA`, `SubsystemB`, `SubsystemC` | `SubsystemA`, `SubsystemB`, `SubsystemC` |
 | Client | Talks to the façade only. | [`FacadeExample`](../../java/src/main/java/com/penapereira/patterns/facade/FacadeExample.java) | `FacadeExample` | [`facadeExample`](../../typescript/src/facade/example.ts) | [`facadeExample`](../../javascript/src/facade/example.js) |
 
