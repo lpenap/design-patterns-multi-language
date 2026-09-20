@@ -10,7 +10,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Prototype — PR #46
 - [x] Singleton — PR #49
 - [x] Adapter — PR #52
-- [ ] Bridge — branch `031-typescript-bridge`
+- [x] Bridge — PR #55
 - [ ] Composite — branch `031-typescript-composite`
 - [ ] Decorator — branch `031-typescript-decorator`
 - [ ] Façade — branch `031-typescript-facade`
