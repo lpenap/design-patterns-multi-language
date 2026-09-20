@@ -526,7 +526,7 @@ Order and status (tick when merged):
 | 024 | Iterator | behavioural | ✅ #24 |
 | 025 | Mediator | behavioural | ✅ #25 |
 | 026 | Memento | behavioural | ✅ #26 |
-| 027 | Visitor | behavioural | ☐ |
+| 027 | Visitor | behavioural | ✅ #27 |
 | 028 | Interpreter | behavioural | ☐ |
 
 Interpreter is last because it is the largest. Unlike Phase 2 there is no
