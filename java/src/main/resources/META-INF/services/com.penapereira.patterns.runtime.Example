@@ -20,3 +20,4 @@ com.penapereira.patterns.prototype.PrototypeExample
 com.penapereira.patterns.monostate.MonostateExample
 com.penapereira.patterns.command.CommandExample
 com.penapereira.patterns.state.StateExample
+com.penapereira.patterns.iterator.IteratorExample

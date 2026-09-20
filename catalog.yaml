@@ -258,7 +258,11 @@ patterns:
     intent: Provide sequential access to the elements of an aggregate without exposing its underlying representation.
     doc: docs/patterns/iterator.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/iterator
+      python: python/src/patterns/iterator
+      typescript: typescript/src/iterator
+      javascript: javascript/src/iterator
   - id: mediator
     icon: "💐"
     name: Mediator
