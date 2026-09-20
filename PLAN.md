@@ -597,7 +597,7 @@ Status per pattern (tick with the PR number when merged):
 | Monostate | ✅ #42 | ✅ #43 | ✅ #44 |
 | Prototype | ✅ #45 | ✅ #46 | ✅ #47 |
 | Singleton | ✅ #48 | ✅ #49 | ✅ #50 |
-| Adapter | ✅ #51 | ☐ | ☐ |
+| Adapter | ✅ #51 | ✅ #52 | ☐ |
 | Bridge | ☐ | ☐ | ☐ |
 | Composite | ☐ | ☐ | ☐ |
 | Decorator | ☐ | ☐ | ☐ |

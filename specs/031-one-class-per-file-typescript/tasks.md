@@ -9,7 +9,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Monostate — PR #43
 - [x] Prototype — PR #46
 - [x] Singleton — PR #49
-- [ ] Adapter — branch `031-typescript-adapter`
+- [x] Adapter — PR #52
 - [ ] Bridge — branch `031-typescript-bridge`
 - [ ] Composite — branch `031-typescript-composite`
 - [ ] Decorator — branch `031-typescript-decorator`
