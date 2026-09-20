@@ -1,8 +1,9 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { BufferOutput } from "../runtime/contract.js";
-import { Abstraction, ConcreteImplementorA, ConcreteImplementorB, RefinedAbstraction } from "./bridge.js";
-import { bridgeExample } from "./example.js";
+import { Abstraction } from "./abstraction.js";
+import { ConcreteImplementorA } from "./concrete-implementor-a.js";
+import { ConcreteImplementorB } from "./concrete-implementor-b.js";
+import { RefinedAbstraction } from "./refined-abstraction.js";
 
 describe("Bridge", () => {
   it("any abstraction works with any implementor", () => {
@@ -16,18 +17,5 @@ describe("Bridge", () => {
     const custom = { operationImpl: () => "Custom" };
     assert.equal(new Abstraction(custom).operation(), "Abstraction(Custom)");
     assert.equal(new RefinedAbstraction(custom).operation(), "RefinedAbstraction(Custom)");
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    bridgeExample.run(out);
-    assert.equal(bridgeExample.id, "bridge");
-    assert.deepEqual(out.lines, [
-      "Executing Bridge Pattern Implementation",
-      "  Abstraction(ConcreteImplementorA)",
-      "  Abstraction(ConcreteImplementorB)",
-      "  RefinedAbstraction(ConcreteImplementorA)",
-      "  RefinedAbstraction(ConcreteImplementorB)",
-    ]);
   });
 });

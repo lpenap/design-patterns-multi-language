@@ -1,4 +1,7 @@
-import { Abstraction, ConcreteImplementorA, ConcreteImplementorB, RefinedAbstraction } from "./bridge.js";
+import { Abstraction } from "./abstraction.js";
+import { ConcreteImplementorA } from "./concrete-implementor-a.js";
+import { ConcreteImplementorB } from "./concrete-implementor-b.js";
+import { RefinedAbstraction } from "./refined-abstraction.js";
 
 /** The client: combines each abstraction with each implementor. */
 export const bridgeExample = {
