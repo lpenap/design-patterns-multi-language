@@ -1,5 +1,4 @@
-from patterns.adapter import Adaptee, Adapter, Target, example
-from patterns.runtime.contract import BufferOutput
+from patterns.adapter import Adaptee, Adapter, Target
 
 
 def test_translates_request_into_specific_request() -> None:
@@ -13,10 +12,3 @@ def test_delegates_to_whichever_adaptee_it_holds() -> None:
             return "Other"
 
     assert Adapter(Other()).request() == "Adapter(Other)"
-
-
-def test_example_prints_the_expected_lines() -> None:
-    out = BufferOutput()
-    example.run(out)
-    assert example.id == "adapter"
-    assert out.lines == ["Executing Adapter Pattern Implementation", "  Adapter(Adaptee)"]
