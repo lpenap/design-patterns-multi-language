@@ -22,3 +22,4 @@ com.penapereira.patterns.command.CommandExample
 com.penapereira.patterns.state.StateExample
 com.penapereira.patterns.iterator.IteratorExample
 com.penapereira.patterns.mediator.MediatorExample
+com.penapereira.patterns.memento.MementoExample
