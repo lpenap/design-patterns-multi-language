@@ -527,7 +527,7 @@ Order and status (tick when merged):
 | 025 | Mediator | behavioural | ✅ #25 |
 | 026 | Memento | behavioural | ✅ #26 |
 | 027 | Visitor | behavioural | ✅ #27 |
-| 028 | Interpreter | behavioural | ☐ |
+| 028 | Interpreter | behavioural | ✅ #28 |
 
 Interpreter is last because it is the largest. Unlike Phase 2 there is no
 original source: each design comes from Gamma et al. (and Ball & Crawford /
