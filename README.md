@@ -56,7 +56,7 @@ generated from [`catalog.yaml`](catalog.yaml); do not edit it by hand.
 | 👷 | [Builder](docs/patterns/builder.md) | Separate the construction of a complex object from its representation so the same process can create different representations. | done | done | done | done |
 | 🏭 | [Factory Method](docs/patterns/factory-method.md) | Define an interface for creating an object, but let subclasses decide which class to instantiate. | done | done | done | done |
 | 🏗️ | [Simple Factory](docs/patterns/simple-factory.md) | Centralise the creation of related products behind a single method that selects the concrete class. | done | done | done | done |
-| 🔂 | [Monostate](docs/patterns/monostate.md) | Share all state among every instance of a class while leaving instantiation unconstrained. | pending | pending | pending | pending |
+| 🔂 | [Monostate](docs/patterns/monostate.md) | Share all state among every instance of a class while leaving instantiation unconstrained. | done | done | done | done |
 | 🃏 | [Prototype](docs/patterns/prototype.md) | Specify the kinds of objects to create using a prototypical instance, and create new objects by copying it. | done | done | done | done |
 | 💍 | [Singleton](docs/patterns/singleton.md) | Ensure a class has exactly one instance and provide a global point of access to it. | done | done | done | done |
 

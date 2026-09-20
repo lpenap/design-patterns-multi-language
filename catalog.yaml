@@ -90,7 +90,11 @@ patterns:
     intent: Share all state among every instance of a class while leaving instantiation unconstrained.
     doc: docs/patterns/monostate.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/monostate
+      python: python/src/patterns/monostate
+      typescript: typescript/src/monostate
+      javascript: javascript/src/monostate
   - id: prototype
     icon: "🃏"
     name: Prototype
