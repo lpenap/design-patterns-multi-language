@@ -270,7 +270,11 @@ patterns:
     intent: Define an object that encapsulates how a set of objects interact, keeping them from referring to each other explicitly.
     doc: docs/patterns/mediator.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/mediator
+      python: python/src/patterns/mediator
+      typescript: typescript/src/mediator
+      javascript: javascript/src/mediator
   - id: memento
     icon: "💾"
     name: Memento

@@ -81,7 +81,7 @@ generated from [`catalog.yaml`](catalog.yaml); do not edit it by hand.
 | 👫 | [Command](docs/patterns/command.md) | Encapsulate a request as an object, allowing requests to be queued, logged and undone. | done | done | done | done |
 | 🎶 | [Interpreter](docs/patterns/interpreter.md) | Given a language, define a representation for its grammar along with an interpreter that uses it. | pending | pending | pending | pending |
 | 🍫 | [Iterator](docs/patterns/iterator.md) | Provide sequential access to the elements of an aggregate without exposing its underlying representation. | done | done | done | done |
-| 💐 | [Mediator](docs/patterns/mediator.md) | Define an object that encapsulates how a set of objects interact, keeping them from referring to each other explicitly. | pending | pending | pending | pending |
+| 💐 | [Mediator](docs/patterns/mediator.md) | Define an object that encapsulates how a set of objects interact, keeping them from referring to each other explicitly. | done | done | done | done |
 | 💾 | [Memento](docs/patterns/memento.md) | Capture and externalise an object's internal state so it can be restored later, without violating encapsulation. | pending | pending | pending | pending |
 | 👓 | [Observer](docs/patterns/observer.md) | Define a one-to-many dependency so that dependents are notified when a subject changes state. | done | done | done | done |
 | 🐉 | [State](docs/patterns/state.md) | Allow an object to alter its behaviour when its internal state changes; the object appears to change class. | done | done | done | done |
