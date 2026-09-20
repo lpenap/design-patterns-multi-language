@@ -16,3 +16,4 @@ com.penapereira.patterns.flyweight.FlyweightExample
 com.penapereira.patterns.protectionproxy.ProtectionProxyExample
 com.penapereira.patterns.virtualproxy.VirtualProxyExample
 com.penapereira.patterns.builder.BuilderExample
+com.penapereira.patterns.prototype.PrototypeExample

@@ -1,0 +1,7 @@
+Executing Prototype Pattern Implementation
+  Original: ConcretePrototype1(state=alpha)
+  Clone: ConcretePrototype1(state=alpha)
+  Clone is a distinct object: true
+  Clone after setState(beta): ConcretePrototype1(state=beta)
+  Original after the clone changed: ConcretePrototype1(state=alpha)
+  ConcretePrototype2 clone: ConcretePrototype2(state=gamma)
