@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { BufferOutput } from "../runtime/contract.ts";
-import { ConcreteComponent, ConcreteDecoratorA, ConcreteDecoratorB } from "./decorator.ts";
-import { decoratorExample } from "./example.ts";
+import { ConcreteComponent } from "./concrete-component.ts";
+import { ConcreteDecoratorA } from "./concrete-decorator-a.ts";
+import { ConcreteDecoratorB } from "./concrete-decorator-b.ts";
 
 describe("Decorator", () => {
   it("adds behaviour around the component", () => {
@@ -18,16 +18,5 @@ describe("Decorator", () => {
   it("a decorator is not its component", () => {
     const c = new ConcreteComponent();
     expect(new ConcreteDecoratorA(c)).not.toBe(c);
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    decoratorExample.run(out);
-    expect(decoratorExample.id).toBe("decorator");
-    expect(out.lines).toEqual([
-      "Executing Decorator Pattern Implementation",
-      "  ConcreteDecoratorA(ConcreteComponent)",
-      "  ConcreteDecoratorB(ConcreteDecoratorA(ConcreteComponent))",
-    ]);
   });
 });

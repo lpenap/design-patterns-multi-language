@@ -1,5 +1,8 @@
 import type { Example } from "../runtime/contract.ts";
-import { type Component, ConcreteComponent, ConcreteDecoratorA, ConcreteDecoratorB } from "./decorator.ts";
+import type { Component } from "./component.ts";
+import { ConcreteComponent } from "./concrete-component.ts";
+import { ConcreteDecoratorA } from "./concrete-decorator-a.ts";
+import { ConcreteDecoratorB } from "./concrete-decorator-b.ts";
 
 /** The client: uses decorated and undecorated objects alike through Component. */
 export const decoratorExample: Example = {
