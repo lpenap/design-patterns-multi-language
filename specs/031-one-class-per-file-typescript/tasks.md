@@ -2,7 +2,7 @@
 
 One task = one pull request. Tick with the PR number when merged.
 
-- [ ] Abstract Factory — branch `031-typescript-abstract-factory`
+- [x] Abstract Factory — PR #31
 - [ ] Builder — branch `031-typescript-builder`
 - [ ] Factory Method — branch `031-typescript-factory-method`
 - [ ] Simple Factory — branch `031-typescript-simple-factory`
