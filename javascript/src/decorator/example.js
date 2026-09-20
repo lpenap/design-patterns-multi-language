@@ -1,4 +1,6 @@
-import { ConcreteComponent, ConcreteDecoratorA, ConcreteDecoratorB } from "./decorator.js";
+import { ConcreteComponent } from "./concrete-component.js";
+import { ConcreteDecoratorA } from "./concrete-decorator-a.js";
+import { ConcreteDecoratorB } from "./concrete-decorator-b.js";
 
 /** The client: uses decorated and undecorated objects alike through `operation()`. */
 export const decoratorExample = {

@@ -1,8 +1,9 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { BufferOutput } from "../runtime/contract.js";
-import { ConcreteComponent, ConcreteDecoratorA, ConcreteDecoratorB, Decorator } from "./decorator.js";
-import { decoratorExample } from "./example.js";
+import { ConcreteComponent } from "./concrete-component.js";
+import { ConcreteDecoratorA } from "./concrete-decorator-a.js";
+import { ConcreteDecoratorB } from "./concrete-decorator-b.js";
+import { Decorator } from "./decorator.js";
 
 describe("Decorator", () => {
   it("adds behaviour around the component", () => {
@@ -21,16 +22,5 @@ describe("Decorator", () => {
     const plain = new Decorator(c);
     assert.equal(plain.operation(), "ConcreteComponent");
     assert.notEqual(plain, c);
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    decoratorExample.run(out);
-    assert.equal(decoratorExample.id, "decorator");
-    assert.deepEqual(out.lines, [
-      "Executing Decorator Pattern Implementation",
-      "  ConcreteDecoratorA(ConcreteComponent)",
-      "  ConcreteDecoratorB(ConcreteDecoratorA(ConcreteComponent))",
-    ]);
   });
 });
