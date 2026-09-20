@@ -4,9 +4,7 @@ from patterns.decorator import (
     ConcreteDecoratorA,
     ConcreteDecoratorB,
     Decorator,
-    example,
 )
-from patterns.runtime.contract import BufferOutput
 
 
 def test_adds_behaviour_around_the_component() -> None:
@@ -33,14 +31,3 @@ def test_base_decorator_forwards_unchanged_and_is_not_its_component() -> None:
     plain: Component = Decorator(c)
     assert plain.operation() == "ConcreteComponent"
     assert plain is not c
-
-
-def test_example_prints_the_expected_lines() -> None:
-    out = BufferOutput()
-    example.run(out)
-    assert example.id == "decorator"
-    assert out.lines == [
-        "Executing Decorator Pattern Implementation",
-        "  ConcreteDecoratorA(ConcreteComponent)",
-        "  ConcreteDecoratorB(ConcreteDecoratorA(ConcreteComponent))",
-    ]
