@@ -12,3 +12,4 @@ com.penapereira.patterns.producerconsumer.ProducerConsumerExample
 com.penapereira.patterns.bridge.BridgeExample
 com.penapereira.patterns.composite.CompositeExample
 com.penapereira.patterns.facade.FacadeExample
+com.penapereira.patterns.flyweight.FlyweightExample

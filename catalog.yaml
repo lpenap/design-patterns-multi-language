@@ -176,7 +176,11 @@ patterns:
     intent: Use sharing to support large numbers of fine-grained objects efficiently.
     doc: docs/patterns/flyweight.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/flyweight
+      python: python/src/patterns/flyweight
+      typescript: typescript/src/flyweight
+      javascript: javascript/src/flyweight
   - id: protection-proxy
     icon: "☔"
     name: Protection Proxy

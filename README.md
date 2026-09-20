@@ -69,7 +69,7 @@ generated from [`catalog.yaml`](catalog.yaml); do not edit it by hand.
 | 🌿 | [Composite](docs/patterns/composite.md) | Compose objects into tree structures and let clients treat individual objects and compositions uniformly. | done | done | done | done |
 | 🍧 | [Decorator](docs/patterns/decorator.md) | Attach additional responsibilities to an object dynamically. | done | done | done | done |
 | 🎁 | [Façade](docs/patterns/facade.md) | Provide a unified, higher-level interface to a set of interfaces in a subsystem. | done | done | done | done |
-| 🍃 | [Flyweight](docs/patterns/flyweight.md) | Use sharing to support large numbers of fine-grained objects efficiently. | pending | pending | pending | pending |
+| 🍃 | [Flyweight](docs/patterns/flyweight.md) | Use sharing to support large numbers of fine-grained objects efficiently. | done | done | done | done |
 | ☔ | [Protection Proxy](docs/patterns/protection-proxy.md) | Control access to an object by checking the caller's rights before forwarding a request. | pending | pending | pending | pending |
 | 🍬 | [Virtual Proxy](docs/patterns/virtual-proxy.md) | Defer the creation of an expensive object until it is actually needed. | pending | pending | pending | pending |
 
