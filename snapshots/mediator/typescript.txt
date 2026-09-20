@@ -1,0 +1,5 @@
+Executing Mediator Pattern Implementation
+  ConcreteColleague1 sends: hello
+  ConcreteColleague2 receives: hello
+  ConcreteColleague2 sends: hi
+  ConcreteColleague1 receives: hi
