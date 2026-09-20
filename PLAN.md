@@ -590,14 +590,6 @@ Status per pattern (tick with the PR number when merged):
 
 | Pattern | Python | TypeScript | JavaScript |
 |---|---|---|---|
-| Java | ☐ | ☐ | ☐ |
-| Python | ☐ | ☐ | ☐ |
-| TypeScript | ☐ | ☐ | ☐ |
-| JavaScript | ☐ | ☐ | ☐ |
-| Creational | ☐ | ☐ | ☐ |
-| Structural | ☐ | ☐ | ☐ |
-| Behavioural | ☐ | ☐ | ☐ |
-| Concurrency constructs | ☐ | ☐ | ☐ |
 | Abstract Factory | ☐ | ☐ | ☐ |
 | Builder | ☐ | ☐ | ☐ |
 | Factory Method | ☐ | ☐ | ☐ |
