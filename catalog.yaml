@@ -188,7 +188,11 @@ patterns:
     intent: Control access to an object by checking the caller's rights before forwarding a request.
     doc: docs/patterns/protection-proxy.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/protectionproxy
+      python: python/src/patterns/protectionproxy
+      typescript: typescript/src/protection-proxy
+      javascript: javascript/src/protection-proxy
   - id: virtual-proxy
     icon: "🍬"
     name: Virtual Proxy

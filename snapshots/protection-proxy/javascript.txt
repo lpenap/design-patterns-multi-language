@@ -1,0 +1,3 @@
+Executing Protection Proxy Pattern Implementation
+  admin: RealSubject.request()
+  guest: access denied by ProtectionProxy
