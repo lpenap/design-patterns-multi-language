@@ -580,7 +580,7 @@ each task of those specs is one PR.
 
 | Spec | Scope | PRs |
 |---|---|---|
-| 029 | Conventions: constitution 1.1.0, `docs/conventions.md`, pattern templates, validator check in warning mode | 1 |
+| 029 | Conventions: constitution 1.1.0, `docs/conventions.md`, pattern templates, validator check in warning mode | ✅ #29 |
 | 030 | Python, one PR per pattern | 27 |
 | 031 | TypeScript, one PR per pattern | 27 |
 | 032 | JavaScript, one PR per pattern | 27 |
