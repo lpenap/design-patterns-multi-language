@@ -18,3 +18,4 @@ com.penapereira.patterns.virtualproxy.VirtualProxyExample
 com.penapereira.patterns.builder.BuilderExample
 com.penapereira.patterns.prototype.PrototypeExample
 com.penapereira.patterns.monostate.MonostateExample
+com.penapereira.patterns.command.CommandExample

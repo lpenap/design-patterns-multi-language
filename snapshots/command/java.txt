@@ -1,0 +1,4 @@
+Executing Command Pattern Implementation
+  Executed ConcreteCommand(Hello): state = Hello
+  Executed ConcreteCommand(World): state = Hello World
+  Undone ConcreteCommand(World): state = Hello
