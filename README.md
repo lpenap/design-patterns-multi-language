@@ -78,7 +78,7 @@ generated from [`catalog.yaml`](catalog.yaml); do not edit it by hand.
 | | Pattern | Intent | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|---|
 | 🐝 | [Chain of Responsibility](docs/patterns/chain-of-responsibility.md) | Pass a request along a chain of handlers until one of them handles it. | done | done | done | done |
-| 👫 | [Command](docs/patterns/command.md) | Encapsulate a request as an object, allowing requests to be queued, logged and undone. | pending | pending | pending | pending |
+| 👫 | [Command](docs/patterns/command.md) | Encapsulate a request as an object, allowing requests to be queued, logged and undone. | done | done | done | done |
 | 🎶 | [Interpreter](docs/patterns/interpreter.md) | Given a language, define a representation for its grammar along with an interpreter that uses it. | pending | pending | pending | pending |
 | 🍫 | [Iterator](docs/patterns/iterator.md) | Provide sequential access to the elements of an aggregate without exposing its underlying representation. | pending | pending | pending | pending |
 | 💐 | [Mediator](docs/patterns/mediator.md) | Define an object that encapsulates how a set of objects interact, keeping them from referring to each other explicitly. | pending | pending | pending | pending |

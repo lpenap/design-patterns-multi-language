@@ -238,7 +238,11 @@ patterns:
     intent: Encapsulate a request as an object, allowing requests to be queued, logged and undone.
     doc: docs/patterns/command.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/command
+      python: python/src/patterns/command
+      typescript: typescript/src/command
+      javascript: javascript/src/command
   - id: interpreter
     icon: "🎶"
     name: Interpreter
