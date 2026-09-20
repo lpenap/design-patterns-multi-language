@@ -13,3 +13,4 @@ com.penapereira.patterns.bridge.BridgeExample
 com.penapereira.patterns.composite.CompositeExample
 com.penapereira.patterns.facade.FacadeExample
 com.penapereira.patterns.flyweight.FlyweightExample
+com.penapereira.patterns.protectionproxy.ProtectionProxyExample
