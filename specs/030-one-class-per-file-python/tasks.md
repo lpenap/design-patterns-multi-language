@@ -12,7 +12,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Adapter — PR #51
 - [x] Bridge — PR #54
 - [x] Composite — PR #57
-- [ ] Decorator — branch `030-python-decorator`
+- [x] Decorator — PR #60
 - [ ] Façade — branch `030-python-facade`
 - [ ] Flyweight — branch `030-python-flyweight`
 - [ ] Protection Proxy — branch `030-python-protection-proxy`
