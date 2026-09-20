@@ -522,7 +522,7 @@ Order and status (tick when merged):
 | 020 | Prototype | creational | ✅ #19 |
 | 021 | Monostate | creational | ✅ #20 |
 | 022 | Command | behavioural | ✅ #22 |
-| 023 | State | behavioural | ☐ |
+| 023 | State | behavioural | ✅ #23 |
 | 024 | Iterator | behavioural | ☐ |
 | 025 | Mediator | behavioural | ☐ |
 | 026 | Memento | behavioural | ☐ |
