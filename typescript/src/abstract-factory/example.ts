@@ -1,5 +1,7 @@
 import type { Example, Output } from "../runtime/contract.ts";
-import { type AbstractFactory, ConcreteFactory1, ConcreteFactory2 } from "./abstract-factory.ts";
+import type { AbstractFactory } from "./abstract-factory.ts";
+import { ConcreteFactory1 } from "./concrete-factory1.ts";
+import { ConcreteFactory2 } from "./concrete-factory2.ts";
 
 function useFamily(factory: AbstractFactory, out: Output): void {
   out.line(`  ${factory.createProductA().name()}`);
