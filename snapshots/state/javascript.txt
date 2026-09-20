@@ -1,0 +1,4 @@
+Executing State Pattern Implementation
+  Context in ConcreteStateA
+  request() handled by ConcreteStateA, now in ConcreteStateB
+  request() handled by ConcreteStateB, now in ConcreteStateA
