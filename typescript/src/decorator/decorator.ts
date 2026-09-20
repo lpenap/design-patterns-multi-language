@@ -1,14 +1,4 @@
-/** The interface shared by objects that can have responsibilities added. */
-export interface Component {
-  operation(): string;
-}
-
-/** The object being decorated. */
-export class ConcreteComponent implements Component {
-  operation(): string {
-    return "ConcreteComponent";
-  }
-}
+import type { Component } from "./component.ts";
 
 /** Holds the wrapped component and forwards to it; subclasses add behaviour. */
 export abstract class Decorator implements Component {
@@ -16,17 +6,5 @@ export abstract class Decorator implements Component {
 
   operation(): string {
     return this.component.operation();
-  }
-}
-
-export class ConcreteDecoratorA extends Decorator {
-  override operation(): string {
-    return `ConcreteDecoratorA(${super.operation()})`;
-  }
-}
-
-export class ConcreteDecoratorB extends Decorator {
-  override operation(): string {
-    return `ConcreteDecoratorB(${super.operation()})`;
   }
 }
