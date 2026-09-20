@@ -294,7 +294,11 @@ patterns:
     intent: Allow an object to alter its behaviour when its internal state changes; the object appears to change class.
     doc: docs/patterns/state.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/state
+      python: python/src/patterns/state
+      typescript: typescript/src/state
+      javascript: javascript/src/state
   - id: strategy
     icon: "💡"
     name: Strategy
