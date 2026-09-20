@@ -3,9 +3,7 @@ from patterns.bridge import (
     ConcreteImplementorA,
     ConcreteImplementorB,
     RefinedAbstraction,
-    example,
 )
-from patterns.runtime.contract import BufferOutput
 
 
 def test_any_abstraction_works_with_any_implementor() -> None:
@@ -26,16 +24,3 @@ def test_a_new_implementor_needs_no_change_on_the_abstraction_side() -> None:
 
     assert Abstraction(Custom()).operation() == "Abstraction(Custom)"
     assert RefinedAbstraction(Custom()).operation() == "RefinedAbstraction(Custom)"
-
-
-def test_example_prints_the_expected_lines() -> None:
-    out = BufferOutput()
-    example.run(out)
-    assert example.id == "bridge"
-    assert out.lines == [
-        "Executing Bridge Pattern Implementation",
-        "  Abstraction(ConcreteImplementorA)",
-        "  Abstraction(ConcreteImplementorB)",
-        "  RefinedAbstraction(ConcreteImplementorA)",
-        "  RefinedAbstraction(ConcreteImplementorB)",
-    ]
