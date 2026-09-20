@@ -53,7 +53,7 @@ classDiagram
 
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
-| Builder | The abstract interface for creating parts of a product. | [`Builder`](../../java/src/main/java/com/penapereira/patterns/builder/Builder.java) | [`Builder`](../../python/src/patterns/builder/__init__.py) (Protocol; `build_part_a`, `build_part_b`, `get_result`) | [`Builder`](../../typescript/src/builder/builder.ts) | implicit: any object with the three methods |
+| Builder | The abstract interface for creating parts of a product. | [`Builder`](../../java/src/main/java/com/penapereira/patterns/builder/Builder.java) | [`Builder`](../../python/src/patterns/builder/builder.py) (Protocol; `build_part_a`, `build_part_b`, `get_result`) | [`Builder`](../../typescript/src/builder/builder.ts) | implicit: any object with the three methods |
 | ConcreteBuilder | Constructs and assembles parts; keeps the representation and hands it out. | [`ConcreteBuilder`](../../java/src/main/java/com/penapereira/patterns/builder/ConcreteBuilder.java) | `ConcreteBuilder` | `ConcreteBuilder` | `ConcreteBuilder` |
 | Director | Constructs an object using the Builder interface; owns the *sequence* of steps. | [`Director`](../../java/src/main/java/com/penapereira/patterns/builder/Director.java) | `Director` | `Director` | `Director` |
 | Product | The complex object under construction. | [`Product`](../../java/src/main/java/com/penapereira/patterns/builder/Product.java) | `Product` | `Product` | `Product` |
