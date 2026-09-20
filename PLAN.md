@@ -524,7 +524,7 @@ Order and status (tick when merged):
 | 022 | Command | behavioural | ✅ #22 |
 | 023 | State | behavioural | ✅ #23 |
 | 024 | Iterator | behavioural | ✅ #24 |
-| 025 | Mediator | behavioural | ☐ |
+| 025 | Mediator | behavioural | ✅ #25 |
 | 026 | Memento | behavioural | ☐ |
 | 027 | Visitor | behavioural | ☐ |
 | 028 | Interpreter | behavioural | ☐ |
