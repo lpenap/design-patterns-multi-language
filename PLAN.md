@@ -520,7 +520,7 @@ Order and status (tick when merged):
 | 018 | Virtual Proxy | structural | ✅ #17 |
 | 019 | Builder | creational | ✅ #18 |
 | 020 | Prototype | creational | ✅ #19 |
-| 021 | Monostate | creational | ☐ |
+| 021 | Monostate | creational | ✅ #20 |
 | 022 | Command | behavioural | ☐ |
 | 023 | State | behavioural | ☐ |
 | 024 | Iterator | behavioural | ☐ |
