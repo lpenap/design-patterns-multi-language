@@ -71,7 +71,7 @@ generated from [`catalog.yaml`](catalog.yaml); do not edit it by hand.
 | 🎁 | [Façade](docs/patterns/facade.md) | Provide a unified, higher-level interface to a set of interfaces in a subsystem. | done | done | done | done |
 | 🍃 | [Flyweight](docs/patterns/flyweight.md) | Use sharing to support large numbers of fine-grained objects efficiently. | done | done | done | done |
 | ☔ | [Protection Proxy](docs/patterns/protection-proxy.md) | Control access to an object by checking the caller's rights before forwarding a request. | done | done | done | done |
-| 🍬 | [Virtual Proxy](docs/patterns/virtual-proxy.md) | Defer the creation of an expensive object until it is actually needed. | pending | pending | pending | pending |
+| 🍬 | [Virtual Proxy](docs/patterns/virtual-proxy.md) | Defer the creation of an expensive object until it is actually needed. | done | done | done | done |
 
 ### Behavioural
 

@@ -200,7 +200,11 @@ patterns:
     intent: Defer the creation of an expensive object until it is actually needed.
     doc: docs/patterns/virtual-proxy.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/virtualproxy
+      python: python/src/patterns/virtualproxy
+      typescript: typescript/src/virtual-proxy
+      javascript: javascript/src/virtual-proxy
 
   # ---- Behavioural ----
   - id: chain-of-responsibility

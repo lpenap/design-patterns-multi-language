@@ -1,0 +1,5 @@
+Executing Virtual Proxy Pattern Implementation
+  Proxy created, real subject loaded: false
+  RealSubject.request()
+  RealSubject.request()
+  Real subject loaded: true, created 1 time
