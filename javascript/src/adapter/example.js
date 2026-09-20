@@ -1,4 +1,5 @@
-import { Adaptee, Adapter } from "./adapter.js";
+import { Adaptee } from "./adaptee.js";
+import { Adapter } from "./adapter.js";
 
 /** The client: knows the target only by its `request()` method. */
 export const adapterExample = {
