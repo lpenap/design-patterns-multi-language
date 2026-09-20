@@ -4,7 +4,7 @@ One task = one pull request. Tick with the PR number when merged.
 
 - [x] Abstract Factory — PR #30
 - [x] Builder — PR #33
-- [ ] Factory Method — branch `030-python-factory-method`
+- [x] Factory Method — PR #36
 - [ ] Simple Factory — branch `030-python-simple-factory`
 - [ ] Monostate — branch `030-python-monostate`
 - [ ] Prototype — branch `030-python-prototype`
