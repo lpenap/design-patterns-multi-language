@@ -1,17 +1,5 @@
-// Simple Factory: one method decides which concrete product to instantiate.
-// A product is any object with `name()`.
-
-export class ConcreteProductA {
-  name() {
-    return "ConcreteProductA";
-  }
-}
-
-export class ConcreteProductB {
-  name() {
-    return "ConcreteProductB";
-  }
-}
+import { ConcreteProductA } from "./concrete-product-a.js";
+import { ConcreteProductB } from "./concrete-product-b.js";
 
 /** Maps a type code to a concrete product; the single place where products are created. */
 export class SimpleFactory {
