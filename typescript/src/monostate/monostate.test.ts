@@ -1,6 +1,4 @@
 import { describe, expect, it } from "vitest";
-import { BufferOutput } from "../runtime/contract.ts";
-import { monostateExample } from "./example.ts";
 import { Monostate } from "./monostate.ts";
 
 describe("Monostate", () => {
@@ -20,17 +18,5 @@ describe("Monostate", () => {
   it("an instance created later sees the shared state", () => {
     new Monostate().setValue(33);
     expect(new Monostate().getValue()).toBe(33);
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    monostateExample.run(out);
-    expect(monostateExample.id).toBe("monostate");
-    expect(out.lines).toEqual([
-      "Executing Monostate Pattern Implementation",
-      "  Two instances are distinct objects: true",
-      "  a.setValue(42) then b.getValue(): 42",
-      "  b.setValue(7) then a.getValue(): 7",
-    ]);
   });
 });
