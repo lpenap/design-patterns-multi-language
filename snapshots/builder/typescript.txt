@@ -1,0 +1,3 @@
+Executing Builder Pattern Implementation
+  Director.construct(ConcreteBuilder): Product(PartA, PartB)
+  ConcreteBuilder alone, only part B: Product(PartB)
