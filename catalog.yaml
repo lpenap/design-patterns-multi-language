@@ -282,7 +282,11 @@ patterns:
     intent: Capture and externalise an object's internal state so it can be restored later, without violating encapsulation.
     doc: docs/patterns/memento.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/memento
+      python: python/src/patterns/memento
+      typescript: typescript/src/memento
+      javascript: javascript/src/memento
   - id: observer
     icon: "👓"
     name: Observer

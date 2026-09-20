@@ -1,0 +1,6 @@
+Executing Memento Pattern Implementation
+  Originator state: A (saved)
+  Originator state: B (saved)
+  Originator state: C
+  Restored: B
+  Restored: A
