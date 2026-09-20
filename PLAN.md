@@ -512,7 +512,7 @@ Order and status (tick when merged):
 
 | Spec | Pattern | Category | PR |
 |---|---|---|---|
-| 013 | Bridge | structural | ☐ |
+| 013 | Bridge | structural | ✅ #12 |
 | 014 | Composite | structural | ☐ |
 | 015 | Façade | structural | ☐ |
 | 016 | Flyweight | structural | ☐ |
