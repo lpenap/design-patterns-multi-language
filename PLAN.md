@@ -593,7 +593,7 @@ Status per pattern (tick with the PR number when merged):
 | Abstract Factory | ✅ #30 | ✅ #31 | ✅ #32 |
 | Builder | ✅ #33 | ✅ #34 | ✅ #35 |
 | Factory Method | ✅ #36 | ✅ #37 | ✅ #38 |
-| Simple Factory | ☐ | ☐ | ☐ |
+| Simple Factory | ✅ #39 | ☐ | ☐ |
 | Monostate | ☐ | ☐ | ☐ |
 | Prototype | ☐ | ☐ | ☐ |
 | Singleton | ☐ | ☐ | ☐ |
