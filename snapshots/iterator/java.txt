@@ -1,0 +1,3 @@
+Executing Iterator Pattern Implementation
+  ConcreteIterator traversal: a b c
+  Two iterators are independent: first.next()=a, second.next()=a
