@@ -1,0 +1,3 @@
+Executing Visitor Pattern Implementation
+  ConcreteVisitor1: visited ConcreteElementA, visited ConcreteElementB
+  ConcreteVisitor2: A+B
