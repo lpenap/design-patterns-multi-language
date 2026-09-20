@@ -7,7 +7,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Factory Method — PR #37
 - [x] Simple Factory — PR #40
 - [x] Monostate — PR #43
-- [ ] Prototype — branch `031-typescript-prototype`
+- [x] Prototype — PR #46
 - [ ] Singleton — branch `031-typescript-singleton`
 - [ ] Adapter — branch `031-typescript-adapter`
 - [ ] Bridge — branch `031-typescript-bridge`
