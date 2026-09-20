@@ -1,5 +1,7 @@
 import type { Example } from "../runtime/contract.ts";
-import { type Component, Composite, Leaf } from "./composite.ts";
+import type { Component } from "./component.ts";
+import { Composite } from "./composite.ts";
+import { Leaf } from "./leaf.ts";
 
 /** The client: manipulates leaves and trees through Component alike. */
 export const compositeExample: Example = {
