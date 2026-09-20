@@ -46,7 +46,7 @@ classDiagram
 
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
-| Prototype | Declares the interface for cloning itself. | [`Prototype`](../../java/src/main/java/com/penapereira/patterns/prototype/Prototype.java) | [`Prototype`](../../python/src/patterns/prototype/__init__.py) (Protocol) | [`Prototype`](../../typescript/src/prototype/prototype.ts) | implicit: any object with `clone()` and `describe()` |
+| Prototype | Declares the interface for cloning itself. | [`Prototype`](../../java/src/main/java/com/penapereira/patterns/prototype/Prototype.java) | [`Prototype`](../../python/src/patterns/prototype/prototype.py) (Protocol) | [`Prototype`](../../typescript/src/prototype/prototype.ts) | implicit: any object with `clone()` and `describe()` |
 | ConcretePrototype | Implements the cloning operation, copying its own state. | [`ConcretePrototype1`](../../java/src/main/java/com/penapereira/patterns/prototype/ConcretePrototype1.java), `ConcretePrototype2` | `ConcretePrototype1`, `ConcretePrototype2` | `ConcretePrototype1`, `ConcretePrototype2` | `ConcretePrototype1`, `ConcretePrototype2` |
 | Client | Creates new objects by asking a prototype to clone itself. | [`PrototypeExample`](../../java/src/main/java/com/penapereira/patterns/prototype/PrototypeExample.java) | `PrototypeExample` | [`prototypeExample`](../../typescript/src/prototype/example.ts) | [`prototypeExample`](../../javascript/src/prototype/example.js) |
 
