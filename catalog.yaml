@@ -250,7 +250,11 @@ patterns:
     intent: Given a language, define a representation for its grammar along with an interpreter that uses it.
     doc: docs/patterns/interpreter.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/interpreter
+      python: python/src/patterns/interpreter
+      typescript: typescript/src/interpreter
+      javascript: javascript/src/interpreter
   - id: iterator
     icon: "🍫"
     name: Iterator

@@ -24,3 +24,4 @@ com.penapereira.patterns.iterator.IteratorExample
 com.penapereira.patterns.mediator.MediatorExample
 com.penapereira.patterns.memento.MementoExample
 com.penapereira.patterns.visitor.VisitorExample
+com.penapereira.patterns.interpreter.InterpreterExample
