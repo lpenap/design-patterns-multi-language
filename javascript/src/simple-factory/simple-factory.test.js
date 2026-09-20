@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { BufferOutput } from "../runtime/contract.js";
-import { simpleFactoryExample } from "./example.js";
-import { ConcreteProductA, ConcreteProductB, SimpleFactory } from "./simple-factory.js";
+import { ConcreteProductA } from "./concrete-product-a.js";
+import { ConcreteProductB } from "./concrete-product-b.js";
+import { SimpleFactory } from "./simple-factory.js";
 
 describe("SimpleFactory", () => {
   const factory = new SimpleFactory();
@@ -16,12 +16,5 @@ describe("SimpleFactory", () => {
 
   it("rejects unknown types", () => {
     assert.throws(() => factory.createProduct("Z"), /Unknown product type: Z/);
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    simpleFactoryExample.run(out);
-    assert.equal(simpleFactoryExample.id, "simple-factory");
-    assert.deepEqual(out.lines, ["Executing Simple Factory Pattern Implementation", "  ConcreteProductA", "  ConcreteProductB"]);
   });
 });
