@@ -1,4 +1,5 @@
-import { ConcretePrototype1, ConcretePrototype2 } from "./prototype.js";
+import { ConcretePrototype1 } from "./concrete-prototype1.js";
+import { ConcretePrototype2 } from "./concrete-prototype2.js";
 
 /** The client: creates new objects by asking prototypes to clone themselves. */
 export const prototypeExample = {
