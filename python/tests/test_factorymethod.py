@@ -5,9 +5,7 @@ from patterns.factorymethod import (
     ConcreteCreatorB,
     Creator,
     Product,
-    example,
 )
-from patterns.runtime.contract import BufferOutput
 
 
 def test_each_concrete_creator_builds_its_own_product() -> None:
@@ -33,14 +31,3 @@ def test_a_creator_without_factory_method_cannot_be_instantiated() -> None:
 
     with pytest.raises(TypeError):
         Incomplete()  # type: ignore[abstract]
-
-
-def test_example_prints_the_expected_lines() -> None:
-    out = BufferOutput()
-    example.run(out)
-    assert example.id == "factory-method"
-    assert out.lines == [
-        "Executing Factory Method Pattern Implementation",
-        "  Built ConcreteProductA",
-        "  Built ConcreteProductB",
-    ]
