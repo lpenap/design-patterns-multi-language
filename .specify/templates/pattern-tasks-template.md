@@ -32,32 +32,32 @@ description: "Task list template for adding one design pattern in all four langu
 
 - [ ] T010 [P] [US2] Behaviour tests in `java/src/test/java/.../[javapackage]/[Name]Test.java` (fail first)
 - [ ] T011 [P] [US2] Example test asserting exact lines in `[Name]ExampleTest.java` (fail first)
-- [ ] T012 [US2] Implement participants with literature names
+- [ ] T012 [US2] Implement participants with literature names, one class per file (`Participant.java`)
 - [ ] T013 [US2] Implement `[Name]Example` and register it in `META-INF/services`
 - [ ] T014 [US2] `./mvnw -q verify` green, coverage gate satisfied
 
 ### Python — `python/src/patterns/[pythonpackage]/`
 
 - [ ] T020 [P] [US2] Behaviour tests in `python/tests/test_[pythonpackage].py` (fail first)
-- [ ] T021 [P] [US2] Example test asserting exact lines (fail first)
-- [ ] T022 [US2] Implement participants with literature names
-- [ ] T023 [US2] Expose `example` in the package `__init__.py`
+- [ ] T021 [P] [US2] Example test asserting exact lines in `python/tests/test_[pythonpackage]_example.py` (fail first)
+- [ ] T022 [US2] Implement participants with literature names, one module per class (`participant.py`), `example.py`
+- [ ] T023 [US2] Re-export the public names and `example` from the package `__init__.py`
 - [ ] T024 [US2] `uv run --project python pytest`, ruff and mypy green, coverage gate satisfied
 
 ### TypeScript — `typescript/src/[pattern-id]/`
 
-- [ ] T030 [P] [US2] Behaviour tests in `typescript/src/[pattern-id]/[name].test.ts` (fail first)
-- [ ] T031 [P] [US2] Example test asserting exact lines (fail first)
-- [ ] T032 [US2] Implement participants with literature names
-- [ ] T033 [US2] Export the Example and add it to `typescript/src/runtime/registry.ts`
+- [ ] T030 [P] [US2] Behaviour tests in `typescript/src/[pattern-id]/[pattern-id].test.ts` (fail first)
+- [ ] T031 [P] [US2] Example test asserting exact lines in `typescript/src/[pattern-id]/example.test.ts` (fail first)
+- [ ] T032 [US2] Implement participants with literature names, one file per class (`participant.ts`)
+- [ ] T033 [US2] Export the Example from `example.ts` and add it to `typescript/src/runtime/registry.ts`
 - [ ] T034 [US2] `pnpm --filter typescript test`, tsc and eslint green, coverage gate satisfied
 
 ### JavaScript — `javascript/src/[pattern-id]/`
 
-- [ ] T040 [P] [US2] Behaviour tests in `javascript/src/[pattern-id]/[name].test.js` (fail first)
-- [ ] T041 [P] [US2] Example test asserting exact lines (fail first)
-- [ ] T042 [US2] Implement participants idiomatically (closures, prototypes or classes as fits)
-- [ ] T043 [US2] Export the Example and add it to `javascript/src/runtime/registry.js`
+- [ ] T040 [P] [US2] Behaviour tests in `javascript/src/[pattern-id]/[pattern-id].test.js` (fail first)
+- [ ] T041 [P] [US2] Example test asserting exact lines in `javascript/src/[pattern-id]/example.test.js` (fail first)
+- [ ] T042 [US2] Implement participants idiomatically, one file per class (`participant.js`)
+- [ ] T043 [US2] Export the Example from `example.js` and add it to `javascript/src/runtime/registry.js`
 - [ ] T044 [US2] `pnpm --filter javascript test` and eslint green, coverage gate satisfied
 
 **Checkpoint**: `<runner> run [pattern-id]` works in all four languages.

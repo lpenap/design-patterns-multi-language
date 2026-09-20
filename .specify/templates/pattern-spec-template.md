@@ -79,7 +79,7 @@ committed; deliberately changing one implementation's output makes it fail.
 
 - **FR-001**: The doc `docs/patterns/[pattern-id].md` MUST contain the sections Intent, Motivation, Structure, Participants, The example, Consequences, Language notes, Related patterns, References, in that order.
 - **FR-002**: The Structure section MUST be a Mermaid `classDiagram` containing only the participants listed in Pattern Summary.
-- **FR-003**: Each of `java/`, `python/`, `typescript/`, `javascript/` MUST contain an idiomatic implementation using the participant names above and the fewest classes or functions that show the structure.
+- **FR-003**: Each of `java/`, `python/`, `typescript/`, `javascript/` MUST contain an idiomatic implementation using the participant names above and the fewest classes or functions that show the structure, **one top-level class per file named after it** (see `docs/conventions.md`, File layout).
 - **FR-004**: Each language MUST register an Example with id `[pattern-id]` whose output follows the output conventions (heading line, two-space indent, plain ASCII, deterministic).
 - **FR-005**: The four outputs MUST be byte-identical [or: MUST agree in the following lines, with `parity: loose` justified in the doc].
 - **FR-006**: Each language MUST have tests of the pattern's behaviour and a test asserting the example's exact lines.

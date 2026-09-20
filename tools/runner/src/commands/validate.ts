@@ -4,11 +4,15 @@ import type { Context } from "../context.ts";
 import { listExamples } from "../languages.ts";
 import { currentSection, renderCatalogue, splice } from "../readme.ts";
 import { readSnapshot } from "../snapshots.ts";
+import { checkOneClassPerFile } from "../structure.ts";
 
 export interface ValidateOptions {
   readonly writeReadme?: boolean;
   readonly json?: boolean;
 }
+
+/** Warning while Phase 4 migrates Python, TypeScript and JavaScript; error afterwards (spec 033). */
+export const ONE_CLASS_PER_FILE_LEVEL: "warning" | "error" = "warning";
 
 export interface ValidationFinding {
   readonly level: "error" | "warning" | "info";
@@ -55,6 +59,11 @@ export function validate(ctx: Context, options: ValidateOptions): number {
       declared.get(lang)?.add(pattern.id);
       if (!existsSync(join(ctx.root, path))) {
         error(`implementation path missing: ${path}`, pattern.id, lang);
+      }
+      if (existsSync(join(ctx.root, path))) {
+        for (const f of checkOneClassPerFile(ctx.root, lang, path)) {
+          findings.push({ level: ONE_CLASS_PER_FILE_LEVEL, pattern: pattern.id, language: lang, message: `${f.file}: ${f.message}` });
+        }
       }
       const snap = readSnapshot(ctx.root, pattern.id, lang);
       if (snap === null) {
@@ -110,6 +119,7 @@ export function validate(ctx: Context, options: ValidateOptions): number {
   }
 
   const errors = findings.filter((f) => f.level === "error").length;
+  const warnings = findings.filter((f) => f.level === "warning").length;
   if (options.json === true) {
     ctx.io.write(JSON.stringify({ findings, errors }) + "\n");
   } else {
@@ -117,7 +127,7 @@ export function validate(ctx: Context, options: ValidateOptions): number {
       const where = [f.pattern, f.language].filter((x) => x !== undefined).join("/");
       ctx.io.write(`${f.level}: ${where === "" ? "" : where + ": "}${f.message}\n`);
     }
-    ctx.io.write(`validate: ${String(ctx.catalog.patterns.length)} patterns, ${String(errors)} errors\n`);
+    ctx.io.write(`validate: ${String(ctx.catalog.patterns.length)} patterns, ${String(errors)} errors, ${String(warnings)} warnings\n`);
   }
   return errors === 0 ? 0 : 1;
 }

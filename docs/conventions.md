@@ -37,6 +37,32 @@ Sections, in this order:
 * The *Example* has an `id` equal to the catalog id and `run(out)` writing only
   through `out.line(...)`.
 
+## File layout
+
+One top-level class, interface or protocol per file, named after it, in every
+language. Strategy as the worked example:
+
+| Language | Files in the pattern folder |
+|---|---|
+| Java | `Strategy.java`, `ConcreteStrategyA.java`, `ConcreteStrategyB.java`, `Context.java`, `StrategyExample.java` |
+| Python | `__init__.py` (re-exports the names and `example`), `strategy.py`, `concrete_strategy_a.py`, `concrete_strategy_b.py`, `context.py`, `example.py` |
+| TypeScript | `strategy.ts`, `concrete-strategy-a.ts`, `concrete-strategy-b.ts`, `context.ts`, `example.ts` |
+| JavaScript | same as TypeScript with `.js` |
+
+Tests come in two files per pattern: the pattern's behaviour and the example's
+exact lines (`StrategyTest.java` + `StrategyExampleTest.java`;
+`test_strategy.py` + `test_strategy_example.py`; `strategy.test.ts` +
+`example.test.ts`; likewise `.js`).
+
+Cross-references between participants use type-only imports
+(`from __future__ import annotations` with `TYPE_CHECKING` in Python,
+`import type` in TypeScript). The one runtime cycle in the catalogue, State's
+two concrete states creating each other, uses a function-local import in
+Python and relies on ESM live bindings in TypeScript and JavaScript.
+
+`patterns validate` reports files that declare more than one top-level type or
+whose name does not match the type they declare.
+
 ## Output
 
 ```
