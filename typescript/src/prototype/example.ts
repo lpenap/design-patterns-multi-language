@@ -1,5 +1,7 @@
 import type { Example } from "../runtime/contract.ts";
-import { ConcretePrototype1, ConcretePrototype2, type Prototype } from "./prototype.ts";
+import { ConcretePrototype1 } from "./concrete-prototype1.ts";
+import { ConcretePrototype2 } from "./concrete-prototype2.ts";
+import type { Prototype } from "./prototype.ts";
 
 /** The client: creates new objects by asking prototypes to clone themselves. */
 export const prototypeExample: Example = {
