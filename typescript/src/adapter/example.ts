@@ -1,5 +1,7 @@
 import type { Example } from "../runtime/contract.ts";
-import { Adaptee, Adapter, type Target } from "./adapter.ts";
+import { Adaptee } from "./adaptee.ts";
+import { Adapter } from "./adapter.ts";
+import type { Target } from "./target.ts";
 
 /** The client: collaborates through Target only. */
 export const adapterExample: Example = {

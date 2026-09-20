@@ -1,14 +1,5 @@
-/** The domain-specific interface the client uses. */
-export interface Target {
-  request(): string;
-}
-
-/** An existing class with a useful but incompatible operation. */
-export class Adaptee {
-  specificRequest(): string {
-    return "Adaptee";
-  }
-}
+import type { Adaptee } from "./adaptee.ts";
+import type { Target } from "./target.ts";
 
 /** Object adapter: implements Target by delegating to the Adaptee it holds. */
 export class Adapter implements Target {
