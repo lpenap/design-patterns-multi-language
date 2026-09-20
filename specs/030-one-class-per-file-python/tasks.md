@@ -8,7 +8,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Simple Factory — PR #39
 - [x] Monostate — PR #42
 - [x] Prototype — PR #45
-- [ ] Singleton — branch `030-python-singleton`
+- [x] Singleton — PR #48
 - [ ] Adapter — branch `030-python-adapter`
 - [ ] Bridge — branch `030-python-bridge`
 - [ ] Composite — branch `030-python-composite`
