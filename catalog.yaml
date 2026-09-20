@@ -54,7 +54,11 @@ patterns:
     intent: Separate the construction of a complex object from its representation so the same process can create different representations.
     doc: docs/patterns/builder.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/builder
+      python: python/src/patterns/builder
+      typescript: typescript/src/builder
+      javascript: javascript/src/builder
   - id: factory-method
     icon: "🏭"
     name: Factory Method
