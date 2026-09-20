@@ -46,7 +46,7 @@ classDiagram
 
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
-| Component | The interface for objects in the composition: `operation()`. | [`Component`](../../java/src/main/java/com/penapereira/patterns/composite/Component.java) | [`Component`](../../python/src/patterns/composite/__init__.py) (Protocol) | [`Component`](../../typescript/src/composite/composite.ts) | implicit: any object with `operation()` |
+| Component | The interface for objects in the composition: `operation()`. | [`Component`](../../java/src/main/java/com/penapereira/patterns/composite/Component.java) | [`Component`](../../python/src/patterns/composite/component.py) (Protocol) | [`Component`](../../typescript/src/composite/composite.ts) | implicit: any object with `operation()` |
 | Leaf | A primitive with no children. | [`Leaf`](../../java/src/main/java/com/penapereira/patterns/composite/Leaf.java) | `Leaf` | `Leaf` | `Leaf` |
 | Composite | Stores children, implements child management (`add`) and delegates `operation()` to them. | [`Composite`](../../java/src/main/java/com/penapereira/patterns/composite/Composite.java) | `Composite` | `Composite` | `Composite` |
 | Client | Manipulates objects through `Component`. | [`CompositeExample`](../../java/src/main/java/com/penapereira/patterns/composite/CompositeExample.java) | `CompositeExample` | [`compositeExample`](../../typescript/src/composite/example.ts) | [`compositeExample`](../../javascript/src/composite/example.js) |
