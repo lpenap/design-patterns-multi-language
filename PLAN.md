@@ -521,7 +521,7 @@ Order and status (tick when merged):
 | 019 | Builder | creational | ✅ #18 |
 | 020 | Prototype | creational | ✅ #19 |
 | 021 | Monostate | creational | ✅ #20 |
-| 022 | Command | behavioural | ☐ |
+| 022 | Command | behavioural | ✅ #22 |
 | 023 | State | behavioural | ☐ |
 | 024 | Iterator | behavioural | ☐ |
 | 025 | Mediator | behavioural | ☐ |
