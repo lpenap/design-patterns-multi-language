@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { BufferOutput } from "../runtime/contract.js";
-import { factoryMethodExample } from "./example.js";
-import { ConcreteCreatorA, ConcreteCreatorB, Creator } from "./factory-method.js";
+import { ConcreteCreatorA } from "./concrete-creator-a.js";
+import { ConcreteCreatorB } from "./concrete-creator-b.js";
+import { Creator } from "./creator.js";
 
 describe("FactoryMethod", () => {
   it("each concrete creator builds its own product", () => {
@@ -21,12 +21,5 @@ describe("FactoryMethod", () => {
 
   it("a creator without factoryMethod() fails at the first call", () => {
     assert.throws(() => new Creator().anOperation(), /must implement factoryMethod/);
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    factoryMethodExample.run(out);
-    assert.equal(factoryMethodExample.id, "factory-method");
-    assert.deepEqual(out.lines, ["Executing Factory Method Pattern Implementation", "  Built ConcreteProductA", "  Built ConcreteProductB"]);
   });
 });

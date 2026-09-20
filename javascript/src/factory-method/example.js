@@ -1,4 +1,5 @@
-import { ConcreteCreatorA, ConcreteCreatorB } from "./factory-method.js";
+import { ConcreteCreatorA } from "./concrete-creator-a.js";
+import { ConcreteCreatorB } from "./concrete-creator-b.js";
 
 /** The client: uses creators through their common base only. */
 export const factoryMethodExample = {
