@@ -514,7 +514,7 @@ Order and status (tick when merged):
 |---|---|---|---|
 | 013 | Bridge | structural | ✅ #12 |
 | 014 | Composite | structural | ✅ #13 |
-| 015 | Façade | structural | ☐ |
+| 015 | Façade | structural | ✅ #14 |
 | 016 | Flyweight | structural | ☐ |
 | 017 | Protection Proxy | structural | ☐ |
 | 018 | Virtual Proxy | structural | ☐ |
