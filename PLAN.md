@@ -600,7 +600,7 @@ Status per pattern (tick with the PR number when merged):
 | Adapter | ✅ #51 | ✅ #52 | ✅ #53 |
 | Bridge | ✅ #54 | ✅ #55 | ✅ #56 |
 | Composite | ✅ #57 | ✅ #58 | ✅ #59 |
-| Decorator | ✅ #60 | ☐ | ☐ |
+| Decorator | ✅ #60 | ✅ #61 | ☐ |
 | Façade | ☐ | ☐ | ☐ |
 | Flyweight | ☐ | ☐ | ☐ |
 | Protection Proxy | ☐ | ☐ | ☐ |
