@@ -32,10 +32,12 @@ describe("expectedOutputBlock", () => {
 });
 
 describe("validate (US5)", () => {
-  it("passes on a consistent repository", () => {
+  it("passes on a consistent repository and reports structure findings as warnings", () => {
     ready(repo);
     expect(validate(repo.ctx, {})).toBe(0);
-    expect(repo.out()).toMatch(/validate: 3 patterns, 0 errors\n$/);
+    expect(repo.out()).toContain("warning: fixture-alpha/python: python/alpha/pair.py: 2 top-level declarations (First, Second); expected one per file\n");
+    expect(repo.out()).toContain("warning: fixture-alpha/typescript: typescript/alpha/wrong-name.ts: declares Right; expected file name right.ts\n");
+    expect(repo.out()).toMatch(/validate: 3 patterns, 0 errors, 3 warnings\n$/);
   });
 
   it("regenerates a stale README only with --write-readme", () => {
@@ -105,8 +107,8 @@ describe("validate (US5)", () => {
     ready(repo);
     writeFileSync(join(repo.root, "README.md"), "no markers\n");
     expect(validate(repo.ctx, { json: true })).toBe(1);
-    const parsed = JSON.parse(repo.out().trim().split("\n").at(-1) ?? "") as { errors: number; findings: { message: string }[] };
+    const parsed = JSON.parse(repo.out().trim().split("\n").at(-1) ?? "") as { errors: number; findings: { level: string; message: string }[] };
     expect(parsed.errors).toBe(1);
-    expect(parsed.findings[0]?.message).toBe("README.md is missing the catalogue markers");
+    expect(parsed.findings.filter((f) => f.level === "error").map((f) => f.message)).toEqual(["README.md is missing the catalogue markers"]);
   });
 });

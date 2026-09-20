@@ -47,6 +47,18 @@ table of the doc maps onto each of them. TypeScript and JavaScript are two
 independent implementations, not one compiled from the other. No frameworks in
 the host or in the examples.
 
+**One class per file.** Every source file declares exactly one top-level
+class, interface or protocol and is named after it: `ConcreteStrategyA.java`,
+`concrete_strategy_a.py`, `concrete-strategy-a.ts`, `concrete-strategy-a.js`.
+The example lives in `<Name>Example.java`, `example.py`, `example.ts` or
+`example.js`. Python's `__init__.py` re-exports the pattern's public names and
+the `example` object. Tests are split into a behaviour file and an example
+file per pattern (`<Name>Test` and `<Name>ExampleTest`; `test_<id>.py` and
+`test_<id>_example.py`; `<id>.test.*` and `example.test.*`). Cross-references
+between participants use type-only imports (`TYPE_CHECKING`, `import type`);
+the rare runtime cycle uses a function-local import in Python and ESM live
+bindings in TypeScript and JavaScript. `patterns validate` enforces the rule.
+
 ### V. Documentation is academic and language-neutral
 `docs/patterns/<id>.md` follows the fixed outline: Intent, Motivation,
 Structure, Participants, The example, Consequences, Language notes, Related
@@ -117,4 +129,4 @@ Every plan and every review checks compliance against the principles above;
 deviations must be justified in the spec's Assumptions section and approved
 before implementation.
 
-**Version**: 1.0.0 | **Ratified**: 2026-09-17 | **Last Amended**: 2026-09-17
+**Version**: 1.1.0 | **Ratified**: 2026-09-17 | **Last Amended**: 2026-09-20 (1.1.0: one class per file added to Principle IV)
