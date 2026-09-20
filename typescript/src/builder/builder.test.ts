@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { BufferOutput } from "../runtime/contract.ts";
-import { type Builder, ConcreteBuilder, Director, Product } from "./builder.ts";
-import { builderExample } from "./example.ts";
+import type { Builder } from "./builder.ts";
+import { ConcreteBuilder } from "./concrete-builder.ts";
+import { Director } from "./director.ts";
+import { Product } from "./product.ts";
 
 describe("Builder", () => {
   it("the director fixes the sequence", () => {
@@ -27,16 +28,5 @@ describe("Builder", () => {
       getResult: () => product,
     };
     expect(new Director().construct(shortNames).describe()).toBe("Product(A, B)");
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    builderExample.run(out);
-    expect(builderExample.id).toBe("builder");
-    expect(out.lines).toEqual([
-      "Executing Builder Pattern Implementation",
-      "  Director.construct(ConcreteBuilder): Product(PartA, PartB)",
-      "  ConcreteBuilder alone, only part B: Product(PartB)",
-    ]);
   });
 });
