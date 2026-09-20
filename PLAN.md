@@ -481,12 +481,58 @@ languages).** *Delivered 2026-09-18, PRs #2–#11. Factory Method, Observer and 
 a move; the other three are fresh idiomatic implementations. A spec closes when the
 definition of done (§7.4) holds and the branch is merged into `master`.
 
-**Phase 3 – Specs 013–028: the sixteen new patterns of §11 (~½ day each).**
-Fresh implementations in all four languages, same template, same definition of
-done. Suggested order: structural first (Bridge, Composite, Façade, Flyweight,
-Protection Proxy, Virtual Proxy), then creational (Builder, Prototype, Monostate),
-then behavioural (Command, State, Iterator, Mediator, Memento, Visitor,
-Interpreter). Interpreter last: it is the largest.
+**Phase 3 – Specs 013–028: the sixteen new patterns of §11, one pull request
+per pattern, merged before the next pattern starts.** Each PR delivers the
+pattern in all four languages plus its doc and snapshots, and closes only when
+the definition of done (§7.4) holds and the four workflows are green. No two
+pattern branches are open at the same time, so every spec starts from a
+`master` that already contains the previous one.
+
+Per-spec routine (the same steps that delivered Phase 2):
+
+1. `git checkout master && git pull`; create the feature with
+   `.specify/scripts/bash/create-new-feature.sh --short-name <id> --number NNN`
+   and `git checkout -b NNN-<id>`.
+2. Write `specs/NNN-<id>/{spec,plan,tasks}.md` from
+   `.specify/templates/pattern-spec-template.md` and
+   `pattern-tasks-template.md`; record participant names and the exact
+   expected output block in the spec.
+3. Fill the catalog entry (four implementation paths) and write
+   `docs/patterns/<id>.md` (nine sections, Mermaid participants only,
+   Language notes).
+4. Implement in Java, Python, TypeScript and JavaScript, tests first, each
+   language's checks green, CLI prints the expected block.
+5. `make snapshot` (four identical files), `make check`,
+   `node tools/runner/bin/patterns.js validate --write-readme`, `make lint`,
+   `make test`. **Gate on lint and test before committing.**
+6. Mark the tasks done, commit, push, `gh pr create`, wait for the four
+   checks, `gh pr merge --merge`, pull `master`, update the progress memory.
+
+Order and status (tick when merged):
+
+| Spec | Pattern | Category | PR |
+|---|---|---|---|
+| 013 | Bridge | structural | ☐ |
+| 014 | Composite | structural | ☐ |
+| 015 | Façade | structural | ☐ |
+| 016 | Flyweight | structural | ☐ |
+| 017 | Protection Proxy | structural | ☐ |
+| 018 | Virtual Proxy | structural | ☐ |
+| 019 | Builder | creational | ☐ |
+| 020 | Prototype | creational | ☐ |
+| 021 | Monostate | creational | ☐ |
+| 022 | Command | behavioural | ☐ |
+| 023 | State | behavioural | ☐ |
+| 024 | Iterator | behavioural | ☐ |
+| 025 | Mediator | behavioural | ☐ |
+| 026 | Memento | behavioural | ☐ |
+| 027 | Visitor | behavioural | ☐ |
+| 028 | Interpreter | behavioural | ☐ |
+
+Interpreter is last because it is the largest. Unlike Phase 2 there is no
+original source: each design comes from Gamma et al. (and Ball & Crawford /
+Martin for Monostate), reduced to the fewest participants that show the
+structure, with a deterministic example.
 
 **Phase 4 – Enhancements (open-ended).**
 * More concurrency constructs (Monitor, Read/Write lock, a Futures/Promises
