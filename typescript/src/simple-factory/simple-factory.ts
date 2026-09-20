@@ -1,19 +1,6 @@
-/** The interface every product implements. */
-export interface Product {
-  name(): string;
-}
-
-export class ConcreteProductA implements Product {
-  name(): string {
-    return "ConcreteProductA";
-  }
-}
-
-export class ConcreteProductB implements Product {
-  name(): string {
-    return "ConcreteProductB";
-  }
-}
+import { ConcreteProductA } from "./concrete-product-a.ts";
+import { ConcreteProductB } from "./concrete-product-b.ts";
+import type { Product } from "./product.ts";
 
 /** Maps a type code to a concrete product; the single place where products are created. */
 export class SimpleFactory {
