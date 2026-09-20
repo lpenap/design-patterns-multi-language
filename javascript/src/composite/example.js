@@ -1,4 +1,5 @@
-import { Composite, Leaf } from "./composite.js";
+import { Composite } from "./composite.js";
+import { Leaf } from "./leaf.js";
 
 /** The client: manipulates leaves and trees through `operation()` alike. */
 export const compositeExample = {
