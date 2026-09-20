@@ -591,7 +591,7 @@ Status per pattern (tick with the PR number when merged):
 | Pattern | Python | TypeScript | JavaScript |
 |---|---|---|---|
 | Abstract Factory | ✅ #30 | ✅ #31 | ✅ #32 |
-| Builder | ✅ #33 | ☐ | ☐ |
+| Builder | ✅ #33 | ✅ #34 | ☐ |
 | Factory Method | ☐ | ☐ | ☐ |
 | Simple Factory | ☐ | ☐ | ☐ |
 | Monostate | ☐ | ☐ | ☐ |
