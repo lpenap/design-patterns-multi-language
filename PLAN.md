@@ -519,7 +519,7 @@ Order and status (tick when merged):
 | 017 | Protection Proxy | structural | ✅ #16 |
 | 018 | Virtual Proxy | structural | ✅ #17 |
 | 019 | Builder | creational | ✅ #18 |
-| 020 | Prototype | creational | ☐ |
+| 020 | Prototype | creational | ✅ #19 |
 | 021 | Monostate | creational | ☐ |
 | 022 | Command | behavioural | ☐ |
 | 023 | State | behavioural | ☐ |
