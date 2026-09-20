@@ -9,6 +9,7 @@ import { decoratorExample } from "../decorator/example.js";
 import { facadeExample } from "../facade/example.js";
 import { factoryMethodExample } from "../factory-method/example.js";
 import { flyweightExample } from "../flyweight/example.js";
+import { interpreterExample } from "../interpreter/example.js";
 import { iteratorExample } from "../iterator/example.js";
 import { mediatorExample } from "../mediator/example.js";
 import { mementoExample } from "../memento/example.js";
@@ -27,4 +28,4 @@ import { visitorExample } from "../visitor/example.js";
 
 // Every pattern folder adds one import line here. The CLI receives this array,
 // so tests can pass fixtures instead and the production list stays exact.
-export const examples = [abstractFactoryExample, adapterExample, bridgeExample, builderExample, chainOfResponsibilityExample, commandExample, compositeExample, decoratorExample, facadeExample, factoryMethodExample, flyweightExample, iteratorExample, mediatorExample, mementoExample, monostateExample, observerExample, producerConsumerExample, protectionProxyExample, prototypeExample, simpleFactoryExample, singletonExample, stateExample, strategyExample, templateMethodExample, virtualProxyExample, visitorExample];
+export const examples = [abstractFactoryExample, adapterExample, bridgeExample, builderExample, chainOfResponsibilityExample, commandExample, compositeExample, decoratorExample, facadeExample, factoryMethodExample, flyweightExample, interpreterExample, iteratorExample, mediatorExample, mementoExample, monostateExample, observerExample, producerConsumerExample, protectionProxyExample, prototypeExample, simpleFactoryExample, singletonExample, stateExample, strategyExample, templateMethodExample, virtualProxyExample, visitorExample];
