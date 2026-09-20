@@ -518,7 +518,7 @@ Order and status (tick when merged):
 | 016 | Flyweight | structural | ✅ #15 |
 | 017 | Protection Proxy | structural | ✅ #16 |
 | 018 | Virtual Proxy | structural | ✅ #17 |
-| 019 | Builder | creational | ☐ |
+| 019 | Builder | creational | ✅ #18 |
 | 020 | Prototype | creational | ☐ |
 | 021 | Monostate | creational | ☐ |
 | 022 | Command | behavioural | ☐ |
