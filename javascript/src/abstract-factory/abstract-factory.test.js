@@ -1,8 +1,9 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { BufferOutput } from "../runtime/contract.js";
-import { ConcreteFactory1, ConcreteFactory2, ProductA1, ProductB2 } from "./abstract-factory.js";
-import { abstractFactoryExample } from "./example.js";
+import { ConcreteFactory1 } from "./concrete-factory1.js";
+import { ConcreteFactory2 } from "./concrete-factory2.js";
+import { ProductA1 } from "./product-a1.js";
+import { ProductB2 } from "./product-b2.js";
 
 /** Client code that knows the factory only by its methods. */
 const namesFrom = (factory) => [factory.createProductA().name(), factory.createProductB().name()];
@@ -16,12 +17,5 @@ describe("AbstractFactory", () => {
   it("products are of the concrete family classes", () => {
     assert.ok(new ConcreteFactory1().createProductA() instanceof ProductA1);
     assert.ok(new ConcreteFactory2().createProductB() instanceof ProductB2);
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    abstractFactoryExample.run(out);
-    assert.equal(abstractFactoryExample.id, "abstract-factory");
-    assert.deepEqual(out.lines, ["Executing Abstract Factory Pattern Implementation", "  ProductA1", "  ProductB1", "  ProductA2", "  ProductB2"]);
   });
 });

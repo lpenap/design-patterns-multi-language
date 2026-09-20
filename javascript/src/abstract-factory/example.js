@@ -1,4 +1,5 @@
-import { ConcreteFactory1, ConcreteFactory2 } from "./abstract-factory.js";
+import { ConcreteFactory1 } from "./concrete-factory1.js";
+import { ConcreteFactory2 } from "./concrete-factory2.js";
 
 function useFamily(factory, out) {
   out.line(`  ${factory.createProductA().name()}`);
