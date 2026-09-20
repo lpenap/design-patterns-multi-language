@@ -1,0 +1,31 @@
+# Tasks: One Class per File — TypeScript
+
+One task = one pull request. Tick with the PR number when merged.
+
+- [ ] Abstract Factory — branch `031-typescript-abstract-factory`
+- [ ] Builder — branch `031-typescript-builder`
+- [ ] Factory Method — branch `031-typescript-factory-method`
+- [ ] Simple Factory — branch `031-typescript-simple-factory`
+- [ ] Monostate — branch `031-typescript-monostate`
+- [ ] Prototype — branch `031-typescript-prototype`
+- [ ] Singleton — branch `031-typescript-singleton`
+- [ ] Adapter — branch `031-typescript-adapter`
+- [ ] Bridge — branch `031-typescript-bridge`
+- [ ] Composite — branch `031-typescript-composite`
+- [ ] Decorator — branch `031-typescript-decorator`
+- [ ] Façade — branch `031-typescript-facade`
+- [ ] Flyweight — branch `031-typescript-flyweight`
+- [ ] Protection Proxy — branch `031-typescript-protection-proxy`
+- [ ] Virtual Proxy — branch `031-typescript-virtual-proxy`
+- [ ] Chain of Responsibility — branch `031-typescript-chain-of-responsibility`
+- [ ] Command — branch `031-typescript-command`
+- [ ] Interpreter — branch `031-typescript-interpreter`
+- [ ] Iterator — branch `031-typescript-iterator`
+- [ ] Mediator — branch `031-typescript-mediator`
+- [ ] Memento — branch `031-typescript-memento`
+- [ ] Observer — branch `031-typescript-observer`
+- [ ] State — branch `031-typescript-state`
+- [ ] Strategy — branch `031-typescript-strategy`
+- [ ] Template Method — branch `031-typescript-template-method`
+- [ ] Visitor — branch `031-typescript-visitor`
+- [ ] Producer/Consumer — branch `031-typescript-producer-consumer`
