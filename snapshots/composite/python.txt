@@ -1,0 +1,3 @@
+Executing Composite Pattern Implementation
+  Leaf(A)
+  Composite(Leaf(A)+Leaf(B)+Composite(Leaf(C)))

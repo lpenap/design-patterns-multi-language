@@ -10,3 +10,4 @@ com.penapereira.patterns.observer.ObserverExample
 com.penapereira.patterns.templatemethod.TemplateMethodExample
 com.penapereira.patterns.producerconsumer.ProducerConsumerExample
 com.penapereira.patterns.bridge.BridgeExample
+com.penapereira.patterns.composite.CompositeExample
