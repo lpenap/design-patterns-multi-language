@@ -11,7 +11,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Singleton — PR #49
 - [x] Adapter — PR #52
 - [x] Bridge — PR #55
-- [ ] Composite — branch `031-typescript-composite`
+- [x] Composite — PR #58
 - [ ] Decorator — branch `031-typescript-decorator`
 - [ ] Façade — branch `031-typescript-facade`
 - [ ] Flyweight — branch `031-typescript-flyweight`
