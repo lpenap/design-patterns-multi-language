@@ -595,7 +595,7 @@ Status per pattern (tick with the PR number when merged):
 | Factory Method | ✅ #36 | ✅ #37 | ✅ #38 |
 | Simple Factory | ✅ #39 | ✅ #40 | ✅ #41 |
 | Monostate | ✅ #42 | ✅ #43 | ✅ #44 |
-| Prototype | ☐ | ☐ | ☐ |
+| Prototype | ✅ #45 | ☐ | ☐ |
 | Singleton | ☐ | ☐ | ☐ |
 | Adapter | ☐ | ☐ | ☐ |
 | Bridge | ☐ | ☐ | ☐ |
