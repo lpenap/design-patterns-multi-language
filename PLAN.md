@@ -572,26 +572,65 @@ Rules that go into the constitution (Principle IV, amendment 1.1.0):
 6. The participants table of each doc links to the participant's own file in
    every language.
 
-Order and status, one PR per row, merged before the next starts:
+Granularity (Luis, 2026-09-20): **one pull request per pattern per language**,
+merged before the next starts, cycling Python → TypeScript → JavaScript for
+each pattern in catalog order. Spec Kit keeps one spec per language so the
+branches are `030-python-<id>`, `031-typescript-<id>`, `032-javascript-<id>`;
+each task of those specs is one PR.
 
-| Spec | Scope | PR |
+| Spec | Scope | PRs |
 |---|---|---|
-| 029 | Conventions: constitution 1.1.0, `docs/conventions.md`, pattern templates, validator check in warning mode | ☐ |
-| 030 | Python creational (7 patterns) | ☐ |
-| 031 | Python structural (8) | ☐ |
-| 032 | Python behavioural + concurrency (12) | ☐ |
-| 033 | TypeScript creational (7) | ☐ |
-| 034 | TypeScript structural (8) | ☐ |
-| 035 | TypeScript behavioural + concurrency (12) | ☐ |
-| 036 | JavaScript creational (7) | ☐ |
-| 037 | JavaScript structural (8) | ☐ |
-| 038 | JavaScript behavioural + concurrency (12) | ☐ |
-| 039 | Validator check to error mode; Java review pass (naming, Javadoc, `final`); docs links cross-checked; README regenerated | ☐ |
+| 029 | Conventions: constitution 1.1.0, `docs/conventions.md`, pattern templates, validator check in warning mode | 1 |
+| 030 | Python, one PR per pattern | 27 |
+| 031 | TypeScript, one PR per pattern | 27 |
+| 032 | JavaScript, one PR per pattern | 27 |
+| 033 | Validator check to error mode; Java review pass (naming, Javadoc, `final`); docs links cross-checked; README regenerated | 1 |
 
-Each language PR: move classes into files, update imports and the registry or
-`__init__.py`, split the test file, update the participants links of the
-patterns touched, then `make lint`, `make test`, `make check` unchanged at 108
-ok, `make validate` with zero new warnings for the migrated patterns.
+Status per pattern (tick with the PR number when merged):
+
+| Pattern | Python | TypeScript | JavaScript |
+|---|---|---|---|
+| Java | ☐ | ☐ | ☐ |
+| Python | ☐ | ☐ | ☐ |
+| TypeScript | ☐ | ☐ | ☐ |
+| JavaScript | ☐ | ☐ | ☐ |
+| Creational | ☐ | ☐ | ☐ |
+| Structural | ☐ | ☐ | ☐ |
+| Behavioural | ☐ | ☐ | ☐ |
+| Concurrency constructs | ☐ | ☐ | ☐ |
+| Abstract Factory | ☐ | ☐ | ☐ |
+| Builder | ☐ | ☐ | ☐ |
+| Factory Method | ☐ | ☐ | ☐ |
+| Simple Factory | ☐ | ☐ | ☐ |
+| Monostate | ☐ | ☐ | ☐ |
+| Prototype | ☐ | ☐ | ☐ |
+| Singleton | ☐ | ☐ | ☐ |
+| Adapter | ☐ | ☐ | ☐ |
+| Bridge | ☐ | ☐ | ☐ |
+| Composite | ☐ | ☐ | ☐ |
+| Decorator | ☐ | ☐ | ☐ |
+| Façade | ☐ | ☐ | ☐ |
+| Flyweight | ☐ | ☐ | ☐ |
+| Protection Proxy | ☐ | ☐ | ☐ |
+| Virtual Proxy | ☐ | ☐ | ☐ |
+| Chain of Responsibility | ☐ | ☐ | ☐ |
+| Command | ☐ | ☐ | ☐ |
+| Interpreter | ☐ | ☐ | ☐ |
+| Iterator | ☐ | ☐ | ☐ |
+| Mediator | ☐ | ☐ | ☐ |
+| Memento | ☐ | ☐ | ☐ |
+| Observer | ☐ | ☐ | ☐ |
+| State | ☐ | ☐ | ☐ |
+| Strategy | ☐ | ☐ | ☐ |
+| Template Method | ☐ | ☐ | ☐ |
+| Visitor | ☐ | ☐ | ☐ |
+| Producer/Consumer | ☐ | ☐ | ☐ |
+
+Each pattern PR: move that pattern's classes into files, update imports and the
+registry or `__init__.py`, split its test file into behaviour and example
+files, update its participants links for that language, then `make lint`,
+`make test`, `make check` unchanged at 108 ok, `make validate` with no
+one-class-per-file warning left for that pattern in that language.
 
 **Phase 5 – Enhancements (open-ended).**
 * More concurrency constructs (Monitor, Read/Write lock, a Futures/Promises
@@ -621,7 +660,7 @@ All confirmed on 2026-09-17. Each row is a constraint for Phase 0 onward.
 | 13 | First specs | 001 is the CLI runner alone, accepted against test fixtures; 002 is Strategy, the first pattern spec |
 | 14 | Catalogue | The 27 patterns of §11: the supplied 25-entry table appended with every original pattern missing from it (Simple Factory, Producer/Consumer); Protection Proxy and Virtual Proxy as two entries; Monostate referenced to Ball & Crawford and Martin; icons carried into the README table |
 | 15 | TypeScript version | 6.0.3 until typescript-eslint supports TypeScript 7 (7.0 ships no compiler API; support tracked for 7.1+). Upgrade is a follow-up spec; the two-compiler alias recipe is not used |
-| 16 | One class per file | Every language keeps one top-level class/interface/protocol per file named after it, tests split into behaviour and example files, enforced by `patterns validate` (Phase 4). *Proposed 2026-09-20, pending confirmation.* |
+| 16 | One class per file | Every language keeps one top-level class/interface/protocol per file named after it; tests split into behaviour and example files; Python `__init__.py` re-exports the public names; enforced by `patterns validate`; one PR per pattern per language (Phase 4). Confirmed 2026-09-20 |
 
 Dependency versions are not pinned in this document; each will be verified as at
 least seven days old when the scaffold is created.
