@@ -98,7 +98,11 @@ patterns:
     intent: Specify the kinds of objects to create using a prototypical instance, and create new objects by copying it.
     doc: docs/patterns/prototype.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/prototype
+      python: python/src/patterns/prototype
+      typescript: typescript/src/prototype
+      javascript: javascript/src/prototype
   - id: singleton
     icon: "💍"
     name: Singleton
