@@ -342,7 +342,11 @@ patterns:
     intent: Represent an operation to be performed on the elements of an object structure without changing their classes.
     doc: docs/patterns/visitor.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/visitor
+      python: python/src/patterns/visitor
+      typescript: typescript/src/visitor
+      javascript: javascript/src/visitor
 
   # ---- Concurrency constructs ----
   - id: producer-consumer

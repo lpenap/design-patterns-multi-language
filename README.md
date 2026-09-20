@@ -87,7 +87,7 @@ generated from [`catalog.yaml`](catalog.yaml); do not edit it by hand.
 | 🐉 | [State](docs/patterns/state.md) | Allow an object to alter its behaviour when its internal state changes; the object appears to change class. | done | done | done | done |
 | 💡 | [Strategy](docs/patterns/strategy.md) | Define a family of interchangeable algorithms and let the client choose one at run time. | done | done | done | done |
 | 📝 | [Template Method](docs/patterns/template-method.md) | Define the skeleton of an algorithm and defer some steps to subclasses. | done | done | done | done |
-| 🏃 | [Visitor](docs/patterns/visitor.md) | Represent an operation to be performed on the elements of an object structure without changing their classes. | pending | pending | pending | pending |
+| 🏃 | [Visitor](docs/patterns/visitor.md) | Represent an operation to be performed on the elements of an object structure without changing their classes. | done | done | done | done |
 
 ### Concurrency constructs
 
