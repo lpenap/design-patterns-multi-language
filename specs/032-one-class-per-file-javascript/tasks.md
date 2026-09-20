@@ -2,7 +2,7 @@
 
 One task = one pull request. Tick with the PR number when merged.
 
-- [ ] Abstract Factory — branch `032-javascript-abstract-factory`
+- [x] Abstract Factory — PR #32
 - [ ] Builder — branch `032-javascript-builder`
 - [ ] Factory Method — branch `032-javascript-factory-method`
 - [ ] Simple Factory — branch `032-javascript-simple-factory`
