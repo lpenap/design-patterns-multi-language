@@ -10,7 +10,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Prototype — PR #47
 - [x] Singleton — PR #50
 - [x] Adapter — PR #53
-- [ ] Bridge — branch `032-javascript-bridge`
+- [x] Bridge — PR #56
 - [ ] Composite — branch `032-javascript-composite`
 - [ ] Decorator — branch `032-javascript-decorator`
 - [ ] Façade — branch `032-javascript-facade`
