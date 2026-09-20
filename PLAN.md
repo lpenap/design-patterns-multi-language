@@ -590,7 +590,7 @@ Status per pattern (tick with the PR number when merged):
 
 | Pattern | Python | TypeScript | JavaScript |
 |---|---|---|---|
-| Abstract Factory | ☐ | ☐ | ☐ |
+| Abstract Factory | ✅ #30 | ☐ | ☐ |
 | Builder | ☐ | ☐ | ☐ |
 | Factory Method | ☐ | ☐ | ☐ |
 | Simple Factory | ☐ | ☐ | ☐ |
