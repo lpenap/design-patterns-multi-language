@@ -1,4 +1,5 @@
-import { ConcreteBuilder, Director } from "./builder.js";
+import { ConcreteBuilder } from "./concrete-builder.js";
+import { Director } from "./director.js";
 
 /** The client: hands a builder to the director, then uses a builder directly. */
 export const builderExample = {
