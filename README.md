@@ -66,7 +66,7 @@ generated from [`catalog.yaml`](catalog.yaml); do not edit it by hand.
 |---|---|---|---|---|---|---|
 | 🔌 | [Adapter](docs/patterns/adapter.md) | Convert the interface of a class into another interface clients expect. | done | done | done | done |
 | 🌉 | [Bridge](docs/patterns/bridge.md) | Decouple an abstraction from its implementation so the two can vary independently. | done | done | done | done |
-| 🌿 | [Composite](docs/patterns/composite.md) | Compose objects into tree structures and let clients treat individual objects and compositions uniformly. | pending | pending | pending | pending |
+| 🌿 | [Composite](docs/patterns/composite.md) | Compose objects into tree structures and let clients treat individual objects and compositions uniformly. | done | done | done | done |
 | 🍧 | [Decorator](docs/patterns/decorator.md) | Attach additional responsibilities to an object dynamically. | done | done | done | done |
 | 🎁 | [Façade](docs/patterns/facade.md) | Provide a unified, higher-level interface to a set of interfaces in a subsystem. | pending | pending | pending | pending |
 | 🍃 | [Flyweight](docs/patterns/flyweight.md) | Use sharing to support large numbers of fine-grained objects efficiently. | pending | pending | pending | pending |

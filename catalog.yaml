@@ -140,7 +140,11 @@ patterns:
     intent: Compose objects into tree structures and let clients treat individual objects and compositions uniformly.
     doc: docs/patterns/composite.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/composite
+      python: python/src/patterns/composite
+      typescript: typescript/src/composite
+      javascript: javascript/src/composite
   - id: decorator
     icon: "🍧"
     name: Decorator
