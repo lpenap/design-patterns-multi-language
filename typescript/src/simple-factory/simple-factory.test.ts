@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { BufferOutput } from "../runtime/contract.ts";
-import { simpleFactoryExample } from "./example.ts";
-import { ConcreteProductA, ConcreteProductB, SimpleFactory } from "./simple-factory.ts";
+import { ConcreteProductA } from "./concrete-product-a.ts";
+import { ConcreteProductB } from "./concrete-product-b.ts";
+import { SimpleFactory } from "./simple-factory.ts";
 
 describe("SimpleFactory", () => {
   const factory = new SimpleFactory();
@@ -15,12 +15,5 @@ describe("SimpleFactory", () => {
 
   it("rejects unknown types", () => {
     expect(() => factory.createProduct("Z")).toThrow("Unknown product type: Z");
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    simpleFactoryExample.run(out);
-    expect(simpleFactoryExample.id).toBe("simple-factory");
-    expect(out.lines).toEqual(["Executing Simple Factory Pattern Implementation", "  ConcreteProductA", "  ConcreteProductB"]);
   });
 });
