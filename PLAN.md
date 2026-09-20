@@ -482,7 +482,7 @@ a move; the other three are fresh idiomatic implementations. A spec closes when 
 definition of done (§7.4) holds and the branch is merged into `master`.
 
 **Phase 3 – Specs 013–028: the sixteen new patterns of §11, one pull request
-per pattern, merged before the next pattern starts.** Each PR delivers the
+per pattern, merged before the next pattern starts.** *Delivered 2026-09-20, PRs #12–#28 (PR #21 was replaced by #22 after GitHub registered no workflow runs for it). All 27 catalogued patterns are implemented in the four languages.* Each PR delivers the
 pattern in all four languages plus its doc and snapshots, and closes only when
 the definition of done (§7.4) holds and the four workflows are green. No two
 pattern branches are open at the same time, so every spec starts from a
