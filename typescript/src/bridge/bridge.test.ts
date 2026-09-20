@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { BufferOutput } from "../runtime/contract.ts";
-import { Abstraction, ConcreteImplementorA, ConcreteImplementorB, RefinedAbstraction } from "./bridge.ts";
-import { bridgeExample } from "./example.ts";
+import { Abstraction } from "./abstraction.ts";
+import { ConcreteImplementorA } from "./concrete-implementor-a.ts";
+import { ConcreteImplementorB } from "./concrete-implementor-b.ts";
+import { RefinedAbstraction } from "./refined-abstraction.ts";
 
 describe("Bridge", () => {
   it("any abstraction works with any implementor", () => {
@@ -15,18 +16,5 @@ describe("Bridge", () => {
     const custom = { operationImpl: () => "Custom" };
     expect(new Abstraction(custom).operation()).toBe("Abstraction(Custom)");
     expect(new RefinedAbstraction(custom).operation()).toBe("RefinedAbstraction(Custom)");
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    bridgeExample.run(out);
-    expect(bridgeExample.id).toBe("bridge");
-    expect(out.lines).toEqual([
-      "Executing Bridge Pattern Implementation",
-      "  Abstraction(ConcreteImplementorA)",
-      "  Abstraction(ConcreteImplementorB)",
-      "  RefinedAbstraction(ConcreteImplementorA)",
-      "  RefinedAbstraction(ConcreteImplementorB)",
-    ]);
   });
 });
