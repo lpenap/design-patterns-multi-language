@@ -534,7 +534,66 @@ original source: each design comes from Gamma et al. (and Ball & Crawford /
 Martin for Monostate), reduced to the fewest participants that show the
 structure, with a deterministic example.
 
-**Phase 4 – Enhancements (open-ended).**
+**Phase 4 – Review and refactor: one class per file in every language.**
+Java already keeps one top-level type per file; Python, TypeScript and
+JavaScript put every class of a pattern in one module (up to ten classes in
+`abstractfactory/__init__.py`). Phase 4 makes the four trees isomorphic: one
+file per participant, named by that language's convention, plus one `example`
+file per pattern. The refactor is behaviour-preserving: no snapshot may change,
+so `make check` (108 ok) is the safety net for every PR.
+
+Target layout, Strategy as the worked example:
+
+| Language | Folder | Files | Naming |
+|---|---|---|---|
+| Java | `strategy/` | `Strategy.java`, `ConcreteStrategyA.java`, `ConcreteStrategyB.java`, `Context.java`, `StrategyExample.java` | PascalCase, unchanged |
+| Python | `strategy/` | `__init__.py` (re-exports + `example`), `strategy.py` (Protocol), `concrete_strategy_a.py`, `concrete_strategy_b.py`, `context.py`, `example.py` | snake_case of the class name |
+| TypeScript | `strategy/` | `strategy.ts` (interface), `concrete-strategy-a.ts`, `concrete-strategy-b.ts`, `context.ts`, `example.ts` | kebab-case of the class name |
+| JavaScript | `strategy/` | same as TypeScript with `.js` | kebab-case |
+
+Rules that go into the constitution (Principle IV, amendment 1.1.0):
+
+1. One top-level class, interface or protocol per source file, named after it.
+2. The example lives in `<Name>Example.java` / `example.py` / `example.ts` /
+   `example.js`; Python's `__init__.py` re-exports the public names and the
+   `example` object (discovery is unchanged).
+3. Tests mirror Java's two files per pattern: behaviour and example
+   (`test_<id>.py` + `test_<id>_example.py`; `<id>.test.ts` + `example.test.ts`;
+   likewise `.js`).
+4. Cross-references between participants: type-only cycles use
+   `from __future__ import annotations` with `TYPE_CHECKING` imports (Python)
+   or `import type` (TypeScript); the one runtime cycle (State: the two
+   concrete states create each other) uses a function-local import in Python
+   and relies on ESM live bindings in TypeScript and JavaScript.
+5. `patterns validate` enforces rule 1: it counts top-level declarations per
+   file under every implementation path and checks the file name against the
+   declared name; a warning during migration, an error once every language is
+   migrated.
+6. The participants table of each doc links to the participant's own file in
+   every language.
+
+Order and status, one PR per row, merged before the next starts:
+
+| Spec | Scope | PR |
+|---|---|---|
+| 029 | Conventions: constitution 1.1.0, `docs/conventions.md`, pattern templates, validator check in warning mode | ☐ |
+| 030 | Python creational (7 patterns) | ☐ |
+| 031 | Python structural (8) | ☐ |
+| 032 | Python behavioural + concurrency (12) | ☐ |
+| 033 | TypeScript creational (7) | ☐ |
+| 034 | TypeScript structural (8) | ☐ |
+| 035 | TypeScript behavioural + concurrency (12) | ☐ |
+| 036 | JavaScript creational (7) | ☐ |
+| 037 | JavaScript structural (8) | ☐ |
+| 038 | JavaScript behavioural + concurrency (12) | ☐ |
+| 039 | Validator check to error mode; Java review pass (naming, Javadoc, `final`); docs links cross-checked; README regenerated | ☐ |
+
+Each language PR: move classes into files, update imports and the registry or
+`__init__.py`, split the test file, update the participants links of the
+patterns touched, then `make lint`, `make test`, `make check` unchanged at 108
+ok, `make validate` with zero new warnings for the migrated patterns.
+
+**Phase 5 – Enhancements (open-ended).**
 * More concurrency constructs (Monitor, Read/Write lock, a Futures/Promises
   comparison across languages is a natural fit for this repo).
 * New languages: Kotlin, Go, Rust. Cost is one dir + one CLI + one catalog entry.
@@ -562,6 +621,7 @@ All confirmed on 2026-09-17. Each row is a constraint for Phase 0 onward.
 | 13 | First specs | 001 is the CLI runner alone, accepted against test fixtures; 002 is Strategy, the first pattern spec |
 | 14 | Catalogue | The 27 patterns of §11: the supplied 25-entry table appended with every original pattern missing from it (Simple Factory, Producer/Consumer); Protection Proxy and Virtual Proxy as two entries; Monostate referenced to Ball & Crawford and Martin; icons carried into the README table |
 | 15 | TypeScript version | 6.0.3 until typescript-eslint supports TypeScript 7 (7.0 ships no compiler API; support tracked for 7.1+). Upgrade is a follow-up spec; the two-compiler alias recipe is not used |
+| 16 | One class per file | Every language keeps one top-level class/interface/protocol per file named after it, tests split into behaviour and example files, enforced by `patterns validate` (Phase 4). *Proposed 2026-09-20, pending confirmation.* |
 
 Dependency versions are not pinned in this document; each will be verified as at
 least seven days old when the scaffold is created.
