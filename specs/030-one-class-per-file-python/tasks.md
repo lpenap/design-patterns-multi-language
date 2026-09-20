@@ -10,7 +10,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Prototype — PR #45
 - [x] Singleton — PR #48
 - [x] Adapter — PR #51
-- [ ] Bridge — branch `030-python-bridge`
+- [x] Bridge — PR #54
 - [ ] Composite — branch `030-python-composite`
 - [ ] Decorator — branch `030-python-decorator`
 - [ ] Façade — branch `030-python-facade`

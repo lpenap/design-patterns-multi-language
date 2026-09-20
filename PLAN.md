@@ -598,7 +598,7 @@ Status per pattern (tick with the PR number when merged):
 | Prototype | ✅ #45 | ✅ #46 | ✅ #47 |
 | Singleton | ✅ #48 | ✅ #49 | ✅ #50 |
 | Adapter | ✅ #51 | ✅ #52 | ✅ #53 |
-| Bridge | ☐ | ☐ | ☐ |
+| Bridge | ✅ #54 | ☐ | ☐ |
 | Composite | ☐ | ☐ | ☐ |
 | Decorator | ☐ | ☐ | ☐ |
 | Façade | ☐ | ☐ | ☐ |
