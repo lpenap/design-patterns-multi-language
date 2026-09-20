@@ -1,0 +1,5 @@
+Executing Bridge Pattern Implementation
+  Abstraction(ConcreteImplementorA)
+  Abstraction(ConcreteImplementorB)
+  RefinedAbstraction(ConcreteImplementorA)
+  RefinedAbstraction(ConcreteImplementorB)
