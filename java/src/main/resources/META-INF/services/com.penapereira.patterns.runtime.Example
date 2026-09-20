@@ -11,3 +11,4 @@ com.penapereira.patterns.templatemethod.TemplateMethodExample
 com.penapereira.patterns.producerconsumer.ProducerConsumerExample
 com.penapereira.patterns.bridge.BridgeExample
 com.penapereira.patterns.composite.CompositeExample
+com.penapereira.patterns.facade.FacadeExample

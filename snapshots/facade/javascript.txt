@@ -1,0 +1,2 @@
+Executing Facade Pattern Implementation
+  Facade.operation(): SubsystemA.operationA, SubsystemB.operationB, SubsystemC.operationC
