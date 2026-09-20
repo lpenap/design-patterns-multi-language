@@ -1,5 +1,7 @@
 import type { Example } from "../runtime/contract.ts";
-import { ConcreteCreatorA, ConcreteCreatorB, type Creator } from "./factory-method.ts";
+import { ConcreteCreatorA } from "./concrete-creator-a.ts";
+import { ConcreteCreatorB } from "./concrete-creator-b.ts";
+import type { Creator } from "./creator.ts";
 
 /** The client: uses creators through the Creator type only. */
 export const factoryMethodExample: Example = {

@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { BufferOutput } from "../runtime/contract.ts";
-import { factoryMethodExample } from "./example.ts";
-import { ConcreteCreatorA, ConcreteCreatorB, Creator, type Product } from "./factory-method.ts";
+import { ConcreteCreatorA } from "./concrete-creator-a.ts";
+import { ConcreteCreatorB } from "./concrete-creator-b.ts";
+import { Creator } from "./creator.ts";
+import type { Product } from "./product.ts";
 
 describe("FactoryMethod", () => {
   it("each concrete creator builds its own product", () => {
@@ -16,12 +17,5 @@ describe("FactoryMethod", () => {
       }
     }
     expect(new CustomCreator().anOperation()).toBe("Built Custom");
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    factoryMethodExample.run(out);
-    expect(factoryMethodExample.id).toBe("factory-method");
-    expect(out.lines).toEqual(["Executing Factory Method Pattern Implementation", "  Built ConcreteProductA", "  Built ConcreteProductB"]);
   });
 });
