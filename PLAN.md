@@ -517,7 +517,7 @@ Order and status (tick when merged):
 | 015 | Façade | structural | ✅ #14 |
 | 016 | Flyweight | structural | ✅ #15 |
 | 017 | Protection Proxy | structural | ✅ #16 |
-| 018 | Virtual Proxy | structural | ☐ |
+| 018 | Virtual Proxy | structural | ✅ #17 |
 | 019 | Builder | creational | ☐ |
 | 020 | Prototype | creational | ☐ |
 | 021 | Monostate | creational | ☐ |
