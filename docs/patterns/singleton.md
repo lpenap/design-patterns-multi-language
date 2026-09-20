@@ -33,7 +33,7 @@ classDiagram
 
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
-| Singleton | Hidden constructor, private static `uniqueInstance`, and the class operation `instance()` that lazily creates and returns it. `doSomething()` stands for the instance's real responsibilities. | [`Singleton`](../../java/src/main/java/com/penapereira/patterns/singleton/Singleton.java) | [`Singleton`](../../python/src/patterns/singleton/__init__.py) (`instance` classmethod, `do_something`) | [`Singleton`](../../typescript/src/singleton/singleton.ts) | [`Singleton`](../../javascript/src/singleton/singleton.js) |
+| Singleton | Hidden constructor, private static `uniqueInstance`, and the class operation `instance()` that lazily creates and returns it. `doSomething()` stands for the instance's real responsibilities. | [`Singleton`](../../java/src/main/java/com/penapereira/patterns/singleton/Singleton.java) | [`Singleton`](../../python/src/patterns/singleton/singleton.py) (`instance` classmethod, `do_something`) | [`Singleton`](../../typescript/src/singleton/singleton.ts) | [`Singleton`](../../javascript/src/singleton/singleton.js) |
 | Client | Obtains the instance through `instance()` only. | [`SingletonExample`](../../java/src/main/java/com/penapereira/patterns/singleton/SingletonExample.java) | `SingletonExample` | [`singletonExample`](../../typescript/src/singleton/example.ts) | [`singletonExample`](../../javascript/src/singleton/example.js) |
 
 ## The example
