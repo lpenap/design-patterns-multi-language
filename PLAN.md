@@ -599,7 +599,7 @@ Status per pattern (tick with the PR number when merged):
 | Singleton | ✅ #48 | ✅ #49 | ✅ #50 |
 | Adapter | ✅ #51 | ✅ #52 | ✅ #53 |
 | Bridge | ✅ #54 | ✅ #55 | ✅ #56 |
-| Composite | ☐ | ☐ | ☐ |
+| Composite | ✅ #57 | ☐ | ☐ |
 | Decorator | ☐ | ☐ | ☐ |
 | Façade | ☐ | ☐ | ☐ |
 | Flyweight | ☐ | ☐ | ☐ |
