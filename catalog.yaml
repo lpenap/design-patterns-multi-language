@@ -164,7 +164,11 @@ patterns:
     intent: Provide a unified, higher-level interface to a set of interfaces in a subsystem.
     doc: docs/patterns/facade.md
     parity: strict
-    implementations: {}
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/facade
+      python: python/src/patterns/facade
+      typescript: typescript/src/facade
+      javascript: javascript/src/facade
   - id: flyweight
     icon: "🍃"
     name: Flyweight
