@@ -8,7 +8,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Simple Factory — PR #41
 - [x] Monostate — PR #44
 - [x] Prototype — PR #47
-- [ ] Singleton — branch `032-javascript-singleton`
+- [x] Singleton — PR #50
 - [ ] Adapter — branch `032-javascript-adapter`
 - [ ] Bridge — branch `032-javascript-bridge`
 - [ ] Composite — branch `032-javascript-composite`
