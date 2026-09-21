@@ -20,8 +20,11 @@ while i < len(lines):
     if line.strip() == "":
         if pending and not any(l.startswith("/**") for l in pending): header += pending; pending = []
         i += 1; continue
-    m = re.match(r"^export\s+(?:(abstract)\s+)?(class|interface|type|const|function|function\*)\s+(\w+)", line)
+    m = re.match(r"^(export\s+)?(?:(abstract)\s+)?(class|interface|type|const|function|function\*)\s+(\w+)", line)
     if not m: raise SystemExit(f"unexpected top-level line {i+1}: {line}")
+    if not m.group(1):  # module-private declaration: its own file needs an export
+        lines[i] = "export " + line
+    m = re.match(r"^export\s+(?:(abstract)\s+)?(class|interface|type|const|function|function\*)\s+(\w+)", lines[i])
     kind, name = m.group(2), m.group(3)
     if kind in ("type", "const") and line.rstrip().endswith(";"):
         j = i
