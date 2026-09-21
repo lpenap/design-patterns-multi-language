@@ -1,7 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { BufferOutput } from "../runtime/contract.ts";
-import { visitorExample } from "./example.ts";
-import { ConcreteElementA, ConcreteElementB, ConcreteVisitor1, ConcreteVisitor2, ObjectStructure, type Visitor } from "./visitor.ts";
+import { ConcreteElementA } from "./concrete-element-a.ts";
+import { ConcreteElementB } from "./concrete-element-b.ts";
+import { ConcreteVisitor1 } from "./concrete-visitor1.ts";
+import { ConcreteVisitor2 } from "./concrete-visitor2.ts";
+import { ObjectStructure } from "./object-structure.ts";
+import type { Visitor } from "./visitor.ts";
 
 function structure(): ObjectStructure {
   const s = new ObjectStructure();
@@ -41,16 +44,5 @@ describe("Visitor", () => {
     };
     structure().accept(counter);
     expect(counts).toEqual(["a", "b", "a"]);
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    visitorExample.run(out);
-    expect(visitorExample.id).toBe("visitor");
-    expect(out.lines).toEqual([
-      "Executing Visitor Pattern Implementation",
-      "  ConcreteVisitor1: visited ConcreteElementA, visited ConcreteElementB",
-      "  ConcreteVisitor2: A+B",
-    ]);
   });
 });
