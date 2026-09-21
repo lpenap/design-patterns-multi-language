@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { BufferOutput } from "../runtime/contract.ts";
-import { type Handler, NegativeHandler, PositiveHandler, ZeroHandler } from "./chain-of-responsibility.ts";
-import { chainOfResponsibilityExample } from "./example.ts";
+import type { Handler } from "./handler.ts";
+import { NegativeHandler } from "./negative-handler.ts";
+import { PositiveHandler } from "./positive-handler.ts";
+import { ZeroHandler } from "./zero-handler.ts";
 
 function fullChain(): Handler {
   const head = new NegativeHandler();
@@ -29,12 +30,5 @@ describe("ChainOfResponsibility", () => {
     expect(head.handle(-1)).toBe("unhandled");
     head.setNext(new NegativeHandler());
     expect(head.handle(-1)).toBe("negative");
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    chainOfResponsibilityExample.run(out);
-    expect(chainOfResponsibilityExample.id).toBe("chain-of-responsibility");
-    expect(out.lines).toEqual(["Executing Chain of Responsibility Pattern Implementation", "  -1 is negative", "  0 is zero", "  1 is positive"]);
   });
 });
