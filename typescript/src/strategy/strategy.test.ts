@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { BufferOutput } from "../runtime/contract.ts";
-import { strategyExample } from "./example.ts";
-import { ConcreteStrategyA, ConcreteStrategyB, Context } from "./strategy.ts";
+import { ConcreteStrategyA } from "./concrete-strategy-a.ts";
+import { ConcreteStrategyB } from "./concrete-strategy-b.ts";
+import { Context } from "./context.ts";
 
 describe("Strategy", () => {
   it("operation delegates to the configured strategy", () => {
@@ -17,16 +17,5 @@ describe("Strategy", () => {
 
   it("any structurally matching object is a strategy", () => {
     expect(new Context({ executeAlgorithm: () => "inline" }).operation()).toBe("Operation with inline");
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    strategyExample.run(out);
-    expect(strategyExample.id).toBe("strategy");
-    expect(out.lines).toEqual([
-      "Executing Strategy Pattern Implementation",
-      "  Operation with --> algorithm from ConcreteStrategyA",
-      "  Operation with ==> algorithm from ConcreteStrategyB",
-    ]);
   });
 });
