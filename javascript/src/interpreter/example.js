@@ -1,4 +1,8 @@
-import { AddExpression, Context, NumberExpression, SubtractExpression, VariableExpression } from "./interpreter.js";
+import { AddExpression } from "./add-expression.js";
+import { Context } from "./context.js";
+import { NumberExpression } from "./number-expression.js";
+import { SubtractExpression } from "./subtract-expression.js";
+import { VariableExpression } from "./variable-expression.js";
 
 /** The client: builds the syntax tree by hand and interprets it under two contexts. */
 export const interpreterExample = {

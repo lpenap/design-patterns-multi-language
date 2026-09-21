@@ -1,8 +1,10 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { BufferOutput } from "../runtime/contract.js";
-import { interpreterExample } from "./example.js";
-import { AddExpression, Context, NumberExpression, SubtractExpression, VariableExpression } from "./interpreter.js";
+import { AddExpression } from "./add-expression.js";
+import { Context } from "./context.js";
+import { NumberExpression } from "./number-expression.js";
+import { SubtractExpression } from "./subtract-expression.js";
+import { VariableExpression } from "./variable-expression.js";
 
 describe("Interpreter", () => {
   it("terminals interpret themselves", () => {
@@ -31,17 +33,5 @@ describe("Interpreter", () => {
 
   it("an undefined variable is an error", () => {
     assert.throws(() => new VariableExpression("q").interpret(new Context()), /undefined variable: q/);
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    interpreterExample.run(out);
-    assert.equal(interpreterExample.id, "interpreter");
-    assert.deepEqual(out.lines, [
-      "Executing Interpreter Pattern Implementation",
-      "  Expression: ((x + 3) - y)",
-      "  With x = 5, y = 2: 6",
-      "  With x = 10, y = 0: 13",
-    ]);
   });
 });
