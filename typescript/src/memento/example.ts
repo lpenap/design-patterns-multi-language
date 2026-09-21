@@ -1,5 +1,6 @@
 import type { Example } from "../runtime/contract.ts";
-import { Caretaker, Originator } from "./memento.ts";
+import { Caretaker } from "./caretaker.ts";
+import { Originator } from "./originator.ts";
 
 /** The client: drives changes and asks the caretaker to save and undo. */
 export const mementoExample: Example = {
