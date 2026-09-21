@@ -614,7 +614,7 @@ Status per pattern (tick with the PR number when merged):
 | Observer | ✅ #93 | ✅ #94 | ✅ #95 |
 | State | ✅ #96 | ✅ #97 | ✅ #98 |
 | Strategy | ✅ #99 | ✅ #100 | ✅ #101 |
-| Template Method | ✅ #102 | ☐ | ☐ |
+| Template Method | ✅ #102 | ✅ #103 | ☐ |
 | Visitor | ☐ | ☐ | ☐ |
 | Producer/Consumer | ☐ | ☐ | ☐ |
 
