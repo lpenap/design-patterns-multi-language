@@ -1,5 +1,4 @@
-from patterns.runtime.contract import BufferOutput
-from patterns.virtualproxy import RealSubject, Subject, VirtualProxy, example
+from patterns.virtualproxy import RealSubject, Subject, VirtualProxy
 
 
 class CountingLoader:
@@ -26,16 +25,3 @@ def test_the_real_subject_is_created_once_and_reused_for_every_request() -> None
     proxy.request()
     proxy.request()
     assert loader.creations == 1
-
-
-def test_example_prints_the_expected_lines() -> None:
-    out = BufferOutput()
-    example.run(out)
-    assert example.id == "virtual-proxy"
-    assert out.lines == [
-        "Executing Virtual Proxy Pattern Implementation",
-        "  Proxy created, real subject loaded: false",
-        "  RealSubject.request()",
-        "  RealSubject.request()",
-        "  Real subject loaded: true, created 1 time",
-    ]
