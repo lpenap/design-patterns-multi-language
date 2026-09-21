@@ -1,4 +1,4 @@
-import { FlyweightFactory } from "./flyweight.js";
+import { FlyweightFactory } from "./flyweight-factory.js";
 
 /** The client: keeps the extrinsic state and obtains flyweights from the factory only. */
 export const flyweightExample = {

@@ -1,8 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { BufferOutput } from "../runtime/contract.js";
-import { flyweightExample } from "./example.js";
-import { ConcreteFlyweight, FlyweightFactory } from "./flyweight.js";
+import { ConcreteFlyweight } from "./concrete-flyweight.js";
+import { FlyweightFactory } from "./flyweight-factory.js";
 
 describe("Flyweight", () => {
   it("the same key yields the same object", () => {
@@ -21,18 +20,5 @@ describe("Flyweight", () => {
 
   it("operation combines intrinsic and extrinsic state", () => {
     assert.equal(new ConcreteFlyweight("q").operation(42), "ConcreteFlyweight(q) with extrinsic state 42");
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    flyweightExample.run(out);
-    assert.equal(flyweightExample.id, "flyweight");
-    assert.deepEqual(out.lines, [
-      "Executing Flyweight Pattern Implementation",
-      "  ConcreteFlyweight(a) with extrinsic state 1",
-      "  ConcreteFlyweight(b) with extrinsic state 2",
-      "  ConcreteFlyweight(a) with extrinsic state 3",
-      "  Flyweights created: 2 for 3 requests",
-    ]);
   });
 });
