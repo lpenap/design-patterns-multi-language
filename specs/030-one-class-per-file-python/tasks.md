@@ -25,7 +25,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Memento — PR #90
 - [x] Observer — PR #93
 - [x] State — PR #96
-- [ ] Strategy — branch `030-python-strategy`
+- [x] Strategy — PR #99
 - [ ] Template Method — branch `030-python-template-method`
 - [ ] Visitor — branch `030-python-visitor`
 - [ ] Producer/Consumer — branch `030-python-producer-consumer`
