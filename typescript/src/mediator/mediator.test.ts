@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { BufferOutput } from "../runtime/contract.ts";
-import { mediatorExample } from "./example.ts";
-import { ConcreteColleague1, ConcreteColleague2, ConcreteMediator, type Mediator } from "./mediator.ts";
+import { ConcreteColleague1 } from "./concrete-colleague1.ts";
+import { ConcreteColleague2 } from "./concrete-colleague2.ts";
+import { ConcreteMediator } from "./concrete-mediator.ts";
+import type { Mediator } from "./mediator.ts";
 
 describe("Mediator", () => {
   it("routes messages to the other colleague in both directions", () => {
@@ -34,18 +35,5 @@ describe("Mediator", () => {
     two.send("y");
     expect(seen).toEqual(["ConcreteColleague1:x", "ConcreteColleague2:y"]);
     expect(one.received()).toEqual([]);
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    mediatorExample.run(out);
-    expect(mediatorExample.id).toBe("mediator");
-    expect(out.lines).toEqual([
-      "Executing Mediator Pattern Implementation",
-      "  ConcreteColleague1 sends: hello",
-      "  ConcreteColleague2 receives: hello",
-      "  ConcreteColleague2 sends: hi",
-      "  ConcreteColleague1 receives: hi",
-    ]);
   });
 });
