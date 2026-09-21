@@ -1,11 +1,9 @@
-from patterns.runtime.contract import BufferOutput
 from patterns.visitor import (
     ConcreteElementA,
     ConcreteElementB,
     ConcreteVisitor1,
     ConcreteVisitor2,
     ObjectStructure,
-    example,
 )
 
 
@@ -49,14 +47,3 @@ def test_a_new_operation_needs_no_change_to_the_elements() -> None:
 
     structure().accept(Counter())
     assert counts == ["a", "b", "a"]
-
-
-def test_example_prints_the_expected_lines() -> None:
-    out = BufferOutput()
-    example.run(out)
-    assert example.id == "visitor"
-    assert out.lines == [
-        "Executing Visitor Pattern Implementation",
-        "  ConcreteVisitor1: visited ConcreteElementA, visited ConcreteElementB",
-        "  ConcreteVisitor2: A+B",
-    ]

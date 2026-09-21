@@ -65,7 +65,7 @@ classDiagram
 
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
-| Visitor | Declares a visit operation for each concrete element class. | [`Visitor`](../../java/src/main/java/com/penapereira/patterns/visitor/Visitor.java) | [`Visitor`](../../python/src/patterns/visitor/__init__.py) (Protocol) | [`Visitor`](../../typescript/src/visitor/visitor.ts) | implicit: any object with the two visit methods |
+| Visitor | Declares a visit operation for each concrete element class. | [`Visitor`](../../java/src/main/java/com/penapereira/patterns/visitor/Visitor.java) | [`Visitor`](../../python/src/patterns/visitor/visitor.py) (Protocol) | [`Visitor`](../../typescript/src/visitor/visitor.ts) | implicit: any object with the two visit methods |
 | ConcreteVisitor | Implements one operation across all element classes, accumulating a result. | [`ConcreteVisitor1`](../../java/src/main/java/com/penapereira/patterns/visitor/ConcreteVisitor1.java), `ConcreteVisitor2` | `ConcreteVisitor1`, `ConcreteVisitor2` | `ConcreteVisitor1`, `ConcreteVisitor2` | `ConcreteVisitor1`, `ConcreteVisitor2` |
 | Element | Declares `accept(visitor)`. | [`Element`](../../java/src/main/java/com/penapereira/patterns/visitor/Element.java) | `Element` (Protocol) | `Element` | implicit: any object with `accept` |
 | ConcreteElement | Implements `accept` by calling the visit method for its own class. | [`ConcreteElementA`](../../java/src/main/java/com/penapereira/patterns/visitor/ConcreteElementA.java), `ConcreteElementB` | `ConcreteElementA`, `ConcreteElementB` | `ConcreteElementA`, `ConcreteElementB` | `ConcreteElementA`, `ConcreteElementB` |
