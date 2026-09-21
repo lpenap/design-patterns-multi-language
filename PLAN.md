@@ -603,7 +603,7 @@ Status per pattern (tick with the PR number when merged):
 | Decorator | ✅ #60 | ✅ #61 | ✅ #62 |
 | Façade | ✅ #63 | ✅ #64 | ✅ #65 |
 | Flyweight | ✅ #66 | ✅ #67 | ✅ #68 |
-| Protection Proxy | ✅ #69 | ☐ | ☐ |
+| Protection Proxy | ✅ #69 | ✅ #70 | ☐ |
 | Virtual Proxy | ☐ | ☐ | ☐ |
 | Chain of Responsibility | ☐ | ☐ | ☐ |
 | Command | ☐ | ☐ | ☐ |
