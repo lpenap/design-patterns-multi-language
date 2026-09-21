@@ -611,7 +611,7 @@ Status per pattern (tick with the PR number when merged):
 | Iterator | ✅ #84 | ✅ #85 | ✅ #86 |
 | Mediator | ✅ #87 | ✅ #88 | ✅ #89 |
 | Memento | ✅ #90 | ✅ #91 | ✅ #92 |
-| Observer | ✅ #93 | ✅ #94 | ☐ |
+| Observer | ✅ #93 | ✅ #94 | ✅ #95 |
 | State | ☐ | ☐ | ☐ |
 | Strategy | ☐ | ☐ | ☐ |
 | Template Method | ☐ | ☐ | ☐ |
