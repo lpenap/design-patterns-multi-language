@@ -1,5 +1,7 @@
 import type { Example } from "../runtime/contract.ts";
-import { type AbstractClass, ConcreteClassA, ConcreteClassB } from "./template-method.ts";
+import type { AbstractClass } from "./abstract-class.ts";
+import { ConcreteClassA } from "./concrete-class-a.ts";
+import { ConcreteClassB } from "./concrete-class-b.ts";
 
 /** The client: calls the template method through the abstract type. */
 export const templateMethodExample: Example = {
