@@ -15,7 +15,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Decorator — PR #60
 - [x] Façade — PR #63
 - [x] Flyweight — PR #66
-- [ ] Protection Proxy — branch `030-python-protection-proxy`
+- [x] Protection Proxy — PR #69
 - [ ] Virtual Proxy — branch `030-python-virtual-proxy`
 - [ ] Chain of Responsibility — branch `030-python-chain-of-responsibility`
 - [ ] Command — branch `030-python-command`
