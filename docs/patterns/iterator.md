@@ -55,7 +55,7 @@ classDiagram
 
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
-| Iterator | The interface for accessing and traversing elements: `hasNext()`, `next()`. | [`Iterator`](../../java/src/main/java/com/penapereira/patterns/iterator/Iterator.java) | [`Iterator`](../../python/src/patterns/iterator/__init__.py) (Protocol, `has_next`, `next`) | [`Iterator`](../../typescript/src/iterator/iterator.ts) | implicit: any object with `hasNext` and `next` |
+| Iterator | The interface for accessing and traversing elements: `hasNext()`, `next()`. | [`Iterator`](../../java/src/main/java/com/penapereira/patterns/iterator/Iterator.java) | [`Iterator`](../../python/src/patterns/iterator/iterator.py) (Protocol, `has_next`, `next`) | [`Iterator`](../../typescript/src/iterator/iterator.ts) | implicit: any object with `hasNext` and `next` |
 | ConcreteIterator | Keeps track of the current position in the traversal. | [`ConcreteIterator`](../../java/src/main/java/com/penapereira/patterns/iterator/ConcreteIterator.java) | `ConcreteIterator` | `ConcreteIterator` | `ConcreteIterator` |
 | Aggregate | The interface for creating an Iterator object. | [`Aggregate`](../../java/src/main/java/com/penapereira/patterns/iterator/Aggregate.java) | `Aggregate` (Protocol, `create_iterator`) | `Aggregate` | implicit: any object with `createIterator` |
 | ConcreteAggregate | Implements the creation interface to return the matching iterator. | [`ConcreteAggregate`](../../java/src/main/java/com/penapereira/patterns/iterator/ConcreteAggregate.java) | `ConcreteAggregate` | `ConcreteAggregate` | `ConcreteAggregate` |
