@@ -1,4 +1,5 @@
-import { Caretaker, Originator } from "./memento.js";
+import { Caretaker } from "./caretaker.js";
+import { Originator } from "./originator.js";
 
 /** The client: drives changes and asks the caretaker to save and undo. */
 export const mementoExample = {
