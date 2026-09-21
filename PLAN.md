@@ -608,7 +608,7 @@ Status per pattern (tick with the PR number when merged):
 | Chain of Responsibility | ✅ #75 | ✅ #76 | ✅ #77 |
 | Command | ✅ #78 | ✅ #79 | ✅ #80 |
 | Interpreter | ✅ #81 | ✅ #82 | ✅ #83 |
-| Iterator | ☐ | ☐ | ☐ |
+| Iterator | ✅ #84 | ☐ | ☐ |
 | Mediator | ☐ | ☐ | ☐ |
 | Memento | ☐ | ☐ | ☐ |
 | Observer | ☐ | ☐ | ☐ |
