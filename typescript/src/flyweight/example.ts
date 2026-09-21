@@ -1,5 +1,5 @@
 import type { Example } from "../runtime/contract.ts";
-import { FlyweightFactory } from "./flyweight.ts";
+import { FlyweightFactory } from "./flyweight-factory.ts";
 
 /** The client: keeps the extrinsic state and obtains flyweights from the factory only. */
 export const flyweightExample: Example = {
