@@ -15,6 +15,8 @@
 SHELL := /bin/bash
 JAVA_HOME ?= $(HOME)/.sdkman/candidates/java/25.0.4-tem
 export JAVA_HOME
+# Put the selected JDK first so `java` resolves to it even when SDKMAN's default JDK is on the PATH.
+export PATH := $(JAVA_HOME)/bin:$(PATH)
 MVN := cd java && ./mvnw -q -ntp
 UV := cd python && uv run
 PNPM := pnpm
