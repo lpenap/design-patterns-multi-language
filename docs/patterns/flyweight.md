@@ -47,14 +47,13 @@ classDiagram
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
 | Flyweight | The interface through which flyweights receive and act on extrinsic state. | [`Flyweight`](../../java/src/main/java/com/penapereira/patterns/flyweight/Flyweight.java) | [`Flyweight`](../../python/src/patterns/flyweight/flyweight.py) (Protocol) | [`Flyweight`](../../typescript/src/flyweight/flyweight.ts) | implicit: any object with `operation()` |
-| ConcreteFlyweight | Stores intrinsic state; sharable. | [`ConcreteFlyweight`](../../java/src/main/java/com/penapereira/patterns/flyweight/ConcreteFlyweight.java) | `ConcreteFlyweight` | `ConcreteFlyweight` | `ConcreteFlyweight` |
-| FlyweightFactory | Creates and manages flyweights; returns an existing one when it has it. | [`FlyweightFactory`](../../java/src/main/java/com/penapereira/patterns/flyweight/FlyweightFactory.java) | `FlyweightFactory` (`get_flyweight`, `count`) | `FlyweightFactory` | `FlyweightFactory` |
-| Client | Holds the extrinsic state and obtains flyweights from the factory only. | [`FlyweightExample`](../../java/src/main/java/com/penapereira/patterns/flyweight/FlyweightExample.java) | `FlyweightExample` | [`flyweightExample`](../../typescript/src/flyweight/example.ts) | [`flyweightExample`](../../javascript/src/flyweight/example.js) |
+| ConcreteFlyweight | Stores intrinsic state; sharable. | [`ConcreteFlyweight`](../../java/src/main/java/com/penapereira/patterns/flyweight/ConcreteFlyweight.java) | [`ConcreteFlyweight`](../../python/src/patterns/flyweight/concrete_flyweight.py) | [`ConcreteFlyweight`](../../typescript/src/flyweight/concrete-flyweight.ts) | [`ConcreteFlyweight`](../../javascript/src/flyweight/concrete-flyweight.js) |
+| FlyweightFactory | Creates and manages flyweights; returns an existing one when it has it. | [`FlyweightFactory`](../../java/src/main/java/com/penapereira/patterns/flyweight/FlyweightFactory.java) | [`FlyweightFactory`](../../python/src/patterns/flyweight/flyweight_factory.py) (`get_flyweight`, `count`) | [`FlyweightFactory`](../../typescript/src/flyweight/flyweight-factory.ts) | [`FlyweightFactory`](../../javascript/src/flyweight/flyweight-factory.js) |
+| Client | Holds the extrinsic state and obtains flyweights from the factory only. | [`FlyweightExample`](../../java/src/main/java/com/penapereira/patterns/flyweight/FlyweightExample.java) | [`FlyweightExample`](../../python/src/patterns/flyweight/example.py) | [`flyweightExample`](../../typescript/src/flyweight/example.ts) | [`flyweightExample`](../../javascript/src/flyweight/example.js) |
 
 Gamma et al. also list *UnsharedConcreteFlyweight* for objects in the
 hierarchy that are not shared (a row or column in the text example). It is
 omitted here to keep the structure minimal.
-
 ## The example
 
 The client asks the factory for the flyweights `a`, `b` and `a` in turn,

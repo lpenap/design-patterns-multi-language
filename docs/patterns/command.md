@@ -59,11 +59,10 @@ classDiagram
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
 | Command | Declares the interface for executing (and undoing) an operation. | [`Command`](../../java/src/main/java/com/penapereira/patterns/command/Command.java) | [`Command`](../../python/src/patterns/command/command.py) (Protocol) | [`Command`](../../typescript/src/command/command.ts) | implicit: any object with `execute`, `undo`, `describe` |
-| ConcreteCommand | Binds a receiver to an action; `execute()` invokes it, `undo()` reverses it. | [`ConcreteCommand`](../../java/src/main/java/com/penapereira/patterns/command/ConcreteCommand.java) | `ConcreteCommand` | `ConcreteCommand` | `ConcreteCommand` |
-| Receiver | Knows how to perform the operations associated with a request. | [`Receiver`](../../java/src/main/java/com/penapereira/patterns/command/Receiver.java) | `Receiver` (`action`, `reverse`, `get_state`) | `Receiver` | `Receiver` |
-| Invoker | Asks the command to carry out the request; keeps the history for undo. | [`Invoker`](../../java/src/main/java/com/penapereira/patterns/command/Invoker.java) | `Invoker` | `Invoker` | `Invoker` |
-| Client | Creates concrete commands and sets their receiver; hands them to the invoker. | [`CommandExample`](../../java/src/main/java/com/penapereira/patterns/command/CommandExample.java) | `CommandExample` | [`commandExample`](../../typescript/src/command/example.ts) | [`commandExample`](../../javascript/src/command/example.js) |
-
+| ConcreteCommand | Binds a receiver to an action; `execute()` invokes it, `undo()` reverses it. | [`ConcreteCommand`](../../java/src/main/java/com/penapereira/patterns/command/ConcreteCommand.java) | [`ConcreteCommand`](../../python/src/patterns/command/concrete_command.py) | [`ConcreteCommand`](../../typescript/src/command/concrete-command.ts) | [`ConcreteCommand`](../../javascript/src/command/concrete-command.js) |
+| Receiver | Knows how to perform the operations associated with a request. | [`Receiver`](../../java/src/main/java/com/penapereira/patterns/command/Receiver.java) | [`Receiver`](../../python/src/patterns/command/receiver.py) (`action`, `reverse`, `get_state`) | [`Receiver`](../../typescript/src/command/receiver.ts) | [`Receiver`](../../javascript/src/command/receiver.js) |
+| Invoker | Asks the command to carry out the request; keeps the history for undo. | [`Invoker`](../../java/src/main/java/com/penapereira/patterns/command/Invoker.java) | [`Invoker`](../../python/src/patterns/command/invoker.py) | [`Invoker`](../../typescript/src/command/invoker.ts) | [`Invoker`](../../javascript/src/command/invoker.js) |
+| Client | Creates concrete commands and sets their receiver; hands them to the invoker. | [`CommandExample`](../../java/src/main/java/com/penapereira/patterns/command/CommandExample.java) | [`CommandExample`](../../python/src/patterns/command/example.py) | [`commandExample`](../../typescript/src/command/example.ts) | [`commandExample`](../../javascript/src/command/example.js) |
 ## The example
 
 The client creates two commands that append words to a receiver, hands them to

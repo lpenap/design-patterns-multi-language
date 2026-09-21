@@ -48,10 +48,9 @@ classDiagram
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
 | Target | The domain-specific interface the client uses: `request()`. | [`Target`](../../java/src/main/java/com/penapereira/patterns/adapter/Target.java) | [`Target`](../../python/src/patterns/adapter/target.py) (Protocol) | [`Target`](../../typescript/src/adapter/target.ts) | implicit: any object with `request()` ([`adapter/`](../../javascript/src/adapter/)) |
-| Adaptee | An existing class with a useful but incompatible operation, `specificRequest()`. | [`Adaptee`](../../java/src/main/java/com/penapereira/patterns/adapter/Adaptee.java) | `Adaptee` (`specific_request`) | `Adaptee` | `Adaptee` |
-| Adapter | Implements `Target` by delegating to the `Adaptee` it was constructed with. | [`Adapter`](../../java/src/main/java/com/penapereira/patterns/adapter/Adapter.java) | `Adapter` | `Adapter` | `Adapter` |
-| Client | Collaborates with objects through `Target` only. | [`AdapterExample`](../../java/src/main/java/com/penapereira/patterns/adapter/AdapterExample.java) | `AdapterExample` | [`adapterExample`](../../typescript/src/adapter/example.ts) | [`adapterExample`](../../javascript/src/adapter/example.js) |
-
+| Adaptee | An existing class with a useful but incompatible operation, `specificRequest()`. | [`Adaptee`](../../java/src/main/java/com/penapereira/patterns/adapter/Adaptee.java) | [`Adaptee`](../../python/src/patterns/adapter/adaptee.py) (`specific_request`) | [`Adaptee`](../../typescript/src/adapter/adaptee.ts) | [`Adaptee`](../../javascript/src/adapter/adaptee.js) |
+| Adapter | Implements `Target` by delegating to the `Adaptee` it was constructed with. | [`Adapter`](../../java/src/main/java/com/penapereira/patterns/adapter/Adapter.java) | [`Adapter`](../../python/src/patterns/adapter/adapter.py) | [`Adapter`](../../typescript/src/adapter/adapter.ts) | [`Adapter`](../../javascript/src/adapter/adapter.js) |
+| Client | Collaborates with objects through `Target` only. | [`AdapterExample`](../../java/src/main/java/com/penapereira/patterns/adapter/AdapterExample.java) | [`AdapterExample`](../../python/src/patterns/adapter/example.py) | [`adapterExample`](../../typescript/src/adapter/example.ts) | [`adapterExample`](../../javascript/src/adapter/example.js) |
 ## The example
 
 The client creates an `Adaptee`, wraps it in an `Adapter` and calls

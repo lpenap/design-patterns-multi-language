@@ -48,15 +48,14 @@ classDiagram
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
 | Originator | Creates a memento of its current internal state and uses one to restore it. | [`Originator`](../../java/src/main/java/com/penapereira/patterns/memento/Originator.java) | [`Originator`](../../python/src/patterns/memento/originator.py) (`create_memento`, `restore`) | [`Originator`](../../typescript/src/memento/originator.ts) | [`Originator`](../../javascript/src/memento/originator.js) |
-| Memento | Stores the originator's state; wide interface for the originator, narrow (opaque) for everyone else. | `Originator.Memento` (nested, private field) | `Memento` (`_state` convention) | `Memento` (opaque interface) + `ConcreteMemento`, imported only by the originator | `Memento` (`#state`, getter used only by the originator) |
-| Caretaker | Keeps mementos safe; never operates on or examines their contents. | [`Caretaker`](../../java/src/main/java/com/penapereira/patterns/memento/Caretaker.java) | `Caretaker` | `Caretaker` | `Caretaker` |
-| Client | Drives changes and asks the caretaker to save and undo. | [`MementoExample`](../../java/src/main/java/com/penapereira/patterns/memento/MementoExample.java) | `MementoExample` | [`mementoExample`](../../typescript/src/memento/example.ts) | [`mementoExample`](../../javascript/src/memento/example.js) |
+| Memento | Stores the originator's state; wide interface for the originator, narrow (opaque) for everyone else. | `Originator.Memento` (nested, private field) | [`Memento`](../../python/src/patterns/memento/memento.py) (`_state` convention) | [`Memento`](../../typescript/src/memento/memento.ts) (opaque interface) + [`ConcreteMemento`](../../typescript/src/memento/concrete-memento.ts), imported only by the originator | [`Memento`](../../javascript/src/memento/memento.js) (`#state`, getter used only by the originator) |
+| Caretaker | Keeps mementos safe; never operates on or examines their contents. | [`Caretaker`](../../java/src/main/java/com/penapereira/patterns/memento/Caretaker.java) | [`Caretaker`](../../python/src/patterns/memento/caretaker.py) | [`Caretaker`](../../typescript/src/memento/caretaker.ts) | [`Caretaker`](../../javascript/src/memento/caretaker.js) |
+| Client | Drives changes and asks the caretaker to save and undo. | [`MementoExample`](../../java/src/main/java/com/penapereira/patterns/memento/MementoExample.java) | [`MementoExample`](../../python/src/patterns/memento/example.py) | [`mementoExample`](../../typescript/src/memento/example.ts) | [`mementoExample`](../../javascript/src/memento/example.js) |
 
 Gamma et al. stress the two interfaces [1, p. 285]: the caretaker sees a
 *narrow* interface (it can only pass the memento around), the originator a
 *wide* one (it reads the state back). How strictly a language can enforce that
 split is the substance of the Language notes below.
-
 ## The example
 
 The client changes the originator's state three times, saving after the first

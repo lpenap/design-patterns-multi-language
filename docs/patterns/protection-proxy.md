@@ -48,10 +48,9 @@ classDiagram
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
 | Subject | The common interface of real subject and proxy, so the proxy can stand in anywhere. | [`Subject`](../../java/src/main/java/com/penapereira/patterns/protectionproxy/Subject.java) | [`Subject`](../../python/src/patterns/protectionproxy/subject.py) (Protocol) | [`Subject`](../../typescript/src/protection-proxy/subject.ts) | implicit: any object with `request()` |
-| RealSubject | The object the proxy represents. | [`RealSubject`](../../java/src/main/java/com/penapereira/patterns/protectionproxy/RealSubject.java) | `RealSubject` | `RealSubject` | `RealSubject` |
-| Proxy | Holds a reference to the subject and a caller role; forwards or refuses. | [`ProtectionProxy`](../../java/src/main/java/com/penapereira/patterns/protectionproxy/ProtectionProxy.java) | `ProtectionProxy` | `ProtectionProxy` | `ProtectionProxy` |
-| Client | Uses the subject through the `Subject` interface, unaware of the proxy. | [`ProtectionProxyExample`](../../java/src/main/java/com/penapereira/patterns/protectionproxy/ProtectionProxyExample.java) | `ProtectionProxyExample` | [`protectionProxyExample`](../../typescript/src/protection-proxy/example.ts) | [`protectionProxyExample`](../../javascript/src/protection-proxy/example.js) |
-
+| RealSubject | The object the proxy represents. | [`RealSubject`](../../java/src/main/java/com/penapereira/patterns/protectionproxy/RealSubject.java) | [`RealSubject`](../../python/src/patterns/protectionproxy/real_subject.py) | [`RealSubject`](../../typescript/src/protection-proxy/real-subject.ts) | [`RealSubject`](../../javascript/src/protection-proxy/real-subject.js) |
+| Proxy | Holds a reference to the subject and a caller role; forwards or refuses. | [`ProtectionProxy`](../../java/src/main/java/com/penapereira/patterns/protectionproxy/ProtectionProxy.java) | [`ProtectionProxy`](../../python/src/patterns/protectionproxy/protection_proxy.py) | [`ProtectionProxy`](../../typescript/src/protection-proxy/protection-proxy.ts) | [`ProtectionProxy`](../../javascript/src/protection-proxy/protection-proxy.js) |
+| Client | Uses the subject through the `Subject` interface, unaware of the proxy. | [`ProtectionProxyExample`](../../java/src/main/java/com/penapereira/patterns/protectionproxy/ProtectionProxyExample.java) | [`ProtectionProxyExample`](../../python/src/patterns/protectionproxy/example.py) | [`protectionProxyExample`](../../typescript/src/protection-proxy/example.ts) | [`protectionProxyExample`](../../javascript/src/protection-proxy/example.js) |
 ## The example
 
 One real subject is wrapped in two proxies carrying different caller roles.

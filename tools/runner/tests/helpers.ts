@@ -72,3 +72,10 @@ export function invocations(root: string): string {
 }
 
 export const ALPHA = "Executing Fixture Alpha Pattern Implementation\n  first\n  second\n";
+
+/** The fixture repository ships three one-class-per-file violations for the structure tests; remove them. */
+export function conformStructure(root: string): void {
+  rmSync(join(root, "python/alpha/pair.py"));
+  rmSync(join(root, "typescript/alpha/wrong-name.ts"));
+  writeFileSync(join(root, "python/alpha/__init__.py"), "");
+}

@@ -47,16 +47,15 @@ classDiagram
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
 | Component | The interface for objects in the composition: `operation()`. | [`Component`](../../java/src/main/java/com/penapereira/patterns/composite/Component.java) | [`Component`](../../python/src/patterns/composite/component.py) (Protocol) | [`Component`](../../typescript/src/composite/component.ts) | implicit: any object with `operation()` |
-| Leaf | A primitive with no children. | [`Leaf`](../../java/src/main/java/com/penapereira/patterns/composite/Leaf.java) | `Leaf` | `Leaf` | `Leaf` |
-| Composite | Stores children, implements child management (`add`) and delegates `operation()` to them. | [`Composite`](../../java/src/main/java/com/penapereira/patterns/composite/Composite.java) | `Composite` | `Composite` | `Composite` |
-| Client | Manipulates objects through `Component`. | [`CompositeExample`](../../java/src/main/java/com/penapereira/patterns/composite/CompositeExample.java) | `CompositeExample` | [`compositeExample`](../../typescript/src/composite/example.ts) | [`compositeExample`](../../javascript/src/composite/example.js) |
+| Leaf | A primitive with no children. | [`Leaf`](../../java/src/main/java/com/penapereira/patterns/composite/Leaf.java) | [`Leaf`](../../python/src/patterns/composite/leaf.py) | [`Leaf`](../../typescript/src/composite/leaf.ts) | [`Leaf`](../../javascript/src/composite/leaf.js) |
+| Composite | Stores children, implements child management (`add`) and delegates `operation()` to them. | [`Composite`](../../java/src/main/java/com/penapereira/patterns/composite/Composite.java) | [`Composite`](../../python/src/patterns/composite/composite.py) | [`Composite`](../../typescript/src/composite/composite.ts) | [`Composite`](../../javascript/src/composite/composite.js) |
+| Client | Manipulates objects through `Component`. | [`CompositeExample`](../../java/src/main/java/com/penapereira/patterns/composite/CompositeExample.java) | [`CompositeExample`](../../python/src/patterns/composite/example.py) | [`compositeExample`](../../typescript/src/composite/example.ts) | [`compositeExample`](../../javascript/src/composite/example.js) |
 
 Gamma et al. discuss where to declare child management [1, p. 167]. Declaring
 `add` on `Component` gives *transparency* (every component looks the same) at
 the cost of *safety* (adding to a leaf is meaningless and must fail at run
 time). These implementations choose safety: only `Composite` has `add`, so the
 compiler or the interpreter refuses `leaf.add(...)`.
-
 ## The example
 
 The client prints a lone leaf, then a tree with two leaves and a nested

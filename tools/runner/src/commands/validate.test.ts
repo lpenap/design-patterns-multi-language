@@ -4,7 +4,7 @@ import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { snapshot } from "./snapshot.ts";
 import { expectedOutputBlock, validate } from "./validate.ts";
 import { snapshotPath } from "../snapshots.ts";
-import { editCatalog, makeRepo, type Repo, setBehaviour } from "../../tests/helpers.ts";
+import { conformStructure, editCatalog, makeRepo, type Repo, setBehaviour } from "../../tests/helpers.ts";
 
 let repo: Repo;
 beforeEach(() => {
@@ -15,6 +15,7 @@ afterEach(() => {
 });
 
 function ready(r: Repo): void {
+  conformStructure(r.root);
   snapshot(r.ctx, {});
   validate(r.ctx, { writeReadme: true });
 }
@@ -32,15 +33,23 @@ describe("expectedOutputBlock", () => {
 });
 
 describe("validate (US5)", () => {
-  it("passes on a consistent repository and reports structure findings as warnings", () => {
+  it("passes on a consistent repository", () => {
     ready(repo);
     expect(validate(repo.ctx, {})).toBe(0);
-    expect(repo.out()).toContain("warning: fixture-alpha/python: python/alpha/pair.py: 2 top-level declarations (First, Second); expected one per file\n");
-    expect(repo.out()).toContain("warning: fixture-alpha/typescript: typescript/alpha/wrong-name.ts: declares Right; expected file name right.ts\n");
-    expect(repo.out()).toMatch(/validate: 3 patterns, 0 errors, 3 warnings\n$/);
+    expect(repo.out()).toMatch(/validate: 3 patterns, 0 errors, 0 warnings\n$/);
+  });
+
+  it("fails on files that break the one-class-per-file rule", () => {
+    snapshot(repo.ctx, {});
+    validate(repo.ctx, { writeReadme: true });
+    expect(validate(repo.ctx, {})).toBe(1);
+    expect(repo.out()).toContain("error: fixture-alpha/python: python/alpha/pair.py: 2 top-level declarations (First, Second); expected one per file\n");
+    expect(repo.out()).toContain("error: fixture-alpha/typescript: typescript/alpha/wrong-name.ts: declares Right; expected file name right.ts\n");
+    expect(repo.out()).toMatch(/validate: 3 patterns, 3 errors, 0 warnings\n$/);
   });
 
   it("regenerates a stale README only with --write-readme", () => {
+    conformStructure(repo.root);
     snapshot(repo.ctx, {});
     expect(validate(repo.ctx, {})).toBe(1);
     expect(repo.out()).toContain("error: README catalogue section is stale (run `patterns validate --write-readme`)\n");

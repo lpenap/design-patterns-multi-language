@@ -40,8 +40,7 @@ classDiagram
 | Role | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
 | Monostate | Public constructor; all state in class-level fields; instance accessors read and write that shared state. | [`Monostate`](../../java/src/main/java/com/penapereira/patterns/monostate/Monostate.java) | [`Monostate`](../../python/src/patterns/monostate/monostate.py) (`get_value`, `set_value`) | [`Monostate`](../../typescript/src/monostate/monostate.ts) | [`Monostate`](../../javascript/src/monostate/monostate.js) |
-| Client | Creates as many instances as it likes and uses them like any object. | [`MonostateExample`](../../java/src/main/java/com/penapereira/patterns/monostate/MonostateExample.java) | `MonostateExample` | [`monostateExample`](../../typescript/src/monostate/example.ts) | [`monostateExample`](../../javascript/src/monostate/example.js) |
-
+| Client | Creates as many instances as it likes and uses them like any object. | [`MonostateExample`](../../java/src/main/java/com/penapereira/patterns/monostate/MonostateExample.java) | [`MonostateExample`](../../python/src/patterns/monostate/example.py) | [`monostateExample`](../../typescript/src/monostate/example.ts) | [`monostateExample`](../../javascript/src/monostate/example.js) |
 ## The example
 
 The client creates two instances, shows they are different objects, writes

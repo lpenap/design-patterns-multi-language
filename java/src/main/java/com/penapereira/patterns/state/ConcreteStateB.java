@@ -1,5 +1,6 @@
 package com.penapereira.patterns.state;
 
+/** State B; handling a request moves the context to ConcreteStateA. */
 public final class ConcreteStateB implements State {
 
     @Override
