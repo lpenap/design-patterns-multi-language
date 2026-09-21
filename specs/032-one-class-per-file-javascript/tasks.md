@@ -18,7 +18,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Protection Proxy — PR #71
 - [x] Virtual Proxy — PR #74
 - [x] Chain of Responsibility — PR #77
-- [ ] Command — branch `032-javascript-command`
+- [x] Command — PR #80
 - [ ] Interpreter — branch `032-javascript-interpreter`
 - [ ] Iterator — branch `032-javascript-iterator`
 - [ ] Mediator — branch `032-javascript-mediator`

@@ -606,7 +606,7 @@ Status per pattern (tick with the PR number when merged):
 | Protection Proxy | ✅ #69 | ✅ #70 | ✅ #71 |
 | Virtual Proxy | ✅ #72 | ✅ #73 | ✅ #74 |
 | Chain of Responsibility | ✅ #75 | ✅ #76 | ✅ #77 |
-| Command | ✅ #78 | ✅ #79 | ☐ |
+| Command | ✅ #78 | ✅ #79 | ✅ #80 |
 | Interpreter | ☐ | ☐ | ☐ |
 | Iterator | ☐ | ☐ | ☐ |
 | Mediator | ☐ | ☐ | ☐ |
