@@ -13,7 +13,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Bridge — PR #56
 - [x] Composite — PR #59
 - [x] Decorator — PR #62
-- [ ] Façade — branch `032-javascript-facade`
+- [x] Façade — PR #65
 - [ ] Flyweight — branch `032-javascript-flyweight`
 - [ ] Protection Proxy — branch `032-javascript-protection-proxy`
 - [ ] Virtual Proxy — branch `032-javascript-virtual-proxy`

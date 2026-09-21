@@ -601,7 +601,7 @@ Status per pattern (tick with the PR number when merged):
 | Bridge | ✅ #54 | ✅ #55 | ✅ #56 |
 | Composite | ✅ #57 | ✅ #58 | ✅ #59 |
 | Decorator | ✅ #60 | ✅ #61 | ✅ #62 |
-| Façade | ✅ #63 | ✅ #64 | ☐ |
+| Façade | ✅ #63 | ✅ #64 | ✅ #65 |
 | Flyweight | ☐ | ☐ | ☐ |
 | Protection Proxy | ☐ | ☐ | ☐ |
 | Virtual Proxy | ☐ | ☐ | ☐ |
