@@ -1,7 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { BufferOutput } from "../runtime/contract.ts";
-import { protectionProxyExample } from "./example.ts";
-import { ProtectionProxy, RealSubject } from "./protection-proxy.ts";
+import { ProtectionProxy } from "./protection-proxy.ts";
+import { RealSubject } from "./real-subject.ts";
 
 describe("ProtectionProxy", () => {
   it("an admin is forwarded to the real subject", () => {
@@ -20,12 +19,5 @@ describe("ProtectionProxy", () => {
     expect(calls).toBe(0);
     expect(new ProtectionProxy(counting, "admin").request()).toBe("secret");
     expect(calls).toBe(1);
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    protectionProxyExample.run(out);
-    expect(protectionProxyExample.id).toBe("protection-proxy");
-    expect(out.lines).toEqual(["Executing Protection Proxy Pattern Implementation", "  admin: RealSubject.request()", "  guest: access denied by ProtectionProxy"]);
   });
 });

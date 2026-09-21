@@ -1,5 +1,7 @@
 import type { Example } from "../runtime/contract.ts";
-import { ProtectionProxy, RealSubject, type Subject } from "./protection-proxy.ts";
+import { ProtectionProxy } from "./protection-proxy.ts";
+import { RealSubject } from "./real-subject.ts";
+import type { Subject } from "./subject.ts";
 
 /** The client: makes the same call through proxies carrying different roles. */
 export const protectionProxyExample: Example = {
