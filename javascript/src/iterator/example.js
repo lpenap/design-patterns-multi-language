@@ -1,4 +1,4 @@
-import { ConcreteAggregate } from "./iterator.js";
+import { ConcreteAggregate } from "./concrete-aggregate.js";
 
 /** The client: traverses through hasNext()/next() only. */
 export const iteratorExample = {
