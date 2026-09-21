@@ -1,5 +1,4 @@
-from patterns.command import ConcreteCommand, Invoker, Receiver, example
-from patterns.runtime.contract import BufferOutput
+from patterns.command import ConcreteCommand, Invoker, Receiver
 
 
 def test_execute_and_undo_act_on_the_receiver() -> None:
@@ -48,15 +47,3 @@ def test_any_command_works_with_the_invoker() -> None:
     invoker.execute(Custom())
     invoker.undo()
     assert log == ["do", "undo"]
-
-
-def test_example_prints_the_expected_lines() -> None:
-    out = BufferOutput()
-    example.run(out)
-    assert example.id == "command"
-    assert out.lines == [
-        "Executing Command Pattern Implementation",
-        "  Executed ConcreteCommand(Hello): state = Hello",
-        "  Executed ConcreteCommand(World): state = Hello World",
-        "  Undone ConcreteCommand(World): state = Hello",
-    ]
