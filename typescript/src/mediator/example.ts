@@ -1,5 +1,8 @@
 import type { Example, Output } from "../runtime/contract.ts";
-import { type Colleague, ConcreteColleague1, ConcreteColleague2, ConcreteMediator } from "./mediator.ts";
+import type { Colleague } from "./colleague.ts";
+import { ConcreteColleague1 } from "./concrete-colleague1.ts";
+import { ConcreteColleague2 } from "./concrete-colleague2.ts";
+import { ConcreteMediator } from "./concrete-mediator.ts";
 
 function exchange(sender: Colleague, receiver: Colleague, message: string, out: Output): void {
   sender.send(message);
