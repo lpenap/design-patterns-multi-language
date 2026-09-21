@@ -1,23 +1,6 @@
-// Facade: one simple entry point in front of a subsystem.
-
-/** A subsystem class; knows nothing of the facade. */
-export class SubsystemA {
-  operationA() {
-    return "SubsystemA.operationA";
-  }
-}
-
-export class SubsystemB {
-  operationB() {
-    return "SubsystemB.operationB";
-  }
-}
-
-export class SubsystemC {
-  operationC() {
-    return "SubsystemC.operationC";
-  }
-}
+import { SubsystemA } from "./subsystem-a.js";
+import { SubsystemB } from "./subsystem-b.js";
+import { SubsystemC } from "./subsystem-c.js";
 
 /** Knows which subsystem classes handle a request and drives them in order. */
 export class Facade {
