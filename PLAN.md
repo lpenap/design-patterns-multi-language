@@ -604,7 +604,7 @@ Status per pattern (tick with the PR number when merged):
 | Façade | ✅ #63 | ✅ #64 | ✅ #65 |
 | Flyweight | ✅ #66 | ✅ #67 | ✅ #68 |
 | Protection Proxy | ✅ #69 | ✅ #70 | ✅ #71 |
-| Virtual Proxy | ✅ #72 | ✅ #73 | ☐ |
+| Virtual Proxy | ✅ #72 | ✅ #73 | ✅ #74 |
 | Chain of Responsibility | ☐ | ☐ | ☐ |
 | Command | ☐ | ☐ | ☐ |
 | Interpreter | ☐ | ☐ | ☐ |

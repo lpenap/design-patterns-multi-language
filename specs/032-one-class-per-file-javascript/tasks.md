@@ -16,7 +16,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Façade — PR #65
 - [x] Flyweight — PR #68
 - [x] Protection Proxy — PR #71
-- [ ] Virtual Proxy — branch `032-javascript-virtual-proxy`
+- [x] Virtual Proxy — PR #74
 - [ ] Chain of Responsibility — branch `032-javascript-chain-of-responsibility`
 - [ ] Command — branch `032-javascript-command`
 - [ ] Interpreter — branch `032-javascript-interpreter`
