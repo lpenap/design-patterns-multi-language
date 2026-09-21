@@ -616,7 +616,7 @@ Status per pattern (tick with the PR number when merged):
 | Strategy | ✅ #99 | ✅ #100 | ✅ #101 |
 | Template Method | ✅ #102 | ✅ #103 | ✅ #104 |
 | Visitor | ✅ #105 | ✅ #106 | ✅ #107 |
-| Producer/Consumer | ✅ #108 | ☐ | ☐ |
+| Producer/Consumer | ✅ #108 | ✅ #109 | ☐ |
 
 Each pattern PR: move that pattern's classes into files, update imports and the
 registry or `__init__.py`, split its test file into behaviour and example

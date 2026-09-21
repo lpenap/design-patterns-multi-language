@@ -1,7 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { BufferOutput } from "../runtime/contract.ts";
-import { producerConsumerExample } from "./example.ts";
-import { BoundedBuffer, Consumer, POISON_PILL, Producer, runTasks } from "./producer-consumer.ts";
+import { BoundedBuffer } from "./bounded-buffer.ts";
+import { Consumer } from "./consumer.ts";
+import { POISON_PILL } from "./poison-pill.ts";
+import { Producer } from "./producer.ts";
+import { runTasks } from "./run-tasks.ts";
 
 describe("BoundedBuffer (cooperative)", () => {
   it("is first in, first out", () => {
@@ -59,17 +61,3 @@ describe("runTasks", () => {
   });
 });
 
-describe("example", () => {
-  it.each([1, 2, 3])("prints the same lines on run %i", () => {
-    const out = new BufferOutput();
-    producerConsumerExample.run(out);
-    expect(producerConsumerExample.id).toBe("producer-consumer");
-    expect(out.lines).toEqual([
-      "Executing Producer/Consumer Pattern Implementation",
-      "  Buffer capacity 2, 1 producer, 2 consumers",
-      "  Produced: 1 2 3 4 5",
-      "  Consumed: 1 2 3 4 5",
-      "  Each item consumed exactly once: true",
-    ]);
-  });
-});
