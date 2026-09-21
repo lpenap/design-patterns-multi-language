@@ -17,7 +17,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Flyweight — PR #67
 - [x] Protection Proxy — PR #70
 - [x] Virtual Proxy — PR #73
-- [ ] Chain of Responsibility — branch `031-typescript-chain-of-responsibility`
+- [x] Chain of Responsibility — PR #76
 - [ ] Command — branch `031-typescript-command`
 - [ ] Interpreter — branch `031-typescript-interpreter`
 - [ ] Iterator — branch `031-typescript-iterator`
