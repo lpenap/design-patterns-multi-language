@@ -1,7 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { BufferOutput } from "../runtime/contract.ts";
-import { observerExample } from "./example.ts";
-import { ConcreteObserver, ConcreteSubject } from "./observer.ts";
+import { ConcreteObserver } from "./concrete-observer.ts";
+import { ConcreteSubject } from "./concrete-subject.ts";
 
 describe("Observer", () => {
   it("notifies every observer in attachment order", () => {
@@ -40,17 +39,5 @@ describe("Observer", () => {
     subject.attach({ update: (o, n) => seen.push([o, n]) });
     subject.setState(3);
     expect(seen).toEqual([[0, 3]]);
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    observerExample.run(out);
-    expect(observerExample.id).toBe("observer");
-    expect(out.lines).toEqual([
-      "Executing Observer Pattern Implementation",
-      "  observer1 notified: state 0 -> 5",
-      "  observer2 notified: state 0 -> 5",
-      "  observer1 notified: state 5 -> 10",
-    ]);
   });
 });

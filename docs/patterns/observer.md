@@ -53,7 +53,7 @@ classDiagram
 
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
-| Subject | Knows its observers; offers `attach()`, `detach()` and `notifyObservers()`. | [`Subject`](../../java/src/main/java/com/penapereira/patterns/observer/Subject.java) | [`Subject`](../../python/src/patterns/observer/subject.py) (`attach`, `detach`, `notify_observers`) | [`Subject`](../../typescript/src/observer/observer.ts) | [`Subject`](../../javascript/src/observer/observer.js) |
+| Subject | Knows its observers; offers `attach()`, `detach()` and `notifyObservers()`. | [`Subject`](../../java/src/main/java/com/penapereira/patterns/observer/Subject.java) | [`Subject`](../../python/src/patterns/observer/subject.py) (`attach`, `detach`, `notify_observers`) | [`Subject`](../../typescript/src/observer/subject.ts) | [`Subject`](../../javascript/src/observer/observer.js) |
 | ConcreteSubject | Holds the state of interest and notifies when it changes. | [`ConcreteSubject`](../../java/src/main/java/com/penapereira/patterns/observer/ConcreteSubject.java) | `ConcreteSubject` (`set_state`, `get_state`) | `ConcreteSubject` | `ConcreteSubject` |
 | Observer | The notification interface: `update(oldState, newState)`. | [`Observer`](../../java/src/main/java/com/penapereira/patterns/observer/Observer.java) | `Observer` (Protocol) | `Observer` | implicit: any object with `update()` |
 | ConcreteObserver | Reports the change it was told about. | [`ConcreteObserver`](../../java/src/main/java/com/penapereira/patterns/observer/ConcreteObserver.java) | `ConcreteObserver` | `ConcreteObserver` | `ConcreteObserver` |
