@@ -613,7 +613,7 @@ Status per pattern (tick with the PR number when merged):
 | Memento | ✅ #90 | ✅ #91 | ✅ #92 |
 | Observer | ✅ #93 | ✅ #94 | ✅ #95 |
 | State | ✅ #96 | ✅ #97 | ✅ #98 |
-| Strategy | ✅ #99 | ✅ #100 | ☐ |
+| Strategy | ✅ #99 | ✅ #100 | ✅ #101 |
 | Template Method | ☐ | ☐ | ☐ |
 | Visitor | ☐ | ☐ | ☐ |
 | Producer/Consumer | ☐ | ☐ | ☐ |
