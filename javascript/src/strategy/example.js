@@ -1,4 +1,6 @@
-import { ConcreteStrategyA, ConcreteStrategyB, Context } from "./strategy.js";
+import { ConcreteStrategyA } from "./concrete-strategy-a.js";
+import { ConcreteStrategyB } from "./concrete-strategy-b.js";
+import { Context } from "./context.js";
 
 /** The client: chooses the strategies and hands them to the context. */
 export const strategyExample = {
