@@ -1,4 +1,6 @@
-import { NegativeHandler, PositiveHandler, ZeroHandler } from "./chain-of-responsibility.js";
+import { NegativeHandler } from "./negative-handler.js";
+import { PositiveHandler } from "./positive-handler.js";
+import { ZeroHandler } from "./zero-handler.js";
 
 /** The client: assembles the chain and sends requests to its first link. */
 export const chainOfResponsibilityExample = {

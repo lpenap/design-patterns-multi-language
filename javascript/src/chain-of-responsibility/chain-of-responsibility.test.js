@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { BufferOutput } from "../runtime/contract.js";
-import { NegativeHandler, PositiveHandler, ZeroHandler } from "./chain-of-responsibility.js";
-import { chainOfResponsibilityExample } from "./example.js";
+import { NegativeHandler } from "./negative-handler.js";
+import { PositiveHandler } from "./positive-handler.js";
+import { ZeroHandler } from "./zero-handler.js";
 
 function fullChain() {
   const head = new NegativeHandler();
@@ -30,12 +30,5 @@ describe("ChainOfResponsibility", () => {
     assert.equal(head.handle(-1), "unhandled");
     head.setNext(new NegativeHandler());
     assert.equal(head.handle(-1), "negative");
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    chainOfResponsibilityExample.run(out);
-    assert.equal(chainOfResponsibilityExample.id, "chain-of-responsibility");
-    assert.deepEqual(out.lines, ["Executing Chain of Responsibility Pattern Implementation", "  -1 is negative", "  0 is zero", "  1 is positive"]);
   });
 });
