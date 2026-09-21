@@ -615,7 +615,7 @@ Status per pattern (tick with the PR number when merged):
 | State | ✅ #96 | ✅ #97 | ✅ #98 |
 | Strategy | ✅ #99 | ✅ #100 | ✅ #101 |
 | Template Method | ✅ #102 | ✅ #103 | ✅ #104 |
-| Visitor | ☐ | ☐ | ☐ |
+| Visitor | ✅ #105 | ☐ | ☐ |
 | Producer/Consumer | ☐ | ☐ | ☐ |
 
 Each pattern PR: move that pattern's classes into files, update imports and the
