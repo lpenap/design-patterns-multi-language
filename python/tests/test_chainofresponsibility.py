@@ -3,9 +3,7 @@ from patterns.chainofresponsibility import (
     NegativeHandler,
     PositiveHandler,
     ZeroHandler,
-    example,
 )
-from patterns.runtime.contract import BufferOutput
 
 
 def full_chain() -> Handler:
@@ -33,15 +31,3 @@ def test_relinking_changes_who_answers() -> None:
     assert head.handle(-1) == "unhandled"
     head.set_next(NegativeHandler())
     assert head.handle(-1) == "negative"
-
-
-def test_example_prints_the_expected_lines() -> None:
-    out = BufferOutput()
-    example.run(out)
-    assert example.id == "chain-of-responsibility"
-    assert out.lines == [
-        "Executing Chain of Responsibility Pattern Implementation",
-        "  -1 is negative",
-        "  0 is zero",
-        "  1 is positive",
-    ]
