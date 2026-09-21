@@ -58,7 +58,7 @@ classDiagram
 
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
-| Command | Declares the interface for executing (and undoing) an operation. | [`Command`](../../java/src/main/java/com/penapereira/patterns/command/Command.java) | [`Command`](../../python/src/patterns/command/__init__.py) (Protocol) | [`Command`](../../typescript/src/command/command.ts) | implicit: any object with `execute`, `undo`, `describe` |
+| Command | Declares the interface for executing (and undoing) an operation. | [`Command`](../../java/src/main/java/com/penapereira/patterns/command/Command.java) | [`Command`](../../python/src/patterns/command/command.py) (Protocol) | [`Command`](../../typescript/src/command/command.ts) | implicit: any object with `execute`, `undo`, `describe` |
 | ConcreteCommand | Binds a receiver to an action; `execute()` invokes it, `undo()` reverses it. | [`ConcreteCommand`](../../java/src/main/java/com/penapereira/patterns/command/ConcreteCommand.java) | `ConcreteCommand` | `ConcreteCommand` | `ConcreteCommand` |
 | Receiver | Knows how to perform the operations associated with a request. | [`Receiver`](../../java/src/main/java/com/penapereira/patterns/command/Receiver.java) | `Receiver` (`action`, `reverse`, `get_state`) | `Receiver` | `Receiver` |
 | Invoker | Asks the command to carry out the request; keeps the history for undo. | [`Invoker`](../../java/src/main/java/com/penapereira/patterns/command/Invoker.java) | `Invoker` | `Invoker` | `Invoker` |
