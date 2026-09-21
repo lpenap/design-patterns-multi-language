@@ -52,7 +52,7 @@ classDiagram
 
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
-| Context | Defines the interface clients use and holds the current state; delegates state-specific requests to it. | [`Context`](../../java/src/main/java/com/penapereira/patterns/state/Context.java) | [`Context`](../../python/src/patterns/state/context.py) (`request`, `set_state`, `get_state_name`) | [`Context`](../../typescript/src/state/context.ts) | [`Context`](../../javascript/src/state/state.js) |
+| Context | Defines the interface clients use and holds the current state; delegates state-specific requests to it. | [`Context`](../../java/src/main/java/com/penapereira/patterns/state/Context.java) | [`Context`](../../python/src/patterns/state/context.py) (`request`, `set_state`, `get_state_name`) | [`Context`](../../typescript/src/state/context.ts) | [`Context`](../../javascript/src/state/context.js) |
 | State | The interface for behaviour associated with a state of the Context. | [`State`](../../java/src/main/java/com/penapereira/patterns/state/State.java) | `State` (Protocol) | `State` | implicit: any object with `handle` and `name` |
 | ConcreteState | Implements the behaviour of one state and decides the transition. | [`ConcreteStateA`](../../java/src/main/java/com/penapereira/patterns/state/ConcreteStateA.java), `ConcreteStateB` | `ConcreteStateA`, `ConcreteStateB` | `ConcreteStateA`, `ConcreteStateB` | `ConcreteStateA`, `ConcreteStateB` |
 | Client | Issues requests to the context; never touches states. | [`StateExample`](../../java/src/main/java/com/penapereira/patterns/state/StateExample.java) | `StateExample` | [`stateExample`](../../typescript/src/state/example.ts) | [`stateExample`](../../javascript/src/state/example.js) |
