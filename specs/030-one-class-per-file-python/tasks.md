@@ -26,6 +26,6 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Observer — PR #93
 - [x] State — PR #96
 - [x] Strategy — PR #99
-- [ ] Template Method — branch `030-python-template-method`
+- [x] Template Method — PR #102
 - [ ] Visitor — branch `030-python-visitor`
 - [ ] Producer/Consumer — branch `030-python-producer-consumer`
