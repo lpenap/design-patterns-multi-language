@@ -1,21 +1,6 @@
-/** A subsystem class; knows nothing of the facade. */
-export class SubsystemA {
-  operationA(): string {
-    return "SubsystemA.operationA";
-  }
-}
-
-export class SubsystemB {
-  operationB(): string {
-    return "SubsystemB.operationB";
-  }
-}
-
-export class SubsystemC {
-  operationC(): string {
-    return "SubsystemC.operationC";
-  }
-}
+import { SubsystemA } from "./subsystem-a.ts";
+import { SubsystemB } from "./subsystem-b.ts";
+import { SubsystemC } from "./subsystem-c.ts";
 
 /** Knows which subsystem classes handle a request and drives them in order. */
 export class Facade {
