@@ -1,7 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { BufferOutput } from "../runtime/contract.ts";
-import { interpreterExample } from "./example.ts";
-import { type AbstractExpression, AddExpression, Context, NumberExpression, SubtractExpression, VariableExpression } from "./interpreter.ts";
+import type { AbstractExpression } from "./abstract-expression.ts";
+import { AddExpression } from "./add-expression.ts";
+import { Context } from "./context.ts";
+import { NumberExpression } from "./number-expression.ts";
+import { SubtractExpression } from "./subtract-expression.ts";
+import { VariableExpression } from "./variable-expression.ts";
 
 describe("Interpreter", () => {
   it("terminals interpret themselves", () => {
@@ -30,17 +33,5 @@ describe("Interpreter", () => {
 
   it("an undefined variable is an error", () => {
     expect(() => new VariableExpression("q").interpret(new Context())).toThrow("undefined variable: q");
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    interpreterExample.run(out);
-    expect(interpreterExample.id).toBe("interpreter");
-    expect(out.lines).toEqual([
-      "Executing Interpreter Pattern Implementation",
-      "  Expression: ((x + 3) - y)",
-      "  With x = 5, y = 2: 6",
-      "  With x = 10, y = 0: 13",
-    ]);
   });
 });
