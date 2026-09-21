@@ -22,27 +22,3 @@ export class AbstractClass {
     return "";
   }
 }
-
-export class ConcreteClassA extends AbstractClass {
-  primitiveOperation1() {
-    return "ConcreteClassA.primitiveOperation1";
-  }
-
-  primitiveOperation2() {
-    return "ConcreteClassA.primitiveOperation2";
-  }
-}
-
-export class ConcreteClassB extends AbstractClass {
-  primitiveOperation1() {
-    return "ConcreteClassB.primitiveOperation1";
-  }
-
-  primitiveOperation2() {
-    return "ConcreteClassB.primitiveOperation2";
-  }
-
-  hook() {
-    return " with hook";
-  }
-}

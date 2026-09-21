@@ -1,4 +1,5 @@
-import { ConcreteClassA, ConcreteClassB } from "./template-method.js";
+import { ConcreteClassA } from "./concrete-class-a.js";
+import { ConcreteClassB } from "./concrete-class-b.js";
 
 /** The client: calls the template method through the common base. */
 export const templateMethodExample = {
