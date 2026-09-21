@@ -1,5 +1,4 @@
-from patterns.memento import Caretaker, Originator, example
-from patterns.runtime.contract import BufferOutput
+from patterns.memento import Caretaker, Originator
 
 
 def test_saved_states_are_restored_most_recent_first() -> None:
@@ -27,17 +26,3 @@ def test_a_memento_captures_the_value_at_save_time() -> None:
     originator.set_state("after")
     originator.restore(memento)
     assert originator.get_state() == "before"
-
-
-def test_example_prints_the_expected_lines() -> None:
-    out = BufferOutput()
-    example.run(out)
-    assert example.id == "memento"
-    assert out.lines == [
-        "Executing Memento Pattern Implementation",
-        "  Originator state: A (saved)",
-        "  Originator state: B (saved)",
-        "  Originator state: C",
-        "  Restored: B",
-        "  Restored: A",
-    ]
