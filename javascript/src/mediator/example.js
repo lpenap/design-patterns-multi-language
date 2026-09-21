@@ -1,4 +1,6 @@
-import { ConcreteColleague1, ConcreteColleague2, ConcreteMediator } from "./mediator.js";
+import { ConcreteColleague1 } from "./concrete-colleague1.js";
+import { ConcreteColleague2 } from "./concrete-colleague2.js";
+import { ConcreteMediator } from "./concrete-mediator.js";
 
 function exchange(sender, receiver, message, out) {
   sender.send(message);
