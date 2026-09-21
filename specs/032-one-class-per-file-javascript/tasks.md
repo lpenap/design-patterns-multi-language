@@ -23,7 +23,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Iterator — PR #86
 - [x] Mediator — PR #89
 - [x] Memento — PR #92
-- [ ] Observer — branch `032-javascript-observer`
+- [x] Observer — PR #95
 - [ ] State — branch `032-javascript-state`
 - [ ] Strategy — branch `032-javascript-strategy`
 - [ ] Template Method — branch `032-javascript-template-method`
