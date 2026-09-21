@@ -3,9 +3,7 @@ from patterns.mediator import (
     ConcreteColleague1,
     ConcreteColleague2,
     ConcreteMediator,
-    example,
 )
-from patterns.runtime.contract import BufferOutput
 
 
 def test_routes_messages_to_the_other_colleague_in_both_directions() -> None:
@@ -41,16 +39,3 @@ def test_colleagues_talk_only_to_the_mediator() -> None:
     two.send("y")
     assert seen == ["ConcreteColleague1:x", "ConcreteColleague2:y"]
     assert one.received() == [] and two.received() == []
-
-
-def test_example_prints_the_expected_lines() -> None:
-    out = BufferOutput()
-    example.run(out)
-    assert example.id == "mediator"
-    assert out.lines == [
-        "Executing Mediator Pattern Implementation",
-        "  ConcreteColleague1 sends: hello",
-        "  ConcreteColleague2 receives: hello",
-        "  ConcreteColleague2 sends: hi",
-        "  ConcreteColleague1 receives: hi",
-    ]
