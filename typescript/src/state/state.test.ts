@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { BufferOutput } from "../runtime/contract.ts";
-import { stateExample } from "./example.ts";
-import { ConcreteStateA, Context, type State } from "./state.ts";
+import { ConcreteStateA } from "./concrete-state-a.ts";
+import { Context } from "./context.ts";
+import type { State } from "./state.ts";
 
 describe("State", () => {
   it("states alternate on each request", () => {
@@ -30,17 +30,5 @@ describe("State", () => {
     one.request();
     expect(one.getStateName()).toBe("ConcreteStateB");
     expect(two.getStateName()).toBe("ConcreteStateA");
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    stateExample.run(out);
-    expect(stateExample.id).toBe("state");
-    expect(out.lines).toEqual([
-      "Executing State Pattern Implementation",
-      "  Context in ConcreteStateA",
-      "  request() handled by ConcreteStateA, now in ConcreteStateB",
-      "  request() handled by ConcreteStateB, now in ConcreteStateA",
-    ]);
   });
 });

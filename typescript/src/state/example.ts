@@ -1,5 +1,6 @@
 import type { Example } from "../runtime/contract.ts";
-import { ConcreteStateA, Context } from "./state.ts";
+import { ConcreteStateA } from "./concrete-state-a.ts";
+import { Context } from "./context.ts";
 
 /** The client: issues requests to the context and never touches the states. */
 export const stateExample: Example = {
