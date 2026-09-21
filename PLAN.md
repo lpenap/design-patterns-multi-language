@@ -609,7 +609,7 @@ Status per pattern (tick with the PR number when merged):
 | Command | ✅ #78 | ✅ #79 | ✅ #80 |
 | Interpreter | ✅ #81 | ✅ #82 | ✅ #83 |
 | Iterator | ✅ #84 | ✅ #85 | ✅ #86 |
-| Mediator | ☐ | ☐ | ☐ |
+| Mediator | ✅ #87 | ☐ | ☐ |
 | Memento | ☐ | ☐ | ☐ |
 | Observer | ☐ | ☐ | ☐ |
 | State | ☐ | ☐ | ☐ |

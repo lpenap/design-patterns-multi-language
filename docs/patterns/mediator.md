@@ -56,7 +56,7 @@ classDiagram
 
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
-| Mediator | Defines the interface for communicating with colleagues. | [`Mediator`](../../java/src/main/java/com/penapereira/patterns/mediator/Mediator.java) | [`Mediator`](../../python/src/patterns/mediator/__init__.py) (Protocol) | [`Mediator`](../../typescript/src/mediator/mediator.ts) | implicit: any object with `notify` |
+| Mediator | Defines the interface for communicating with colleagues. | [`Mediator`](../../java/src/main/java/com/penapereira/patterns/mediator/Mediator.java) | [`Mediator`](../../python/src/patterns/mediator/mediator.py) (Protocol) | [`Mediator`](../../typescript/src/mediator/mediator.ts) | implicit: any object with `notify` |
 | ConcreteMediator | Knows and maintains its colleagues; implements the cooperative behaviour by routing. | [`ConcreteMediator`](../../java/src/main/java/com/penapereira/patterns/mediator/ConcreteMediator.java) | `ConcreteMediator` | `ConcreteMediator` | `ConcreteMediator` |
 | Colleague | Knows its mediator and communicates with it, never with other colleagues. | [`Colleague`](../../java/src/main/java/com/penapereira/patterns/mediator/Colleague.java) | `Colleague` | `Colleague` | `Colleague` |
 | ConcreteColleague | A specific colleague; here two that only differ by name. | [`ConcreteColleague1`](../../java/src/main/java/com/penapereira/patterns/mediator/ConcreteColleague1.java), `ConcreteColleague2` | `ConcreteColleague1`, `ConcreteColleague2` | `ConcreteColleague1`, `ConcreteColleague2` | `ConcreteColleague1`, `ConcreteColleague2` |
