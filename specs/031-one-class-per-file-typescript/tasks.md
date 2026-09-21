@@ -20,7 +20,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Chain of Responsibility — PR #76
 - [x] Command — PR #79
 - [x] Interpreter — PR #82
-- [ ] Iterator — branch `031-typescript-iterator`
+- [x] Iterator — PR #85
 - [ ] Mediator — branch `031-typescript-mediator`
 - [ ] Memento — branch `031-typescript-memento`
 - [ ] Observer — branch `031-typescript-observer`
