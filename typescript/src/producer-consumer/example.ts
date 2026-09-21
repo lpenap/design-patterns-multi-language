@@ -1,7 +1,7 @@
 import type { Example } from "../runtime/contract.ts";
 import { BoundedBuffer } from "./bounded-buffer.ts";
 import { Consumer } from "./consumer.ts";
-import { POISON_PILL } from "./poison_pill.ts";
+import { POISON_PILL } from "./poison-pill.ts";
 import { Producer } from "./producer.ts";
 import { runTasks } from "./run-tasks.ts";
 

@@ -1,5 +1,5 @@
 import type { BoundedBuffer } from "./bounded-buffer.ts";
-import { POISON_PILL } from "./poison_pill.ts";
+import { POISON_PILL } from "./poison-pill.ts";
 import type { Task } from "./task.ts";
 
 /** Takes items until it takes the poison pill, recording each. */

@@ -10,7 +10,7 @@ main = ROOT / f"{pid}{ext}"
 src = main.read_text()
 main.unlink()  # before writing: a declaration may map to the same file name
 
-def kebab(name): return re.sub(r"([a-z0-9])([A-Z])", r"\1-\2", name).lower()
+def kebab(name): return re.sub(r"([a-z0-9])([A-Z])", r"\1-\2", name).lower().replace("_", "-")
 
 lines = src.split("\n"); blocks = []; i = 0; pending = []; header = []
 while i < len(lines):
