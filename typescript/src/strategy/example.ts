@@ -1,5 +1,7 @@
 import type { Example } from "../runtime/contract.ts";
-import { ConcreteStrategyA, ConcreteStrategyB, Context } from "./strategy.ts";
+import { ConcreteStrategyA } from "./concrete-strategy-a.ts";
+import { ConcreteStrategyB } from "./concrete-strategy-b.ts";
+import { Context } from "./context.ts";
 
 /** The client: chooses the strategies and hands them to the context. */
 export const strategyExample: Example = {
