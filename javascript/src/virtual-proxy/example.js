@@ -1,4 +1,5 @@
-import { RealSubject, VirtualProxy } from "./virtual-proxy.js";
+import { RealSubject } from "./real-subject.js";
+import { VirtualProxy } from "./virtual-proxy.js";
 
 /** The client: observes that the real subject is created once, at the first request. */
 export const virtualProxyExample = {
