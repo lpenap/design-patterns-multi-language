@@ -584,7 +584,7 @@ each task of those specs is one PR.
 | 030 | Python, one PR per pattern | 27 |
 | 031 | TypeScript, one PR per pattern | 27 |
 | 032 | JavaScript, one PR per pattern | 27 |
-| 033 | Validator check to error mode; Java review pass (naming, Javadoc, `final`); docs links cross-checked; README regenerated | 1 |
+| 033 | Validator check to error mode; Java review pass (naming, Javadoc, `final`); docs links cross-checked; README regenerated | ✅ #111 |
 
 Status per pattern (tick with the PR number when merged):
 

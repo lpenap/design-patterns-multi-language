@@ -5,4 +5,4 @@
 - [x] T003 Java review: Javadoc on every top-level type; `final` audit (no change: the open classes are parents or test-stubbed)
 - [x] T004 README catalogue regenerated; `tools/refactor/` removed
 - [x] T005 `make lint`, `make test`, `make check` (108 ok), `make validate` (0 errors, 0 warnings)
-- [ ] T006 Commit, push, PR, workflows green, merge; Phase 4 delivered and spec 033 ticked in PLAN.md
+- [x] T006 PR #111; Phase 4 delivered and spec 033 ticked in PLAN.md
