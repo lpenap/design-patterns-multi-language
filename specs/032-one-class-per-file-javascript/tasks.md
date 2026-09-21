@@ -28,4 +28,4 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Strategy — PR #101
 - [x] Template Method — PR #104
 - [x] Visitor — PR #107
-- [ ] Producer/Consumer — branch `032-javascript-producer-consumer`
+- [x] Producer/Consumer — PR #110
