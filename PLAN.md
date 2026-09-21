@@ -610,7 +610,7 @@ Status per pattern (tick with the PR number when merged):
 | Interpreter | ✅ #81 | ✅ #82 | ✅ #83 |
 | Iterator | ✅ #84 | ✅ #85 | ✅ #86 |
 | Mediator | ✅ #87 | ✅ #88 | ✅ #89 |
-| Memento | ☐ | ☐ | ☐ |
+| Memento | ✅ #90 | ☐ | ☐ |
 | Observer | ☐ | ☐ | ☐ |
 | State | ☐ | ☐ | ☐ |
 | Strategy | ☐ | ☐ | ☐ |
