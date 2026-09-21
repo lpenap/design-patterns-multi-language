@@ -45,7 +45,7 @@ classDiagram
 
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
-| Subject | The common interface of real subject and proxy. | [`Subject`](../../java/src/main/java/com/penapereira/patterns/virtualproxy/Subject.java) | [`Subject`](../../python/src/patterns/virtualproxy/subject.py) (Protocol) | [`Subject`](../../typescript/src/virtual-proxy/virtual-proxy.ts) | implicit: any object with `request()` |
+| Subject | The common interface of real subject and proxy. | [`Subject`](../../java/src/main/java/com/penapereira/patterns/virtualproxy/Subject.java) | [`Subject`](../../python/src/patterns/virtualproxy/subject.py) (Protocol) | [`Subject`](../../typescript/src/virtual-proxy/subject.ts) | implicit: any object with `request()` |
 | RealSubject | The expensive object the proxy stands in for. | [`RealSubject`](../../java/src/main/java/com/penapereira/patterns/virtualproxy/RealSubject.java) | `RealSubject` | `RealSubject` | `RealSubject` |
 | Proxy | Creates the real subject through its loader on the first request and forwards every request to it. | [`VirtualProxy`](../../java/src/main/java/com/penapereira/patterns/virtualproxy/VirtualProxy.java) | `VirtualProxy` (`request`, `is_loaded`) | `VirtualProxy` | `VirtualProxy` |
 | Client | Uses the subject through the `Subject` interface. | [`VirtualProxyExample`](../../java/src/main/java/com/penapereira/patterns/virtualproxy/VirtualProxyExample.java) | `VirtualProxyExample` | [`virtualProxyExample`](../../typescript/src/virtual-proxy/example.ts) | [`virtualProxyExample`](../../javascript/src/virtual-proxy/example.js) |

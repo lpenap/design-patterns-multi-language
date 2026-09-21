@@ -3,7 +3,7 @@
 set -u
 NNN=$1; LANG_=$2; ID=$3; NAME=$4
 cd "$(dirname "$0")/../.." || exit 1
-export JAVA_HOME=${JAVA_HOME:-$HOME/.sdkman/candidates/java/25.0.4-tem}; export PATH=$JAVA_HOME/bin:$PATH
+export JAVA_HOME=$HOME/.sdkman/candidates/java/$(sed -n "s/^java=//p" .sdkmanrc); export PATH=$JAVA_HOME/bin:$PATH
 make check 2>&1 | grep "^check:" | tee /tmp/check-$NNN-$ID.txt
 grep -q "^check: 108 ok, 0 drift, 0 mismatch, 0 failed" /tmp/check-$NNN-$ID.txt || { echo "CHECK GATE FAILED"; exit 1; }
 git status --porcelain snapshots | grep -q . && { echo "SNAPSHOTS CHANGED"; exit 1; }

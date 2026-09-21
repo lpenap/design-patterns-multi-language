@@ -13,7 +13,12 @@
 #   make validate         catalog <-> filesystem <-> docs <-> snapshots consistency
 
 SHELL := /bin/bash
-JAVA_HOME ?= $(HOME)/.sdkman/candidates/java/25.0.4-tem
+# Prefer the project JDK from .sdkmanrc when SDKMAN has it (locally SDKMAN's own
+# JAVA_HOME points at its default JDK); otherwise keep the environment's JAVA_HOME (CI).
+SDKMAN_JAVA := $(HOME)/.sdkman/candidates/java/$(shell sed -n 's/^java=//p' .sdkmanrc)
+ifneq ($(wildcard $(SDKMAN_JAVA)/bin/java),)
+JAVA_HOME := $(SDKMAN_JAVA)
+endif
 export JAVA_HOME
 # Put the selected JDK first so `java` resolves to it even when SDKMAN's default JDK is on the PATH.
 export PATH := $(JAVA_HOME)/bin:$(PATH)
