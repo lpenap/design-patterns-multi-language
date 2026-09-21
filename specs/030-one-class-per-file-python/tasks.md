@@ -17,7 +17,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Flyweight — PR #66
 - [x] Protection Proxy — PR #69
 - [x] Virtual Proxy — PR #72
-- [ ] Chain of Responsibility — branch `030-python-chain-of-responsibility`
+- [x] Chain of Responsibility — PR #75
 - [ ] Command — branch `030-python-command`
 - [ ] Interpreter — branch `030-python-interpreter`
 - [ ] Iterator — branch `030-python-iterator`
