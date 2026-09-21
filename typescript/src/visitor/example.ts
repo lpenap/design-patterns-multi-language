@@ -1,5 +1,9 @@
 import type { Example } from "../runtime/contract.ts";
-import { ConcreteElementA, ConcreteElementB, ConcreteVisitor1, ConcreteVisitor2, ObjectStructure } from "./visitor.ts";
+import { ConcreteElementA } from "./concrete-element-a.ts";
+import { ConcreteElementB } from "./concrete-element-b.ts";
+import { ConcreteVisitor1 } from "./concrete-visitor1.ts";
+import { ConcreteVisitor2 } from "./concrete-visitor2.ts";
+import { ObjectStructure } from "./object-structure.ts";
 
 /** The client: creates visitors and applies them to the structure. */
 export const visitorExample: Example = {

@@ -27,5 +27,5 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] State — PR #97
 - [x] Strategy — PR #100
 - [x] Template Method — PR #103
-- [ ] Visitor — branch `031-typescript-visitor`
+- [x] Visitor — PR #106
 - [ ] Producer/Consumer — branch `031-typescript-producer-consumer`
