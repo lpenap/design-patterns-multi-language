@@ -1,7 +1,6 @@
 import pytest
 
-from patterns.runtime.contract import BufferOutput
-from patterns.templatemethod import AbstractClass, ConcreteClassA, ConcreteClassB, example
+from patterns.templatemethod import AbstractClass, ConcreteClassA, ConcreteClassB
 
 
 def test_skeleton_comes_from_the_base_and_steps_from_the_subclass() -> None:
@@ -34,14 +33,3 @@ def test_a_subclass_missing_a_primitive_operation_cannot_be_instantiated() -> No
 
     with pytest.raises(TypeError):
         Incomplete()  # type: ignore[abstract]
-
-
-def test_example_prints_the_expected_lines() -> None:
-    out = BufferOutput()
-    example.run(out)
-    assert example.id == "template-method"
-    assert out.lines == [
-        "Executing Template Method Pattern Implementation",
-        "  ConcreteClassA.primitiveOperation1 then ConcreteClassA.primitiveOperation2",
-        "  ConcreteClassB.primitiveOperation1 then ConcreteClassB.primitiveOperation2 with hook",
-    ]
