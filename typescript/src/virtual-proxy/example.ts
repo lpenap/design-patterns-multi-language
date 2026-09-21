@@ -1,5 +1,7 @@
 import type { Example } from "../runtime/contract.ts";
-import { RealSubject, type Subject, VirtualProxy } from "./virtual-proxy.ts";
+import { RealSubject } from "./real-subject.ts";
+import type { Subject } from "./subject.ts";
+import { VirtualProxy } from "./virtual-proxy.ts";
 
 /** The client: observes that the real subject is created once, at the first request. */
 export const virtualProxyExample: Example = {
