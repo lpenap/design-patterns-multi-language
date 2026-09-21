@@ -1,4 +1,8 @@
-import { BoundedBuffer, Consumer, POISON_PILL, Producer, runTasks } from "./producer-consumer.js";
+import { BoundedBuffer } from "./bounded-buffer.js";
+import { Consumer } from "./consumer.js";
+import { POISON_PILL } from "./poison-pill.js";
+import { Producer } from "./producer.js";
+import { runTasks } from "./run-tasks.js";
 
 const CAPACITY = 2;
 const CONSUMERS = 2;
