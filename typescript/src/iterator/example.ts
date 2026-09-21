@@ -1,5 +1,5 @@
 import type { Example } from "../runtime/contract.ts";
-import { ConcreteAggregate } from "./iterator.ts";
+import { ConcreteAggregate } from "./concrete-aggregate.ts";
 
 /** The client: traverses through the Iterator interface only. */
 export const iteratorExample: Example = {
