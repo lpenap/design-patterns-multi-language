@@ -1,4 +1,5 @@
-import { ConcreteStateA, Context } from "./state.js";
+import { ConcreteStateA } from "./concrete-state-a.js";
+import { Context } from "./context.js";
 
 /** The client: issues requests to the context and never touches the states. */
 export const stateExample = {

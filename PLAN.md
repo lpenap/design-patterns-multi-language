@@ -612,7 +612,7 @@ Status per pattern (tick with the PR number when merged):
 | Mediator | ✅ #87 | ✅ #88 | ✅ #89 |
 | Memento | ✅ #90 | ✅ #91 | ✅ #92 |
 | Observer | ✅ #93 | ✅ #94 | ✅ #95 |
-| State | ✅ #96 | ✅ #97 | ☐ |
+| State | ✅ #96 | ✅ #97 | ✅ #98 |
 | Strategy | ☐ | ☐ | ☐ |
 | Template Method | ☐ | ☐ | ☐ |
 | Visitor | ☐ | ☐ | ☐ |

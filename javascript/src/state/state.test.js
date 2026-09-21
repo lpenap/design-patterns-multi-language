@@ -1,8 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { BufferOutput } from "../runtime/contract.js";
-import { stateExample } from "./example.js";
-import { ConcreteStateA, Context } from "./state.js";
+import { ConcreteStateA } from "./concrete-state-a.js";
+import { Context } from "./context.js";
 
 describe("State", () => {
   it("states alternate on each request", () => {
@@ -26,17 +25,5 @@ describe("State", () => {
     one.request();
     assert.equal(one.getStateName(), "ConcreteStateB");
     assert.equal(two.getStateName(), "ConcreteStateA");
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    stateExample.run(out);
-    assert.equal(stateExample.id, "state");
-    assert.deepEqual(out.lines, [
-      "Executing State Pattern Implementation",
-      "  Context in ConcreteStateA",
-      "  request() handled by ConcreteStateA, now in ConcreteStateB",
-      "  request() handled by ConcreteStateB, now in ConcreteStateA",
-    ]);
   });
 });

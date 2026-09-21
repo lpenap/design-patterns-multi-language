@@ -1,26 +1,3 @@
-// State: let an object alter its behaviour when its internal state changes.
-// A state is any object with handle(context) and name().
-
-export class ConcreteStateA {
-  handle(context) {
-    context.setState(new ConcreteStateB());
-  }
-
-  name() {
-    return "ConcreteStateA";
-  }
-}
-
-export class ConcreteStateB {
-  handle(context) {
-    context.setState(new ConcreteStateA());
-  }
-
-  name() {
-    return "ConcreteStateB";
-  }
-}
-
 /** Holds the current state and delegates state-specific requests to it. */
 export class Context {
   #state;
