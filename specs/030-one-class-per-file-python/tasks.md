@@ -21,7 +21,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Command — PR #78
 - [x] Interpreter — PR #81
 - [x] Iterator — PR #84
-- [ ] Mediator — branch `030-python-mediator`
+- [x] Mediator — PR #87
 - [ ] Memento — branch `030-python-memento`
 - [ ] Observer — branch `030-python-observer`
 - [ ] State — branch `030-python-state`
