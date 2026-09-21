@@ -11,8 +11,8 @@ export interface ValidateOptions {
   readonly json?: boolean;
 }
 
-/** Warning while Phase 4 migrates Python, TypeScript and JavaScript; error afterwards (spec 033). */
-export const ONE_CLASS_PER_FILE_LEVEL: "warning" | "error" = "warning";
+/** Every language is migrated (Phase 4, spec 033): a file breaking the one-class-per-file rule fails validation. */
+export const ONE_CLASS_PER_FILE_LEVEL: "warning" | "error" = "error";
 
 export interface ValidationFinding {
   readonly level: "error" | "warning" | "info";

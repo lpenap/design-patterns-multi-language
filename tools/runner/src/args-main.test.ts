@@ -3,7 +3,7 @@ import { parseArgs, USAGE } from "./args.ts";
 import { loadCatalog } from "./catalog.ts";
 import { main } from "./main.ts";
 import { snapshot } from "./commands/snapshot.ts";
-import { ALPHA, makeRepo, type Repo } from "../tests/helpers.ts";
+import { ALPHA, conformStructure, makeRepo, type Repo } from "../tests/helpers.ts";
 
 describe("parseArgs", () => {
   it("parses commands, flags and values", () => {
@@ -41,6 +41,7 @@ describe("main", () => {
 
   it("dispatches every command", () => {
     repo = makeRepo();
+    conformStructure(repo.root);
     expect(main(["list", "--lang", "java"], opts(repo))).toBe(0);
     expect(repo.out()).toBe("Java: fixture-alpha, fixture-beta\n");
     expect(main(["run", "fixture-alpha", "--lang", "java"], opts(repo))).toBe(0);

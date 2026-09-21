@@ -1,5 +1,6 @@
 package com.penapereira.patterns.chainofresponsibility;
 
+/** Handles negative requests; passes anything else to the next handler. */
 public final class NegativeHandler extends Handler {
 
     @Override

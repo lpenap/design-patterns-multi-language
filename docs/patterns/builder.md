@@ -54,11 +54,10 @@ classDiagram
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
 | Builder | The abstract interface for creating parts of a product. | [`Builder`](../../java/src/main/java/com/penapereira/patterns/builder/Builder.java) | [`Builder`](../../python/src/patterns/builder/builder.py) (Protocol; `build_part_a`, `build_part_b`, `get_result`) | [`Builder`](../../typescript/src/builder/builder.ts) | implicit: any object with the three methods |
-| ConcreteBuilder | Constructs and assembles parts; keeps the representation and hands it out. | [`ConcreteBuilder`](../../java/src/main/java/com/penapereira/patterns/builder/ConcreteBuilder.java) | `ConcreteBuilder` | `ConcreteBuilder` | `ConcreteBuilder` |
-| Director | Constructs an object using the Builder interface; owns the *sequence* of steps. | [`Director`](../../java/src/main/java/com/penapereira/patterns/builder/Director.java) | `Director` | `Director` | `Director` |
-| Product | The complex object under construction. | [`Product`](../../java/src/main/java/com/penapereira/patterns/builder/Product.java) | `Product` | `Product` | `Product` |
-| Client | Creates a builder, hands it to the director, retrieves the product. | [`BuilderExample`](../../java/src/main/java/com/penapereira/patterns/builder/BuilderExample.java) | `BuilderExample` | [`builderExample`](../../typescript/src/builder/example.ts) | [`builderExample`](../../javascript/src/builder/example.js) |
-
+| ConcreteBuilder | Constructs and assembles parts; keeps the representation and hands it out. | [`ConcreteBuilder`](../../java/src/main/java/com/penapereira/patterns/builder/ConcreteBuilder.java) | [`ConcreteBuilder`](../../python/src/patterns/builder/concrete_builder.py) | [`ConcreteBuilder`](../../typescript/src/builder/concrete-builder.ts) | [`ConcreteBuilder`](../../javascript/src/builder/concrete-builder.js) |
+| Director | Constructs an object using the Builder interface; owns the *sequence* of steps. | [`Director`](../../java/src/main/java/com/penapereira/patterns/builder/Director.java) | [`Director`](../../python/src/patterns/builder/director.py) | [`Director`](../../typescript/src/builder/director.ts) | [`Director`](../../javascript/src/builder/director.js) |
+| Product | The complex object under construction. | [`Product`](../../java/src/main/java/com/penapereira/patterns/builder/Product.java) | [`Product`](../../python/src/patterns/builder/product.py) | [`Product`](../../typescript/src/builder/product.ts) | [`Product`](../../javascript/src/builder/product.js) |
+| Client | Creates a builder, hands it to the director, retrieves the product. | [`BuilderExample`](../../java/src/main/java/com/penapereira/patterns/builder/BuilderExample.java) | [`BuilderExample`](../../python/src/patterns/builder/example.py) | [`builderExample`](../../typescript/src/builder/example.ts) | [`builderExample`](../../javascript/src/builder/example.js) |
 ## The example
 
 The director drives a concrete builder through its fixed sequence, part A then

@@ -1,5 +1,6 @@
 package com.penapereira.patterns.templatemethod;
 
+/** Implements the primitive operations and keeps the default hook. */
 public final class ConcreteClassA extends AbstractClass {
 
     @Override

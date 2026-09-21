@@ -50,14 +50,13 @@ classDiagram
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
 | AbstractClass | `templateMethod()` fixes the algorithm as `primitiveOperation1()` then `primitiveOperation2()` then `hook()`. The primitive operations are abstract; the hook has a default (empty) implementation. | [`AbstractClass`](../../java/src/main/java/com/penapereira/patterns/templatemethod/AbstractClass.java) | [`AbstractClass`](../../python/src/patterns/templatemethod/abstract_class.py) (`template_method`, `primitive_operation_1`, `primitive_operation_2`, `hook`) | [`AbstractClass`](../../typescript/src/template-method/abstract-class.ts) | [`AbstractClass`](../../javascript/src/template-method/abstract-class.js) |
-| ConcreteClass | Implement the primitive operations; may override the hook. | [`ConcreteClassA`](../../java/src/main/java/com/penapereira/patterns/templatemethod/ConcreteClassA.java), `ConcreteClassB` | `ConcreteClassA`, `ConcreteClassB` | `ConcreteClassA`, `ConcreteClassB` | `ConcreteClassA`, `ConcreteClassB` |
-| Client | Calls the template method through the abstract type. | [`TemplateMethodExample`](../../java/src/main/java/com/penapereira/patterns/templatemethod/TemplateMethodExample.java) | `TemplateMethodExample` | [`templateMethodExample`](../../typescript/src/template-method/example.ts) | [`templateMethodExample`](../../javascript/src/template-method/example.js) |
+| ConcreteClass | Implement the primitive operations; may override the hook. | [`ConcreteClassA`](../../java/src/main/java/com/penapereira/patterns/templatemethod/ConcreteClassA.java), [`ConcreteClassB`](../../java/src/main/java/com/penapereira/patterns/templatemethod/ConcreteClassB.java) | [`ConcreteClassA`](../../python/src/patterns/templatemethod/concrete_class_a.py), [`ConcreteClassB`](../../python/src/patterns/templatemethod/concrete_class_b.py) | [`ConcreteClassA`](../../typescript/src/template-method/concrete-class-a.ts), [`ConcreteClassB`](../../typescript/src/template-method/concrete-class-b.ts) | [`ConcreteClassA`](../../javascript/src/template-method/concrete-class-a.js), [`ConcreteClassB`](../../javascript/src/template-method/concrete-class-b.js) |
+| Client | Calls the template method through the abstract type. | [`TemplateMethodExample`](../../java/src/main/java/com/penapereira/patterns/templatemethod/TemplateMethodExample.java) | [`TemplateMethodExample`](../../python/src/patterns/templatemethod/example.py) | [`templateMethodExample`](../../typescript/src/template-method/example.ts) | [`templateMethodExample`](../../javascript/src/template-method/example.js) |
 
 Gamma et al. distinguish *abstract operations*, which subclasses must
 implement, from *hook operations*, which provide default behaviour subclasses
 may extend [1, p. 328]. `ConcreteClassB` overrides the hook; `ConcreteClassA`
 inherits the default.
-
 ## The example
 
 The client instantiates each concrete class through the abstract type and

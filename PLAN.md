@@ -534,7 +534,7 @@ original source: each design comes from Gamma et al. (and Ball & Crawford /
 Martin for Monostate), reduced to the fewest participants that show the
 structure, with a deterministic example.
 
-**Phase 4 – Review and refactor: one class per file in every language.**
+**Phase 4 – Review and refactor: one class per file in every language.** *Delivered 2026-09-21: spec 029 (PR #29), 81 per-pattern PRs (#30–#110) and spec 033; the validator enforces the rule as an error.*
 Java already keeps one top-level type per file; Python, TypeScript and
 JavaScript put every class of a pattern in one module (up to ten classes in
 `abstractfactory/__init__.py`). Phase 4 makes the four trees isomorphic: one
@@ -584,7 +584,7 @@ each task of those specs is one PR.
 | 030 | Python, one PR per pattern | 27 |
 | 031 | TypeScript, one PR per pattern | 27 |
 | 032 | JavaScript, one PR per pattern | 27 |
-| 033 | Validator check to error mode; Java review pass (naming, Javadoc, `final`); docs links cross-checked; README regenerated | 1 |
+| 033 | Validator check to error mode; Java review pass (naming, Javadoc, `final`); docs links cross-checked; README regenerated | ✅ #111 |
 
 Status per pattern (tick with the PR number when merged):
 

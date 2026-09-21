@@ -46,10 +46,9 @@ classDiagram
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
 | Subject | The common interface of real subject and proxy. | [`Subject`](../../java/src/main/java/com/penapereira/patterns/virtualproxy/Subject.java) | [`Subject`](../../python/src/patterns/virtualproxy/subject.py) (Protocol) | [`Subject`](../../typescript/src/virtual-proxy/subject.ts) | implicit: any object with `request()` |
-| RealSubject | The expensive object the proxy stands in for. | [`RealSubject`](../../java/src/main/java/com/penapereira/patterns/virtualproxy/RealSubject.java) | `RealSubject` | `RealSubject` | `RealSubject` |
-| Proxy | Creates the real subject through its loader on the first request and forwards every request to it. | [`VirtualProxy`](../../java/src/main/java/com/penapereira/patterns/virtualproxy/VirtualProxy.java) | `VirtualProxy` (`request`, `is_loaded`) | `VirtualProxy` | `VirtualProxy` |
-| Client | Uses the subject through the `Subject` interface. | [`VirtualProxyExample`](../../java/src/main/java/com/penapereira/patterns/virtualproxy/VirtualProxyExample.java) | `VirtualProxyExample` | [`virtualProxyExample`](../../typescript/src/virtual-proxy/example.ts) | [`virtualProxyExample`](../../javascript/src/virtual-proxy/example.js) |
-
+| RealSubject | The expensive object the proxy stands in for. | [`RealSubject`](../../java/src/main/java/com/penapereira/patterns/virtualproxy/RealSubject.java) | [`RealSubject`](../../python/src/patterns/virtualproxy/real_subject.py) | [`RealSubject`](../../typescript/src/virtual-proxy/real-subject.ts) | [`RealSubject`](../../javascript/src/virtual-proxy/real-subject.js) |
+| Proxy | Creates the real subject through its loader on the first request and forwards every request to it. | [`VirtualProxy`](../../java/src/main/java/com/penapereira/patterns/virtualproxy/VirtualProxy.java) | [`VirtualProxy`](../../python/src/patterns/virtualproxy/virtual_proxy.py) (`request`, `is_loaded`) | [`VirtualProxy`](../../typescript/src/virtual-proxy/virtual-proxy.ts) | [`VirtualProxy`](../../javascript/src/virtual-proxy/virtual-proxy.js) |
+| Client | Uses the subject through the `Subject` interface. | [`VirtualProxyExample`](../../java/src/main/java/com/penapereira/patterns/virtualproxy/VirtualProxyExample.java) | [`VirtualProxyExample`](../../python/src/patterns/virtualproxy/example.py) | [`virtualProxyExample`](../../typescript/src/virtual-proxy/example.ts) | [`virtualProxyExample`](../../javascript/src/virtual-proxy/example.js) |
 ## The example
 
 The client hands the proxy a loader that counts how often it runs, checks that
