@@ -1,5 +1,8 @@
 import type { Example } from "../runtime/contract.ts";
-import { type Handler, NegativeHandler, PositiveHandler, ZeroHandler } from "./chain-of-responsibility.ts";
+import type { Handler } from "./handler.ts";
+import { NegativeHandler } from "./negative-handler.ts";
+import { PositiveHandler } from "./positive-handler.ts";
+import { ZeroHandler } from "./zero-handler.ts";
 
 /** The client: assembles the chain and sends requests to its first link. */
 export const chainOfResponsibilityExample: Example = {
