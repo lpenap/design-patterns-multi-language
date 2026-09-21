@@ -1,5 +1,6 @@
 import type { Example } from "../runtime/contract.ts";
-import { ConcreteObserver, ConcreteSubject } from "./observer.ts";
+import { ConcreteObserver } from "./concrete-observer.ts";
+import { ConcreteSubject } from "./concrete-subject.ts";
 
 /** The client: wires subject and observers and drives the changes. */
 export const observerExample: Example = {
