@@ -1,4 +1,5 @@
-import { ConcreteObserver, ConcreteSubject } from "./observer.js";
+import { ConcreteObserver } from "./concrete-observer.js";
+import { ConcreteSubject } from "./concrete-subject.js";
 
 /** The client: wires subject and observers and drives the changes. */
 export const observerExample = {
