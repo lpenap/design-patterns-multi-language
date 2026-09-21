@@ -1,4 +1,6 @@
-import { ConcreteCommand, Invoker, Receiver } from "./command.js";
+import { ConcreteCommand } from "./concrete-command.js";
+import { Invoker } from "./invoker.js";
+import { Receiver } from "./receiver.js";
 
 /** The client: creates commands bound to a receiver and hands them to the invoker. */
 export const commandExample = {
