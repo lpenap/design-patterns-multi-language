@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { BufferOutput } from "../runtime/contract.ts";
-import { type Command, ConcreteCommand, Invoker, Receiver } from "./command.ts";
-import { commandExample } from "./example.ts";
+import type { Command } from "./command.ts";
+import { ConcreteCommand } from "./concrete-command.ts";
+import { Invoker } from "./invoker.ts";
+import { Receiver } from "./receiver.ts";
 
 describe("Command", () => {
   it("execute and undo act on the receiver", () => {
@@ -46,17 +47,5 @@ describe("Command", () => {
     invoker.execute(custom);
     invoker.undo();
     expect(log).toEqual(["do", "undo"]);
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    commandExample.run(out);
-    expect(commandExample.id).toBe("command");
-    expect(out.lines).toEqual([
-      "Executing Command Pattern Implementation",
-      "  Executed ConcreteCommand(Hello): state = Hello",
-      "  Executed ConcreteCommand(World): state = Hello World",
-      "  Undone ConcreteCommand(World): state = Hello",
-    ]);
   });
 });

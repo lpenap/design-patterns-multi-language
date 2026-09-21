@@ -1,5 +1,8 @@
 import type { Example } from "../runtime/contract.ts";
-import { type Command, ConcreteCommand, Invoker, Receiver } from "./command.ts";
+import type { Command } from "./command.ts";
+import { ConcreteCommand } from "./concrete-command.ts";
+import { Invoker } from "./invoker.ts";
+import { Receiver } from "./receiver.ts";
 
 /** The client: creates commands bound to a receiver and hands them to the invoker. */
 export const commandExample: Example = {
