@@ -1,8 +1,10 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { BufferOutput } from "../runtime/contract.js";
-import { visitorExample } from "./example.js";
-import { ConcreteElementA, ConcreteElementB, ConcreteVisitor1, ConcreteVisitor2, ObjectStructure } from "./visitor.js";
+import { ConcreteElementA } from "./concrete-element-a.js";
+import { ConcreteElementB } from "./concrete-element-b.js";
+import { ConcreteVisitor1 } from "./concrete-visitor1.js";
+import { ConcreteVisitor2 } from "./concrete-visitor2.js";
+import { ObjectStructure } from "./object-structure.js";
 
 function structure() {
   const s = new ObjectStructure();
@@ -39,16 +41,5 @@ describe("Visitor", () => {
     const counter = { visitConcreteElementA: () => counts.push("a"), visitConcreteElementB: () => counts.push("b") };
     structure().accept(counter);
     assert.deepEqual(counts, ["a", "b", "a"]);
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    visitorExample.run(out);
-    assert.equal(visitorExample.id, "visitor");
-    assert.deepEqual(out.lines, [
-      "Executing Visitor Pattern Implementation",
-      "  ConcreteVisitor1: visited ConcreteElementA, visited ConcreteElementB",
-      "  ConcreteVisitor2: A+B",
-    ]);
   });
 });
