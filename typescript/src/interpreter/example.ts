@@ -1,5 +1,10 @@
 import type { Example } from "../runtime/contract.ts";
-import { type AbstractExpression, AddExpression, Context, NumberExpression, SubtractExpression, VariableExpression } from "./interpreter.ts";
+import type { AbstractExpression } from "./abstract-expression.ts";
+import { AddExpression } from "./add-expression.ts";
+import { Context } from "./context.ts";
+import { NumberExpression } from "./number-expression.ts";
+import { SubtractExpression } from "./subtract-expression.ts";
+import { VariableExpression } from "./variable-expression.ts";
 
 /** The client: builds the syntax tree by hand and interprets it under two contexts. */
 export const interpreterExample: Example = {

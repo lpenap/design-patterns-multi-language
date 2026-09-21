@@ -19,7 +19,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Virtual Proxy — PR #72
 - [x] Chain of Responsibility — PR #75
 - [x] Command — PR #78
-- [ ] Interpreter — branch `030-python-interpreter`
+- [x] Interpreter — PR #81
 - [ ] Iterator — branch `030-python-iterator`
 - [ ] Mediator — branch `030-python-mediator`
 - [ ] Memento — branch `030-python-memento`
