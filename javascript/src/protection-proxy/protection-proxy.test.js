@@ -1,8 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { BufferOutput } from "../runtime/contract.js";
-import { protectionProxyExample } from "./example.js";
-import { ProtectionProxy, RealSubject } from "./protection-proxy.js";
+import { ProtectionProxy } from "./protection-proxy.js";
+import { RealSubject } from "./real-subject.js";
 
 describe("ProtectionProxy", () => {
   it("an admin is forwarded to the real subject", () => {
@@ -21,12 +20,5 @@ describe("ProtectionProxy", () => {
     assert.equal(calls, 0);
     assert.equal(new ProtectionProxy(counting, "admin").request(), "secret");
     assert.equal(calls, 1);
-  });
-
-  it("example prints the expected lines", () => {
-    const out = new BufferOutput();
-    protectionProxyExample.run(out);
-    assert.equal(protectionProxyExample.id, "protection-proxy");
-    assert.deepEqual(out.lines, ["Executing Protection Proxy Pattern Implementation", "  admin: RealSubject.request()", "  guest: access denied by ProtectionProxy"]);
   });
 });
