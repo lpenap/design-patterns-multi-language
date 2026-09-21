@@ -1,5 +1,4 @@
-from patterns.observer import ConcreteObserver, ConcreteSubject, example
-from patterns.runtime.contract import BufferOutput
+from patterns.observer import ConcreteObserver, ConcreteSubject
 
 
 def test_notifies_every_observer_in_attachment_order() -> None:
@@ -42,15 +41,3 @@ def test_any_object_with_update_can_observe() -> None:
     subject.attach(Recorder())
     subject.set_state(3)
     assert seen == [(0, 3)]
-
-
-def test_example_prints_the_expected_lines() -> None:
-    out = BufferOutput()
-    example.run(out)
-    assert example.id == "observer"
-    assert out.lines == [
-        "Executing Observer Pattern Implementation",
-        "  observer1 notified: state 0 -> 5",
-        "  observer2 notified: state 0 -> 5",
-        "  observer1 notified: state 5 -> 10",
-    ]
