@@ -46,7 +46,7 @@ classDiagram
 
 | Role [1] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
-| Flyweight | The interface through which flyweights receive and act on extrinsic state. | [`Flyweight`](../../java/src/main/java/com/penapereira/patterns/flyweight/Flyweight.java) | [`Flyweight`](../../python/src/patterns/flyweight/__init__.py) (Protocol) | [`Flyweight`](../../typescript/src/flyweight/flyweight.ts) | implicit: any object with `operation()` |
+| Flyweight | The interface through which flyweights receive and act on extrinsic state. | [`Flyweight`](../../java/src/main/java/com/penapereira/patterns/flyweight/Flyweight.java) | [`Flyweight`](../../python/src/patterns/flyweight/flyweight.py) (Protocol) | [`Flyweight`](../../typescript/src/flyweight/flyweight.ts) | implicit: any object with `operation()` |
 | ConcreteFlyweight | Stores intrinsic state; sharable. | [`ConcreteFlyweight`](../../java/src/main/java/com/penapereira/patterns/flyweight/ConcreteFlyweight.java) | `ConcreteFlyweight` | `ConcreteFlyweight` | `ConcreteFlyweight` |
 | FlyweightFactory | Creates and manages flyweights; returns an existing one when it has it. | [`FlyweightFactory`](../../java/src/main/java/com/penapereira/patterns/flyweight/FlyweightFactory.java) | `FlyweightFactory` (`get_flyweight`, `count`) | `FlyweightFactory` | `FlyweightFactory` |
 | Client | Holds the extrinsic state and obtains flyweights from the factory only. | [`FlyweightExample`](../../java/src/main/java/com/penapereira/patterns/flyweight/FlyweightExample.java) | `FlyweightExample` | [`flyweightExample`](../../typescript/src/flyweight/example.ts) | [`flyweightExample`](../../javascript/src/flyweight/example.js) |
