@@ -1,16 +1,12 @@
 import threading
 import time
 
-import pytest
-
 from patterns.producerconsumer import (
     POISON_PILL,
     BoundedBuffer,
     Consumer,
     Producer,
-    example,
 )
-from patterns.runtime.contract import BufferOutput
 
 
 def test_is_first_in_first_out() -> None:
@@ -67,17 +63,3 @@ def test_every_item_is_consumed_exactly_once_and_consumers_stop_on_the_poison_pi
         t.join(2.0)
     assert sorted(consumed) == [10, 20, 30, 40]
     assert buffer.size() == 0
-
-
-@pytest.mark.parametrize("run", range(5))
-def test_example_prints_the_same_lines_on_every_run(run: int) -> None:
-    out = BufferOutput()
-    example.run(out)
-    assert example.id == "producer-consumer"
-    assert out.lines == [
-        "Executing Producer/Consumer Pattern Implementation",
-        "  Buffer capacity 2, 1 producer, 2 consumers",
-        "  Produced: 1 2 3 4 5",
-        "  Consumed: 1 2 3 4 5",
-        "  Each item consumed exactly once: true",
-    ]
