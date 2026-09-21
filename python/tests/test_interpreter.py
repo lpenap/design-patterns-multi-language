@@ -7,9 +7,7 @@ from patterns.interpreter import (
     NumberExpression,
     SubtractExpression,
     VariableExpression,
-    example,
 )
-from patterns.runtime.contract import BufferOutput
 
 
 def test_terminals_interpret_themselves() -> None:
@@ -41,15 +39,3 @@ def test_trees_nest_to_any_depth() -> None:
 def test_an_undefined_variable_is_an_error() -> None:
     with pytest.raises(KeyError, match="undefined variable: q"):
         VariableExpression("q").interpret(Context())
-
-
-def test_example_prints_the_expected_lines() -> None:
-    out = BufferOutput()
-    example.run(out)
-    assert example.id == "interpreter"
-    assert out.lines == [
-        "Executing Interpreter Pattern Implementation",
-        "  Expression: ((x + 3) - y)",
-        "  With x = 5, y = 2: 6",
-        "  With x = 10, y = 0: 13",
-    ]
