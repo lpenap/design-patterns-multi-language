@@ -24,7 +24,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Mediator — PR #88
 - [x] Memento — PR #91
 - [x] Observer — PR #94
-- [ ] State — branch `031-typescript-state`
+- [x] State — PR #97
 - [ ] Strategy — branch `031-typescript-strategy`
 - [ ] Template Method — branch `031-typescript-template-method`
 - [ ] Visitor — branch `031-typescript-visitor`
