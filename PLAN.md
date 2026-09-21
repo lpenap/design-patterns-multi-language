@@ -602,7 +602,7 @@ Status per pattern (tick with the PR number when merged):
 | Composite | ✅ #57 | ✅ #58 | ✅ #59 |
 | Decorator | ✅ #60 | ✅ #61 | ✅ #62 |
 | Façade | ✅ #63 | ✅ #64 | ✅ #65 |
-| Flyweight | ☐ | ☐ | ☐ |
+| Flyweight | ✅ #66 | ☐ | ☐ |
 | Protection Proxy | ☐ | ☐ | ☐ |
 | Virtual Proxy | ☐ | ☐ | ☐ |
 | Chain of Responsibility | ☐ | ☐ | ☐ |
