@@ -18,7 +18,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Protection Proxy — PR #70
 - [x] Virtual Proxy — PR #73
 - [x] Chain of Responsibility — PR #76
-- [ ] Command — branch `031-typescript-command`
+- [x] Command — PR #79
 - [ ] Interpreter — branch `031-typescript-interpreter`
 - [ ] Iterator — branch `031-typescript-iterator`
 - [ ] Mediator — branch `031-typescript-mediator`
