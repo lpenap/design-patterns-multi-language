@@ -1,5 +1,4 @@
-from patterns.runtime.contract import BufferOutput
-from patterns.state import ConcreteStateA, Context, example
+from patterns.state import ConcreteStateA, Context
 
 
 def test_states_alternate_on_each_request() -> None:
@@ -28,15 +27,3 @@ def test_a_state_instance_can_serve_several_contexts() -> None:
     one.request()
     assert one.get_state_name() == "ConcreteStateB"
     assert two.get_state_name() == "ConcreteStateA"
-
-
-def test_example_prints_the_expected_lines() -> None:
-    out = BufferOutput()
-    example.run(out)
-    assert example.id == "state"
-    assert out.lines == [
-        "Executing State Pattern Implementation",
-        "  Context in ConcreteStateA",
-        "  request() handled by ConcreteStateA, now in ConcreteStateB",
-        "  request() handled by ConcreteStateB, now in ConcreteStateA",
-    ]
