@@ -16,7 +16,7 @@ One task = one pull request. Tick with the PR number when merged.
 - [x] Façade — PR #64
 - [x] Flyweight — PR #67
 - [x] Protection Proxy — PR #70
-- [ ] Virtual Proxy — branch `031-typescript-virtual-proxy`
+- [x] Virtual Proxy — PR #73
 - [ ] Chain of Responsibility — branch `031-typescript-chain-of-responsibility`
 - [ ] Command — branch `031-typescript-command`
 - [ ] Interpreter — branch `031-typescript-interpreter`
