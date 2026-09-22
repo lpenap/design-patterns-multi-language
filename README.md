@@ -34,6 +34,7 @@ make setup            # installs every toolchain's dependencies
 make test             # every language's tests and coverage gates
 make run P=strategy   # one pattern in all four languages, side by side
 make run P=strategy L=python
+make run-all L=python # every pattern in one language, in catalogue order
 make list L=java
 ```
 
