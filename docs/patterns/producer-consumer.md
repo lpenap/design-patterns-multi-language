@@ -9,6 +9,8 @@ bounded, thread-safe buffer. A producer waits while the buffer is full, a
 consumer waits while it is empty, and concurrent access never corrupts the
 buffer or loses or duplicates an item.
 
+*Principles:* [Loose coupling](../principles.md#loose-coupling).
+
 ## Motivation
 
 Two kinds of activities share a buffer of finite capacity. *Producers* generate

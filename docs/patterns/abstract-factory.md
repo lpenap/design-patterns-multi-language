@@ -7,6 +7,8 @@
 Provide an interface for creating families of related or dependent objects
 without specifying their concrete classes [1, p. 87].
 
+*Principles:* [Encapsulate what varies](../principles.md#encapsulate-what-varies), [Program to an interface](../principles.md#program-to-an-interface), [Dependency inversion principle](../principles.md#dependency-inversion-principle), [Open-closed principle](../principles.md#open-closed-principle).
+
 ## Motivation
 
 Some systems must be configurable with one of several *families* of products,

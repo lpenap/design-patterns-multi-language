@@ -7,6 +7,8 @@
 Provide a way to access the elements of an aggregate object sequentially
 without exposing its underlying representation [1, p. 257].
 
+*Principles:* [Single responsibility principle](../principles.md#single-responsibility-principle), [Program to an interface](../principles.md#program-to-an-interface), [Encapsulate what varies](../principles.md#encapsulate-what-varies).
+
 ## Motivation
 
 A list should let clients visit its elements without revealing whether it is

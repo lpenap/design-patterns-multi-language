@@ -7,6 +7,8 @@
 Attach additional responsibilities to an object dynamically. Decorators provide
 a flexible alternative to subclassing for extending functionality [1, p. 175].
 
+*Principles:* [Open-closed principle](../principles.md#open-closed-principle), [Favour composition over inheritance](../principles.md#favour-composition-over-inheritance), [Program to an interface](../principles.md#program-to-an-interface).
+
 ## Motivation
 
 Adding a border or a scroll bar to any visual component through inheritance

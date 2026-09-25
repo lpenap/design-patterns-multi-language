@@ -7,6 +7,8 @@
 Without violating encapsulation, capture and externalize an object's internal
 state so that the object can be restored to this state later [1, p. 283].
 
+*Principles:* [Single responsibility principle](../principles.md#single-responsibility-principle).
+
 ## Motivation
 
 An undo mechanism must save an object's state before an operation so the state

@@ -15,10 +15,12 @@ This is the multi-language iteration of
 
 1. [Quickstart](#quickstart)
 2. [Catalogue](#catalogue)
-3. [Repository layout](#repository-layout)
-4. [How it fits together](#how-it-fits-together)
-5. [Adding a pattern](#adding-a-pattern)
-6. [References](#references)
+3. [Principles](#principles)
+4. [Repository layout](#repository-layout)
+5. [How it fits together](#how-it-fits-together)
+6. [Adding a pattern](#adding-a-pattern)
+7. [Future work](#future-work)
+8. [References](#references)
 
 ## Quickstart
 
@@ -60,6 +62,7 @@ generated from [`catalog.yaml`](catalog.yaml); do not edit it by hand.
 | 🔂 | [Monostate](docs/patterns/monostate.md) | Share all state among every instance of a class while leaving instantiation unconstrained. | done | done | done | done |
 | 🃏 | [Prototype](docs/patterns/prototype.md) | Specify the kinds of objects to create using a prototypical instance, and create new objects by copying it. | done | done | done | done |
 | 💍 | [Singleton](docs/patterns/singleton.md) | Ensure a class has exactly one instance and provide a global point of access to it. | done | done | done | done |
+| ♻️ | [Object Pool](docs/patterns/object-pool.md) | Reuse a bounded set of expensive-to-create objects by lending them out and taking them back instead of creating and discarding them. | pending | pending | pending | pending |
 
 ### Structural
 
@@ -89,13 +92,48 @@ generated from [`catalog.yaml`](catalog.yaml); do not edit it by hand.
 | 💡 | [Strategy](docs/patterns/strategy.md) | Define a family of interchangeable algorithms and let the client choose one at run time. | done | done | done | done |
 | 📝 | [Template Method](docs/patterns/template-method.md) | Define the skeleton of an algorithm and defer some steps to subclasses. | done | done | done | done |
 | 🏃 | [Visitor](docs/patterns/visitor.md) | Represent an operation to be performed on the elements of an object structure without changing their classes. | done | done | done | done |
+| 🫥 | [Null Object](docs/patterns/null-object.md) | Provide a do-nothing collaborator with the expected interface so clients never test for null. | pending | pending | pending | pending |
 
 ### Concurrency constructs
 
 | | Construct | Problem | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|---|
 | 🔄 | [Producer/Consumer](docs/patterns/producer-consumer.md) | Coordinate threads that generate data with threads that process it through a bounded, thread-safe buffer. | done | done | done | done |
+| 🚦 | [Monitor](docs/patterns/monitor.md) | Bundle shared state with the lock and condition variables that guard it, so callers never synchronise by hand. | pending | pending | pending | pending |
+| 📖 | [Read/Write Lock](docs/patterns/read-write-lock.md) | Let many readers share access to a resource while a writer gets it exclusively. | pending | pending | pending | pending |
+| 🔮 | [Future/Promise](docs/patterns/future-promise.md) | Represent a result that will be available later, so callers compose and wait on it instead of blocking at once. | pending | pending | pending | pending |
+| 🧵 | [Thread Pool](docs/patterns/thread-pool.md) | Run submitted tasks on a fixed set of worker threads instead of creating a thread per task. | pending | pending | pending | pending |
+| ⏸️ | [Guarded Suspension](docs/patterns/guarded-suspension.md) | Suspend a call until its precondition holds, then run it. | pending | pending | pending | pending |
+
+### Enterprise
+
+| | Pattern | Intent | Java | Python | TypeScript | JavaScript |
+|---|---|---|---|---|---|---|
+| 💎 | [Value Object](docs/patterns/value-object.md) | A small immutable object whose equality rests on its value, not its identity. | pending | pending | pending | pending |
+| 💰 | [Money](docs/patterns/money.md) | Represent a monetary amount with its currency and exact arithmetic, including allocation that loses no cents. | pending | pending | pending | pending |
+| 📦 | [Data Transfer Object](docs/patterns/data-transfer-object.md) | Carry data between layers or processes in one object to reduce the number of calls. | pending | pending | pending | pending |
+| 📇 | [Registry](docs/patterns/registry.md) | A well-known object through which other objects find common objects and services. | pending | pending | pending | pending |
+| 🔌 | [Plugin](docs/patterns/plugin.md) | Link classes during configuration rather than compilation. | pending | pending | pending | pending |
+| 🎭 | [Service Stub](docs/patterns/service-stub.md) | Replace a problematic external service with a stand-in during development and testing. | pending | pending | pending | pending |
+| 📜 | [Transaction Script](docs/patterns/transaction-script.md) | Organise business logic as one procedure per request. | pending | pending | pending | pending |
+| 🧠 | [Domain Model](docs/patterns/domain-model.md) | An object model of the domain that incorporates both behaviour and data. | pending | pending | pending | pending |
+| 🛎️ | [Service Layer](docs/patterns/service-layer.md) | Define an application's boundary with a layer of services that coordinates the domain and exposes the available operations. | pending | pending | pending | pending |
+| 🗂️ | [Active Record](docs/patterns/active-record.md) | An object that wraps a row, encapsulates its data access and adds domain logic. | pending | pending | pending | pending |
+| 🗺️ | [Data Mapper](docs/patterns/data-mapper.md) | A layer of mappers that moves data between objects and a store while keeping the two independent. | pending | pending | pending | pending |
+| 🪪 | [Identity Map](docs/patterns/identity-map.md) | Load each object once by keeping every loaded object in a map keyed by identity. | pending | pending | pending | pending |
+| 📝 | [Unit of Work](docs/patterns/unit-of-work.md) | Track the objects affected by a business transaction and commit their changes as one. | pending | pending | pending | pending |
+| 🏛️ | [Repository](docs/patterns/repository.md) | Mediate between the domain and the data mapping layer with a collection-like interface. | pending | pending | pending | pending |
+| 🔒 | [Optimistic Offline Lock](docs/patterns/optimistic-offline-lock.md) | Detect conflicts between concurrent business transactions with a version check at commit. | pending | pending | pending | pending |
+| 🖼️ | [Model-View-Controller](docs/patterns/model-view-controller.md) | Split user-interface interaction into model, view and controller. | pending | pending | pending | pending |
 <!-- catalogue:end -->
+
+## Principles
+
+The patterns are not ends in themselves: each exists to honour one or more
+design principles, such as *encapsulate what varies* or the *open-closed
+principle*. [`docs/principles.md`](docs/principles.md) states those principles
+with their sources, and every pattern document names, right after its intent,
+the principles it relies on.
 
 ## Repository layout
 
@@ -138,6 +176,15 @@ In short: the academic doc with a participants-only diagram, an idiomatic
 implementation with tests in each language, line and branch coverage above
 90 %, a recorded snapshot per language, and `make validate` and `make check`
 green.
+
+## Future work
+
+Two catalogues were reviewed and deliberately left out of this repository:
+[generative AI patterns](docs/future/genai-patterns.md) and
+[API design patterns](docs/future/api-design-patterns.md). Each document records
+the candidate patterns, why they do not fit the contract here (no network, no
+secrets, byte-exact output in every language) and how a separate project could
+build them.
 
 ## References
 

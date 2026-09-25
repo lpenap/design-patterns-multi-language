@@ -8,6 +8,8 @@ Define a one-to-many dependency between objects so that when one object
 changes state, all its dependents are notified and updated automatically
 [1, p. 293].
 
+*Principles:* [Loose coupling](../principles.md#loose-coupling), [Program to an interface](../principles.md#program-to-an-interface), [Open-closed principle](../principles.md#open-closed-principle).
+
 ## Motivation
 
 A spreadsheet cell and the charts drawn from it must stay consistent, yet the

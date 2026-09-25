@@ -8,6 +8,8 @@ Define an interface for creating an object, but let subclasses decide which
 class to instantiate. Factory Method lets a class defer instantiation to
 subclasses [1, p. 107].
 
+*Principles:* [Encapsulate what varies](../principles.md#encapsulate-what-varies), [Dependency inversion principle](../principles.md#dependency-inversion-principle), [Open-closed principle](../principles.md#open-closed-principle), [Hollywood principle](../principles.md#hollywood-principle).
+
 ## Motivation
 
 A framework often knows *when* an object must be created but not *which* class

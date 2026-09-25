@@ -8,6 +8,8 @@ Define the skeleton of an algorithm in an operation, deferring some steps to
 subclasses. Template Method lets subclasses redefine certain steps of an
 algorithm without changing the algorithm's structure [1, p. 325].
 
+*Principles:* [Hollywood principle](../principles.md#hollywood-principle), [Don't repeat yourself](../principles.md#dont-repeat-yourself), [Open-closed principle](../principles.md#open-closed-principle).
+
 ## Motivation
 
 An application framework that opens a document must always perform the same

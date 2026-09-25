@@ -7,6 +7,8 @@
 Use sharing to support large numbers of fine-grained objects efficiently
 [1, p. 195].
 
+*Principles:* [Encapsulate what varies](../principles.md#encapsulate-what-varies).
+
 ## Motivation
 
 A document editor that represents every character as an object pays for

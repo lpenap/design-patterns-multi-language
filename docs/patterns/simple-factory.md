@@ -8,6 +8,8 @@ Centralise the creation of a family of related products behind a single method
 that decides which concrete class to instantiate, so that clients depend only
 on the product interface.
 
+*Principles:* [Encapsulate what varies](../principles.md#encapsulate-what-varies), [Single responsibility principle](../principles.md#single-responsibility-principle).
+
 ## Motivation
 
 Code that instantiates concrete classes directly is tied to them: adding a

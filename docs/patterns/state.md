@@ -7,6 +7,8 @@
 Allow an object to alter its behavior when its internal state changes. The
 object will appear to change its class [1, p. 305].
 
+*Principles:* [Encapsulate what varies](../principles.md#encapsulate-what-varies), [Open-closed principle](../principles.md#open-closed-principle), [Single responsibility principle](../principles.md#single-responsibility-principle).
+
 ## Motivation
 
 A TCP connection responds to `open`, `close` and `acknowledge` differently

@@ -8,6 +8,8 @@ Provide a surrogate or placeholder for another object to control access to it
 [1, p. 207]. A **protection proxy** controls access by checking that the caller
 has the right to make the request before forwarding it to the real subject.
 
+*Principles:* [Program to an interface](../principles.md#program-to-an-interface), [Single responsibility principle](../principles.md#single-responsibility-principle).
+
 ## Motivation
 
 An object may be sensitive: a document that only its owner may edit, an

@@ -8,6 +8,8 @@ Provide a unified interface to a set of interfaces in a subsystem. Façade
 defines a higher-level interface that makes the subsystem easier to use
 [1, p. 185].
 
+*Principles:* [Principle of least knowledge](../principles.md#principle-of-least-knowledge), [Loose coupling](../principles.md#loose-coupling).
+
 ## Motivation
 
 A compiler subsystem contains a scanner, a parser, a symbol table, a code
