@@ -62,7 +62,7 @@ generated from [`catalog.yaml`](catalog.yaml); do not edit it by hand.
 | 🔂 | [Monostate](docs/patterns/monostate.md) | Share all state among every instance of a class while leaving instantiation unconstrained. | done | done | done | done |
 | 🃏 | [Prototype](docs/patterns/prototype.md) | Specify the kinds of objects to create using a prototypical instance, and create new objects by copying it. | done | done | done | done |
 | 💍 | [Singleton](docs/patterns/singleton.md) | Ensure a class has exactly one instance and provide a global point of access to it. | done | done | done | done |
-| ♻️ | [Object Pool](docs/patterns/object-pool.md) | Reuse a bounded set of expensive-to-create objects by lending them out and taking them back instead of creating and discarding them. | done | done | done | pending |
+| ♻️ | [Object Pool](docs/patterns/object-pool.md) | Reuse a bounded set of expensive-to-create objects by lending them out and taking them back instead of creating and discarding them. | done | done | done | done |
 
 ### Structural
 
