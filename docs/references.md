@@ -26,3 +26,4 @@ Shared bibliography. Pattern documents cite these by number, e.g. `[1, p. 315]`.
 22. B. Liskov, "Data Abstraction and Hierarchy," *ACM SIGPLAN Notices*, vol. 23, no. 5, pp. 17–34, 1988.
 23. J. J. Geewax, *API Design Patterns*. Manning, 2021.
 24. V. Lakshmanan and H. Hapke, *Generative AI Design Patterns: Solutions to Common Challenges When Building GenAI Agents and Applications*. O'Reilly, 2025.
+25. M. Grand, *Patterns in Java, Volume 1: A Catalog of Reusable Design Patterns Illustrated with UML*. Wiley, 1998.

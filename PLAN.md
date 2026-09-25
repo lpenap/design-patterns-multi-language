@@ -664,7 +664,7 @@ Status per pattern (tick with the PR number when merged):
 
 | Spec | Pattern | Category | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|---|
-| 035 | Object Pool | creational | ☐ | ☐ | ☐ | ☐ |
+| 035 | Object Pool | creational | ✅ #115 | ☐ | ☐ | ☐ |
 | 036 | Null Object | behavioural | ☐ | ☐ | ☐ | ☐ |
 | 037 | Monitor | concurrency | ☐ | ☐ | ☐ | ☐ |
 | 038 | Read/Write Lock | concurrency | ☐ | ☐ | ☐ | ☐ |
