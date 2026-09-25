@@ -391,6 +391,7 @@ patterns:
     parity: strict
     implementations:
       java: java/src/main/java/com/penapereira/patterns/nullobject
+      python: python/src/patterns/nullobject
   - id: monitor
     icon: "🚦"
     name: Monitor

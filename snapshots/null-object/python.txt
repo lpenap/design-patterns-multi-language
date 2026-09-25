@@ -1,0 +1,8 @@
+Executing Null Object Pattern Implementation
+  OrderProcessor with OutputLogger:
+    [log] processing order 1
+    [log] processing order 2
+    processed 2 orders
+  OrderProcessor with NullLogger:
+    processed 2 orders
+  The processor never tested its logger for null
