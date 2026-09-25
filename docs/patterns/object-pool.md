@@ -60,9 +60,9 @@ classDiagram
 
 | Role [25] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
-| Reusable | The pooled object; expensive to create, cheap to reset. Knows the task it serves and how often it has been lent. | [`Reusable`](../../java/src/main/java/com/penapereira/patterns/objectpool/Reusable.java) | [`Reusable`](../../python/src/patterns/objectpool/reusable.py) | [`Reusable`](../../typescript/src/object-pool/reusable.ts) | `Reusable` |
-| ReusablePool | Creates objects lazily up to a capacity, lends idle ones first, resets and recycles released ones, refuses when exhausted. | [`ObjectPool`](../../java/src/main/java/com/penapereira/patterns/objectpool/ObjectPool.java) | [`ObjectPool`](../../python/src/patterns/objectpool/object_pool.py) | [`ObjectPool`](../../typescript/src/object-pool/object-pool.ts) | `ObjectPool` |
-| Client | Acquires an object for a task and releases it afterwards; never constructs one. | [`ObjectPoolExample`](../../java/src/main/java/com/penapereira/patterns/objectpool/ObjectPoolExample.java) | [`ObjectPoolExample`](../../python/src/patterns/objectpool/example.py) | [`objectPoolExample`](../../typescript/src/object-pool/example.ts) | `objectPoolExample` |
+| Reusable | The pooled object; expensive to create, cheap to reset. Knows the task it serves and how often it has been lent. | [`Reusable`](../../java/src/main/java/com/penapereira/patterns/objectpool/Reusable.java) | [`Reusable`](../../python/src/patterns/objectpool/reusable.py) | [`Reusable`](../../typescript/src/object-pool/reusable.ts) | [`Reusable`](../../javascript/src/object-pool/reusable.js) |
+| ReusablePool | Creates objects lazily up to a capacity, lends idle ones first, resets and recycles released ones, refuses when exhausted. | [`ObjectPool`](../../java/src/main/java/com/penapereira/patterns/objectpool/ObjectPool.java) | [`ObjectPool`](../../python/src/patterns/objectpool/object_pool.py) | [`ObjectPool`](../../typescript/src/object-pool/object-pool.ts) | [`ObjectPool`](../../javascript/src/object-pool/object-pool.js) |
+| Client | Acquires an object for a task and releases it afterwards; never constructs one. | [`ObjectPoolExample`](../../java/src/main/java/com/penapereira/patterns/objectpool/ObjectPoolExample.java) | [`ObjectPoolExample`](../../python/src/patterns/objectpool/example.py) | [`objectPoolExample`](../../typescript/src/object-pool/example.ts) | [`objectPoolExample`](../../javascript/src/object-pool/example.js) |
 
 ## The example
 

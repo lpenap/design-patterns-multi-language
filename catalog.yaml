@@ -381,6 +381,7 @@ patterns:
       java: java/src/main/java/com/penapereira/patterns/objectpool
       python: python/src/patterns/objectpool
       typescript: typescript/src/object-pool
+      javascript: javascript/src/object-pool
   - id: null-object
     icon: "🫥"
     name: Null Object
