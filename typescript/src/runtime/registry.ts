@@ -15,6 +15,7 @@ import { mediatorExample } from "../mediator/example.ts";
 import { mementoExample } from "../memento/example.ts";
 import { monostateExample } from "../monostate/example.ts";
 import { observerExample } from "../observer/example.ts";
+import { objectPoolExample } from "../object-pool/example.ts";
 import { producerConsumerExample } from "../producer-consumer/example.ts";
 import { protectionProxyExample } from "../protection-proxy/example.ts";
 import { prototypeExample } from "../prototype/example.ts";
@@ -31,4 +32,4 @@ import type { Example } from "./contract.ts";
  * Every pattern folder adds one import line here. The CLI receives this array,
  * so tests can pass fixtures instead and the production list stays exact.
  */
-export const examples: readonly Example[] = [abstractFactoryExample, adapterExample, bridgeExample, builderExample, chainOfResponsibilityExample, commandExample, compositeExample, decoratorExample, facadeExample, factoryMethodExample, flyweightExample, interpreterExample, iteratorExample, mediatorExample, mementoExample, monostateExample, observerExample, producerConsumerExample, protectionProxyExample, prototypeExample, simpleFactoryExample, singletonExample, stateExample, strategyExample, templateMethodExample, virtualProxyExample, visitorExample];
+export const examples: readonly Example[] = [abstractFactoryExample, adapterExample, bridgeExample, builderExample, chainOfResponsibilityExample, commandExample, compositeExample, decoratorExample, facadeExample, factoryMethodExample, flyweightExample, interpreterExample, iteratorExample, mediatorExample, mementoExample, monostateExample, observerExample, objectPoolExample, producerConsumerExample, protectionProxyExample, prototypeExample, simpleFactoryExample, singletonExample, stateExample, strategyExample, templateMethodExample, virtualProxyExample, visitorExample];
