@@ -26,3 +26,4 @@ com.penapereira.patterns.memento.MementoExample
 com.penapereira.patterns.visitor.VisitorExample
 com.penapereira.patterns.interpreter.InterpreterExample
 com.penapereira.patterns.objectpool.ObjectPoolExample
+com.penapereira.patterns.nullobject.NullObjectExample
