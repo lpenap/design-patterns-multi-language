@@ -624,12 +624,74 @@ files, update its participants links for that language, then `make lint`,
 `make test`, `make check` unchanged at 108 ok, `make validate` with no
 one-class-per-file warning left for that pattern in that language.
 
-**Phase 5 – Enhancements (open-ended).**
-* More concurrency constructs (Monitor, Read/Write lock, a Futures/Promises
-  comparison across languages is a natural fit for this repo).
-* New languages: Kotlin, Go, Rust. Cost is one dir + one CLI + one catalog entry.
-* Presentation beyond GitHub: revisit options C and D of §5 if wanted.
-Each enhancement is its own spec.
+**Phase 5 – Catalogue extension: twenty-three patterns and the Enterprise
+category.** *Scoped 2026-09-25 (decisions 17–21) after a coverage review against
+Gamma et al. [1], Head First Design Patterns [3], Head First OOA&D [17], Fowler's
+Patterns of Enterprise Application Architecture [18], Geewax's API Design Patterns
+and Lakshmanan & Hapke's Generative AI Design Patterns.* The 27 patterns already
+cover the two classic catalogues completely. The review adds Object Pool and Null
+Object to the existing categories, five concurrency constructs, and a new
+`enterprise` category with sixteen Fowler patterns that run in-process with
+in-memory stores (Model-View-Controller among them). GenAI and API design
+patterns are not implemented here; their candidate lists and the approach they
+would need live in `docs/future/` so a separate project can start from them.
+
+Routine per pattern, **one pull request per pattern per language**, merged before
+the next starts, in the order Java → Python → TypeScript → JavaScript:
+
+1. The Java PR carries the pattern doc (academic write-up, Mermaid diagram of the
+   participants, references, principles), the Java implementation and tests, the
+   catalogue's Java implementation path and the Java snapshot; `make check` and
+   `make validate` stay green.
+2. Each following language PR adds its implementation, its tests, its snapshot,
+   its implementation path in the catalogue and its links in the doc's
+   Participants table; parity is checked against the snapshots already there.
+3. Branches are `NNN-<id>-<lang>`; the PR ticks its cell in the status table
+   below and its task in `specs/NNN-<id>/tasks.md`, on the PR branch (master
+   accepts pull requests only).
+
+Parity is `strict` by default. A concurrency construct prints a summary, never an
+interleaving (as Producer/Consumer does); TypeScript and JavaScript use the
+cooperative scheduler or Promises. A spec may declare `loose` parity only with a
+recorded reason.
+
+| Spec | Scope | PRs |
+|---|---|---|
+| 034 | Opener: the 23 catalogue entries with empty implementations (README shows them pending), Enterprise category, references 17–20, `docs/principles.md` plus a principles line in the 27 existing docs, `docs/future/genai-patterns.md`, `docs/future/api-design-patterns.md`, README links | 1 |
+| 035–057 | One spec per pattern, four tasks (java, python, typescript, javascript), one PR each | 92 |
+
+Status per pattern (tick with the PR number when merged):
+
+| Spec | Pattern | Category | Java | Python | TypeScript | JavaScript |
+|---|---|---|---|---|---|---|
+| 035 | Object Pool | creational | ☐ | ☐ | ☐ | ☐ |
+| 036 | Null Object | behavioural | ☐ | ☐ | ☐ | ☐ |
+| 037 | Monitor | concurrency | ☐ | ☐ | ☐ | ☐ |
+| 038 | Read/Write Lock | concurrency | ☐ | ☐ | ☐ | ☐ |
+| 039 | Future/Promise | concurrency | ☐ | ☐ | ☐ | ☐ |
+| 040 | Thread Pool | concurrency | ☐ | ☐ | ☐ | ☐ |
+| 041 | Guarded Suspension | concurrency | ☐ | ☐ | ☐ | ☐ |
+| 042 | Value Object | enterprise | ☐ | ☐ | ☐ | ☐ |
+| 043 | Money | enterprise | ☐ | ☐ | ☐ | ☐ |
+| 044 | Data Transfer Object | enterprise | ☐ | ☐ | ☐ | ☐ |
+| 045 | Registry | enterprise | ☐ | ☐ | ☐ | ☐ |
+| 046 | Plugin | enterprise | ☐ | ☐ | ☐ | ☐ |
+| 047 | Service Stub | enterprise | ☐ | ☐ | ☐ | ☐ |
+| 048 | Transaction Script | enterprise | ☐ | ☐ | ☐ | ☐ |
+| 049 | Domain Model | enterprise | ☐ | ☐ | ☐ | ☐ |
+| 050 | Service Layer | enterprise | ☐ | ☐ | ☐ | ☐ |
+| 051 | Active Record | enterprise | ☐ | ☐ | ☐ | ☐ |
+| 052 | Data Mapper | enterprise | ☐ | ☐ | ☐ | ☐ |
+| 053 | Identity Map | enterprise | ☐ | ☐ | ☐ | ☐ |
+| 054 | Unit of Work | enterprise | ☐ | ☐ | ☐ | ☐ |
+| 055 | Repository | enterprise | ☐ | ☐ | ☐ | ☐ |
+| 056 | Optimistic Offline Lock | enterprise | ☐ | ☐ | ☐ | ☐ |
+| 057 | Model-View-Controller | enterprise | ☐ | ☐ | ☐ | ☐ |
+
+**Phase 6 – Further enhancements (open-ended).** New languages (Kotlin, Go,
+Rust: one dir, one CLI, one catalogue column), presentation beyond GitHub
+(options C and D of §5), and the deferred GenAI and API design catalogues if they
+stay in this repository. Each enhancement is its own spec.
 
 ## 10. Decisions
 
@@ -653,6 +715,11 @@ All confirmed on 2026-09-17. Each row is a constraint for Phase 0 onward.
 | 14 | Catalogue | The 27 patterns of §11: the supplied 25-entry table appended with every original pattern missing from it (Simple Factory, Producer/Consumer); Protection Proxy and Virtual Proxy as two entries; Monostate referenced to Ball & Crawford and Martin; icons carried into the README table |
 | 15 | TypeScript version | 6.0.3 until typescript-eslint supports TypeScript 7 (7.0 ships no compiler API; support tracked for 7.1+). Upgrade is a follow-up spec; the two-compiler alias recipe is not used |
 | 16 | One class per file | Every language keeps one top-level class/interface/protocol per file named after it; tests split into behaviour and example files; Python `__init__.py` re-exports the public names; enforced by `patterns validate`; one PR per pattern per language (Phase 4). Confirmed 2026-09-20 |
+| 17 | Phase 5 scope | Coverage review of 2026-09-25 against Gamma et al., Head First Design Patterns, Head First OOA&D, Fowler (PoEAA), Geewax (API Design Patterns) and Lakshmanan & Hapke (Generative AI Design Patterns): the two classic catalogues are complete. Added to the existing categories: Object Pool (creational), Null Object (behavioural, absorbing Fowler's Special Case), Monitor, Read/Write Lock, Future/Promise, Thread Pool and Guarded Suspension (concurrency). The companion-repository reference to [java-monitor-example](https://github.com/lpenap/java-monitor-example) moves from the Producer/Consumer doc to the Monitor doc (spec 037). Confirmed 2026-09-25 |
+| 18 | Enterprise category | New category `enterprise` for Fowler's patterns that run in-process with in-memory stores: Value Object, Money, Data Transfer Object, Registry, Plugin, Service Stub, Transaction Script, Domain Model, Service Layer, Active Record, Data Mapper, Identity Map, Unit of Work, Repository, Optimistic Offline Lock, and Model-View-Controller (Fowler ch. 14; Head First's compound pattern). Excluded: web presentation and session-state patterns (they need an HTTP layer), Lazy Load (covered by Virtual Proxy), Layer Supertype and Separated Interface (trivial in one package), Pessimistic Offline Lock (needs sessions). Confirmed 2026-09-25 |
+| 19 | GenAI and API design patterns | Not implemented in this repository: a model in the loop conflicts with no-network, no-secrets CI and strict parity; API patterns are wire-level and a CLI cannot show their HTTP shape. Candidate lists, constraints and the stub-model / in-process approach are recorded in `docs/future/genai-patterns.md` and `docs/future/api-design-patterns.md` so a separate project can reference them. Confirmed 2026-09-25 |
+| 20 | Principles | Head First OOA&D adds no pattern; it is cited for principles. `docs/principles.md` states the principles the patterns lean on (encapsulate what varies, program to an interface, favour composition over inheritance, open-closed, single responsibility, delegation) with citations to [17], [9] and [8]; every pattern doc, existing and new, names the principles it relies on where any applies (spec 034 adds the line to the 27 existing docs). Confirmed 2026-09-25 |
+| 21 | Phase 5 granularity | One PR per pattern per language: a new pattern is split into four PRs, one per language, Java → Python → TypeScript → JavaScript, each merged before the next; the Java PR carries the doc; all catalogue entries land in spec 034 with empty implementations; parity `strict` unless a spec records a reason for `loose`. Confirmed 2026-09-25 |
 
 Dependency versions are not pinned in this document; each will be verified as at
 least seven days old when the scaffold is created.
@@ -661,9 +728,10 @@ least seven days old when the scaffold is created.
 
 ## 11. Pattern catalogue
 
-Twenty-seven entries: the eleven of the original project (marked *original*) and
-sixteen new ones. Categories follow Gamma et al. with one extra category for
-concurrency constructs. Icons are stored in the catalog and rendered in the
+Fifty entries: the eleven of the original project (marked *original*), sixteen
+added in Phase 3 (*new*) and twenty-three added in Phase 5 (decisions 17–21).
+Categories follow Gamma et al. with two extra categories: concurrency constructs
+and enterprise (Fowler). Icons are stored in the catalog and rendered in the
 generated README table.
 
 ### Creational
@@ -677,6 +745,7 @@ generated README table.
 | 🔂 | Monostate | `monostate` | Share all state among every instance of a class while leaving instantiation unconstrained; a Singleton alternative (Ball and Crawford). | new |
 | 🃏 | Prototype | `prototype` | Specify the kinds of objects to create using a prototypical instance, and create new objects by copying it. | new |
 | 💍 | Singleton | `singleton` | Ensure a class has exactly one instance and provide a global point of access to it. | original |
+| ♻️ | Object Pool | `object-pool` | Reuse a bounded set of expensive-to-create objects by lending them out and taking them back instead of creating and discarding them. | Phase 5 |
 
 ### Structural
 
@@ -706,12 +775,39 @@ generated README table.
 | 💡 | Strategy | `strategy` | Define a family of interchangeable algorithms and let the client choose one at run time. | original |
 | 📝 | Template Method | `template-method` | Define the skeleton of an algorithm and defer some steps to subclasses. | original |
 | 🏃 | Visitor | `visitor` | Represent an operation to be performed on the elements of an object structure without changing their classes. | new |
+| 🫥 | Null Object | `null-object` | Provide a do-nothing collaborator with the expected interface so clients never test for null. | Phase 5 |
 
 ### Concurrency constructs
 
 | | Construct | Id | Problem | Origin |
 |---|---|---|---|---|
 | 🔄 | Producer/Consumer | `producer-consumer` | Coordinate threads that generate data with threads that process it through a bounded, thread-safe buffer. | original |
+| 🚦 | Monitor | `monitor` | Bundle shared state with the lock and condition variables that guard it, so callers never synchronise by hand. | Phase 5 |
+| 📖 | Read/Write Lock | `read-write-lock` | Let many readers share access to a resource while a writer gets it exclusively. | Phase 5 |
+| 🔮 | Future/Promise | `future-promise` | Represent a result that will be available later, so callers compose and wait on it instead of blocking at once. | Phase 5 |
+| 🧵 | Thread Pool | `thread-pool` | Run submitted tasks on a fixed set of worker threads instead of creating a thread per task. | Phase 5 |
+| ⏸️ | Guarded Suspension | `guarded-suspension` | Suspend a call until its precondition holds, then run it. | Phase 5 |
+
+### Enterprise
+
+| | Pattern | Id | Intent | Origin |
+|---|---|---|---|---|
+| 💎 | Value Object | `value-object` | A small immutable object whose equality rests on its value, not its identity. | Phase 5 |
+| 💰 | Money | `money` | Represent a monetary amount with its currency and exact arithmetic, including allocation that loses no cents. | Phase 5 |
+| 📦 | Data Transfer Object | `data-transfer-object` | Carry data between layers or processes in one object to reduce the number of calls. | Phase 5 |
+| 📇 | Registry | `registry` | A well-known object through which other objects find common objects and services. | Phase 5 |
+| 🔌 | Plugin | `plugin` | Link classes during configuration rather than compilation. | Phase 5 |
+| 🎭 | Service Stub | `service-stub` | Replace a problematic external service with a stand-in during development and testing. | Phase 5 |
+| 📜 | Transaction Script | `transaction-script` | Organise business logic as one procedure per request. | Phase 5 |
+| 🧠 | Domain Model | `domain-model` | An object model of the domain that incorporates both behaviour and data. | Phase 5 |
+| 🛎️ | Service Layer | `service-layer` | Define an application's boundary with a layer of services that coordinates the domain and exposes the available operations. | Phase 5 |
+| 🗂️ | Active Record | `active-record` | An object that wraps a row, encapsulates its data access and adds domain logic. | Phase 5 |
+| 🗺️ | Data Mapper | `data-mapper` | A layer of mappers that moves data between objects and a store while keeping the two independent. | Phase 5 |
+| 🪪 | Identity Map | `identity-map` | Load each object once by keeping every loaded object in a map keyed by identity. | Phase 5 |
+| 📝 | Unit of Work | `unit-of-work` | Track the objects affected by a business transaction and commit their changes as one. | Phase 5 |
+| 🏛️ | Repository | `repository` | Mediate between the domain and the data mapping layer with a collection-like interface. | Phase 5 |
+| 🔒 | Optimistic Offline Lock | `optimistic-offline-lock` | Detect conflicts between concurrent business transactions with a version check at commit. | Phase 5 |
+| 🖼️ | Model-View-Controller | `model-view-controller` | Split user-interface interaction into model, view and controller. | Phase 5 |
 
 Notes:
 
@@ -726,3 +822,9 @@ Notes:
   Development*, 2003, ch. on Singleton and Monostate. Added to `docs/references.md`.
 * Icons for Simple Factory and Producer/Consumer are placeholders chosen here; all
   others are as supplied.
+* **Phase 5 entries** (decisions 17–21): Null Object absorbs Fowler's Special
+  Case; Model-View-Controller sits in Enterprise (Fowler ch. 14; Head First's
+  compound pattern) rather than in a category of its own; Lazy Load is not an
+  entry because Virtual Proxy covers it. Icons for the Phase 5 entries are chosen
+  here. References: [17] Head First OOA&D, [18] Fowler PoEAA, [19] Woolf's Null
+  Object, [20] Kircher & Jain's Pooling.
