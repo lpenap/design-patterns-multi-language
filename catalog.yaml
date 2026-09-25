@@ -389,6 +389,8 @@ patterns:
     intent: Provide a do-nothing collaborator with the expected interface so clients never test for null.
     doc: docs/patterns/null-object.md
     parity: strict
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/nullobject
   - id: monitor
     icon: "🚦"
     name: Monitor
