@@ -51,12 +51,12 @@ classDiagram
 
 | Role [19] | Responsibility | Java | Python | TypeScript | JavaScript |
 |---|---|---|---|---|---|
-| AbstractObject | The interface the client depends on. | [`Logger`](../../java/src/main/java/com/penapereira/patterns/nullobject/Logger.java) | `Logger` | `Logger` | implicit: any object with `log()` |
-| RealObject | The useful implementation. | [`OutputLogger`](../../java/src/main/java/com/penapereira/patterns/nullobject/OutputLogger.java) | `OutputLogger` | `OutputLogger` | `OutputLogger` |
-| NullObject | Implements the interface and does nothing. | [`NullLogger`](../../java/src/main/java/com/penapereira/patterns/nullobject/NullLogger.java) | `NullLogger` | `NullLogger` | `NullLogger` |
-| Client | Uses the abstract object unconditionally; never checks for null. | [`OrderProcessor`](../../java/src/main/java/com/penapereira/patterns/nullobject/OrderProcessor.java) | `OrderProcessor` | `OrderProcessor` | `OrderProcessor` |
+| AbstractObject | The interface the client depends on. | [`Logger`](../../java/src/main/java/com/penapereira/patterns/nullobject/Logger.java) | [`Logger`](../../python/src/patterns/nullobject/logger.py) | `Logger` | implicit: any object with `log()` |
+| RealObject | The useful implementation. | [`OutputLogger`](../../java/src/main/java/com/penapereira/patterns/nullobject/OutputLogger.java) | [`OutputLogger`](../../python/src/patterns/nullobject/output_logger.py) | `OutputLogger` | `OutputLogger` |
+| NullObject | Implements the interface and does nothing. | [`NullLogger`](../../java/src/main/java/com/penapereira/patterns/nullobject/NullLogger.java) | [`NullLogger`](../../python/src/patterns/nullobject/null_logger.py) | `NullLogger` | `NullLogger` |
+| Client | Uses the abstract object unconditionally; never checks for null. | [`OrderProcessor`](../../java/src/main/java/com/penapereira/patterns/nullobject/OrderProcessor.java) | [`OrderProcessor`](../../python/src/patterns/nullobject/order_processor.py) | `OrderProcessor` | `OrderProcessor` |
 
-The example ([`NullObjectExample`](../../java/src/main/java/com/penapereira/patterns/nullobject/NullObjectExample.java), `NullObjectExample`, `nullObjectExample`, `nullObjectExample`) is the setup code that chooses which logger the client gets.
+The example ([`NullObjectExample`](../../java/src/main/java/com/penapereira/patterns/nullobject/NullObjectExample.java), [`NullObjectExample`](../../python/src/patterns/nullobject/example.py), `nullObjectExample`, `nullObjectExample`) is the setup code that chooses which logger the client gets.
 
 ## The example
 

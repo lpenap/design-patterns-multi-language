@@ -92,7 +92,7 @@ generated from [`catalog.yaml`](catalog.yaml); do not edit it by hand.
 | 💡 | [Strategy](docs/patterns/strategy.md) | Define a family of interchangeable algorithms and let the client choose one at run time. | done | done | done | done |
 | 📝 | [Template Method](docs/patterns/template-method.md) | Define the skeleton of an algorithm and defer some steps to subclasses. | done | done | done | done |
 | 🏃 | [Visitor](docs/patterns/visitor.md) | Represent an operation to be performed on the elements of an object structure without changing their classes. | done | done | done | done |
-| 🫥 | [Null Object](docs/patterns/null-object.md) | Provide a do-nothing collaborator with the expected interface so clients never test for null. | done | pending | pending | pending |
+| 🫥 | [Null Object](docs/patterns/null-object.md) | Provide a do-nothing collaborator with the expected interface so clients never test for null. | done | done | pending | pending |
 
 ### Concurrency constructs
 
