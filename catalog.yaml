@@ -30,6 +30,8 @@ categories:
     name: Behavioural
   - id: concurrency
     name: Concurrency constructs
+  - id: enterprise
+    name: Enterprise
 
 # `implementations` is filled in by each pattern's spec; empty means pending.
 # `parity: strict` requires byte-identical output across languages.
@@ -367,3 +369,165 @@ patterns:
       python: python/src/patterns/producerconsumer
       typescript: typescript/src/producer-consumer
       javascript: javascript/src/producer-consumer
+  # ---- Phase 5 (decisions 17–21): implementations are filled in by each language's PR ----
+  - id: object-pool
+    icon: "♻️"
+    name: Object Pool
+    category: creational
+    intent: Reuse a bounded set of expensive-to-create objects by lending them out and taking them back instead of creating and discarding them.
+    doc: docs/patterns/object-pool.md
+    parity: strict
+  - id: null-object
+    icon: "🫥"
+    name: Null Object
+    category: behavioural
+    intent: Provide a do-nothing collaborator with the expected interface so clients never test for null.
+    doc: docs/patterns/null-object.md
+    parity: strict
+  - id: monitor
+    icon: "🚦"
+    name: Monitor
+    category: concurrency
+    intent: Bundle shared state with the lock and condition variables that guard it, so callers never synchronise by hand.
+    doc: docs/patterns/monitor.md
+    parity: strict
+  - id: read-write-lock
+    icon: "📖"
+    name: Read/Write Lock
+    category: concurrency
+    intent: Let many readers share access to a resource while a writer gets it exclusively.
+    doc: docs/patterns/read-write-lock.md
+    parity: strict
+  - id: future-promise
+    icon: "🔮"
+    name: Future/Promise
+    category: concurrency
+    intent: Represent a result that will be available later, so callers compose and wait on it instead of blocking at once.
+    doc: docs/patterns/future-promise.md
+    parity: strict
+  - id: thread-pool
+    icon: "🧵"
+    name: Thread Pool
+    category: concurrency
+    intent: Run submitted tasks on a fixed set of worker threads instead of creating a thread per task.
+    doc: docs/patterns/thread-pool.md
+    parity: strict
+  - id: guarded-suspension
+    icon: "⏸️"
+    name: Guarded Suspension
+    category: concurrency
+    intent: Suspend a call until its precondition holds, then run it.
+    doc: docs/patterns/guarded-suspension.md
+    parity: strict
+  - id: value-object
+    icon: "💎"
+    name: Value Object
+    category: enterprise
+    intent: A small immutable object whose equality rests on its value, not its identity.
+    doc: docs/patterns/value-object.md
+    parity: strict
+  - id: money
+    icon: "💰"
+    name: Money
+    category: enterprise
+    intent: Represent a monetary amount with its currency and exact arithmetic, including allocation that loses no cents.
+    doc: docs/patterns/money.md
+    parity: strict
+  - id: data-transfer-object
+    icon: "📦"
+    name: Data Transfer Object
+    category: enterprise
+    intent: Carry data between layers or processes in one object to reduce the number of calls.
+    doc: docs/patterns/data-transfer-object.md
+    parity: strict
+  - id: registry
+    icon: "📇"
+    name: Registry
+    category: enterprise
+    intent: A well-known object through which other objects find common objects and services.
+    doc: docs/patterns/registry.md
+    parity: strict
+  - id: plugin
+    icon: "🔌"
+    name: Plugin
+    category: enterprise
+    intent: Link classes during configuration rather than compilation.
+    doc: docs/patterns/plugin.md
+    parity: strict
+  - id: service-stub
+    icon: "🎭"
+    name: Service Stub
+    category: enterprise
+    intent: Replace a problematic external service with a stand-in during development and testing.
+    doc: docs/patterns/service-stub.md
+    parity: strict
+  - id: transaction-script
+    icon: "📜"
+    name: Transaction Script
+    category: enterprise
+    intent: Organise business logic as one procedure per request.
+    doc: docs/patterns/transaction-script.md
+    parity: strict
+  - id: domain-model
+    icon: "🧠"
+    name: Domain Model
+    category: enterprise
+    intent: An object model of the domain that incorporates both behaviour and data.
+    doc: docs/patterns/domain-model.md
+    parity: strict
+  - id: service-layer
+    icon: "🛎️"
+    name: Service Layer
+    category: enterprise
+    intent: Define an application's boundary with a layer of services that coordinates the domain and exposes the available operations.
+    doc: docs/patterns/service-layer.md
+    parity: strict
+  - id: active-record
+    icon: "🗂️"
+    name: Active Record
+    category: enterprise
+    intent: An object that wraps a row, encapsulates its data access and adds domain logic.
+    doc: docs/patterns/active-record.md
+    parity: strict
+  - id: data-mapper
+    icon: "🗺️"
+    name: Data Mapper
+    category: enterprise
+    intent: A layer of mappers that moves data between objects and a store while keeping the two independent.
+    doc: docs/patterns/data-mapper.md
+    parity: strict
+  - id: identity-map
+    icon: "🪪"
+    name: Identity Map
+    category: enterprise
+    intent: Load each object once by keeping every loaded object in a map keyed by identity.
+    doc: docs/patterns/identity-map.md
+    parity: strict
+  - id: unit-of-work
+    icon: "📝"
+    name: Unit of Work
+    category: enterprise
+    intent: Track the objects affected by a business transaction and commit their changes as one.
+    doc: docs/patterns/unit-of-work.md
+    parity: strict
+  - id: repository
+    icon: "🏛️"
+    name: Repository
+    category: enterprise
+    intent: Mediate between the domain and the data mapping layer with a collection-like interface.
+    doc: docs/patterns/repository.md
+    parity: strict
+  - id: optimistic-offline-lock
+    icon: "🔒"
+    name: Optimistic Offline Lock
+    category: enterprise
+    intent: Detect conflicts between concurrent business transactions with a version check at commit.
+    doc: docs/patterns/optimistic-offline-lock.md
+    parity: strict
+  - id: model-view-controller
+    icon: "🖼️"
+    name: Model-View-Controller
+    category: enterprise
+    intent: Split user-interface interaction into model, view and controller.
+    doc: docs/patterns/model-view-controller.md
+    parity: strict

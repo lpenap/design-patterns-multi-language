@@ -8,6 +8,8 @@ Encapsulate a request as an object, thereby letting you parameterise clients
 with different requests, queue or log requests, and support undoable operations
 [1, p. 233].
 
+*Principles:* [Encapsulate what varies](../principles.md#encapsulate-what-varies), [Loose coupling](../principles.md#loose-coupling), [Single responsibility principle](../principles.md#single-responsibility-principle), [Open-closed principle](../principles.md#open-closed-principle).
+
 ## Motivation
 
 A user-interface toolkit provides buttons and menu items but cannot know what

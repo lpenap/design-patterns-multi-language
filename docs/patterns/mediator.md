@@ -8,6 +8,8 @@ Define an object that encapsulates how a set of objects interact. Mediator
 promotes loose coupling by keeping objects from referring to each other
 explicitly, and it lets you vary their interaction independently [1, p. 273].
 
+*Principles:* [Loose coupling](../principles.md#loose-coupling), [Single responsibility principle](../principles.md#single-responsibility-principle).
+
 ## Motivation
 
 The widgets of a dialog box depend on one another: choosing an entry in a list

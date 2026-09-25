@@ -8,6 +8,8 @@ Provide a surrogate or placeholder for another object to control access to it
 [1, p. 207]. A **virtual proxy** creates an expensive object on demand: the
 proxy stands in for it until a request actually needs the real thing.
 
+*Principles:* [Program to an interface](../principles.md#program-to-an-interface), [Single responsibility principle](../principles.md#single-responsibility-principle).
+
 ## Motivation
 
 A document editor embeds images that are costly to load, yet a document should

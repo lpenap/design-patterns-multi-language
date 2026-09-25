@@ -8,6 +8,8 @@ Given a language, define a representation for its grammar along with an
 interpreter that uses the representation to interpret sentences in the
 language [1, p. 243].
 
+*Principles:* [Program to an interface](../principles.md#program-to-an-interface), [Open-closed principle](../principles.md#open-closed-principle).
+
 ## Motivation
 
 When a problem recurs often enough, it pays to express its instances as

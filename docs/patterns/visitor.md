@@ -8,6 +8,8 @@ Represent an operation to be performed on the elements of an object structure.
 Visitor lets you define a new operation without changing the classes of the
 elements on which it operates [1, p. 331].
 
+*Principles:* [Open-closed principle](../principles.md#open-closed-principle), [Single responsibility principle](../principles.md#single-responsibility-principle).
+
 ## Motivation
 
 A compiler represents a program as an abstract syntax tree and must perform

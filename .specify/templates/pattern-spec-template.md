@@ -77,7 +77,7 @@ committed; deliberately changing one implementation's output makes it fail.
 
 ### Functional Requirements
 
-- **FR-001**: The doc `docs/patterns/[pattern-id].md` MUST contain the sections Intent, Motivation, Structure, Participants, The example, Consequences, Language notes, Related patterns, References, in that order.
+- **FR-001**: The doc `docs/patterns/[pattern-id].md` MUST contain the sections Intent, Motivation, Structure, Participants, The example, Consequences, Language notes, Related patterns, References, in that order. Right after the Intent text, a `*Principles:*` line MUST link the principles of `docs/principles.md` the pattern relies on; the line is omitted only when none applies.
 - **FR-002**: The Structure section MUST be a Mermaid `classDiagram` containing only the participants listed in Pattern Summary.
 - **FR-003**: Each of `java/`, `python/`, `typescript/`, `javascript/` MUST contain an idiomatic implementation using the participant names above and the fewest classes or functions that show the structure, **one top-level class per file named after it** (see `docs/conventions.md`, File layout).
 - **FR-004**: Each language MUST register an Example with id `[pattern-id]` whose output follows the output conventions (heading line, two-space indent, plain ASCII, deterministic).

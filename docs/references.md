@@ -18,3 +18,11 @@ Shared bibliography. Pattern documents cite these by number, e.g. `[1, p. 315]`.
 14. Oracle, *Java Platform SE API Specification*, class `java.util.Observable`, deprecation note.
 15. E. W. Dijkstra, "Cooperating Sequential Processes," EWD 123, Technological University Eindhoven, 1965. Reprinted in F. Genuys (ed.), *Programming Languages*, Academic Press, 1968, pp. 43–112.
 16. D. Lea, *Concurrent Programming in Java: Design Principles and Patterns*, 2nd ed. Addison-Wesley, 1999.
+17. B. McLaughlin, G. Pollice and D. West, *Head First Object-Oriented Analysis and Design*. O'Reilly, 2006.
+18. M. Fowler, *Patterns of Enterprise Application Architecture*. Addison-Wesley, 2002.
+19. B. Woolf, "Null Object," in R. C. Martin, D. Riehle and F. Buschmann (eds.), *Pattern Languages of Program Design 3*. Addison-Wesley, 1998, pp. 5–18.
+20. M. Kircher and P. Jain, *Pattern-Oriented Software Architecture, Volume 3: Patterns for Resource Management*. Wiley, 2004.
+21. A. Hunt and D. Thomas, *The Pragmatic Programmer: From Journeyman to Master*. Addison-Wesley, 1999.
+22. B. Liskov, "Data Abstraction and Hierarchy," *ACM SIGPLAN Notices*, vol. 23, no. 5, pp. 17–34, 1988.
+23. J. J. Geewax, *API Design Patterns*. Manning, 2021.
+24. V. Lakshmanan and H. Hapke, *Generative AI Design Patterns: Solutions to Common Challenges When Building GenAI Agents and Applications*. O'Reilly, 2025.

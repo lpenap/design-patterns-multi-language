@@ -657,7 +657,7 @@ recorded reason.
 
 | Spec | Scope | PRs |
 |---|---|---|
-| 034 | Opener: the 23 catalogue entries with empty implementations (README shows them pending), Enterprise category, references 17–20, `docs/principles.md` plus a principles line in the 27 existing docs, `docs/future/genai-patterns.md`, `docs/future/api-design-patterns.md`, README links | 1 |
+| 034 | Opener: the 23 catalogue entries with empty implementations (README shows them pending), Enterprise category, references 17–20, `docs/principles.md` plus a principles line in the 27 existing docs, `docs/future/genai-patterns.md`, `docs/future/api-design-patterns.md`, README links | ✅ #114 |
 | 035–057 | One spec per pattern, four tasks (java, python, typescript, javascript), one PR each | 92 |
 
 Status per pattern (tick with the PR number when merged):

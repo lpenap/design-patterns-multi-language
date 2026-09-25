@@ -8,6 +8,8 @@ Convert the interface of a class into another interface clients expect.
 Adapter lets classes work together that could not otherwise because of
 incompatible interfaces [1, p. 139].
 
+*Principles:* [Program to an interface](../principles.md#program-to-an-interface), [Favour composition over inheritance](../principles.md#favour-composition-over-inheritance), [Open-closed principle](../principles.md#open-closed-principle).
+
 ## Motivation
 
 A useful class often has an interface that does not match the one a client was

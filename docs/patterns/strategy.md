@@ -8,6 +8,8 @@ Define a family of algorithms, encapsulate each one, and make them
 interchangeable. Strategy lets the algorithm vary independently from clients
 that use it [1, p. 315].
 
+*Principles:* [Encapsulate what varies](../principles.md#encapsulate-what-varies), [Program to an interface](../principles.md#program-to-an-interface), [Favour composition over inheritance](../principles.md#favour-composition-over-inheritance), [Open-closed principle](../principles.md#open-closed-principle).
+
 ## Motivation
 
 A text composer may break lines with several algorithms of differing cost and

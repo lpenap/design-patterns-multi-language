@@ -7,6 +7,8 @@
 Specify the kinds of objects to create using a prototypical instance, and
 create new objects by copying this prototype [1, p. 117].
 
+*Principles:* [Encapsulate what varies](../principles.md#encapsulate-what-varies), [Open-closed principle](../principles.md#open-closed-principle).
+
 ## Motivation
 
 A music editor's palette offers notes, rests and staves; the framework class

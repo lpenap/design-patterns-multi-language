@@ -7,6 +7,8 @@
 Decouple an abstraction from its implementation so that the two can vary
 independently [1, p. 151].
 
+*Principles:* [Favour composition over inheritance](../principles.md#favour-composition-over-inheritance), [Encapsulate what varies](../principles.md#encapsulate-what-varies), [Program to an interface](../principles.md#program-to-an-interface).
+
 ## Motivation
 
 A portable window abstraction must work on several window systems. Putting the

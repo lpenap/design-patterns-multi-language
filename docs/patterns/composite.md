@@ -8,6 +8,8 @@ Compose objects into tree structures to represent part-whole hierarchies.
 Composite lets clients treat individual objects and compositions of objects
 uniformly [1, p. 163].
 
+*Principles:* [Program to an interface](../principles.md#program-to-an-interface), [Open-closed principle](../principles.md#open-closed-principle).
+
 ## Motivation
 
 A drawing editor lets users build complex diagrams out of simple primitives and

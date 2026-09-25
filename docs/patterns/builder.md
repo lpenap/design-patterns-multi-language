@@ -7,6 +7,8 @@
 Separate the construction of a complex object from its representation so that
 the same construction process can create different representations [1, p. 97].
 
+*Principles:* [Encapsulate what varies](../principles.md#encapsulate-what-varies), [Single responsibility principle](../principles.md#single-responsibility-principle).
+
 ## Motivation
 
 A reader for the RTF document format should be able to convert RTF to many
