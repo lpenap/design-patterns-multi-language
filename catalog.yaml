@@ -377,6 +377,8 @@ patterns:
     intent: Reuse a bounded set of expensive-to-create objects by lending them out and taking them back instead of creating and discarding them.
     doc: docs/patterns/object-pool.md
     parity: strict
+    implementations:
+      java: java/src/main/java/com/penapereira/patterns/objectpool
   - id: null-object
     icon: "🫥"
     name: Null Object
